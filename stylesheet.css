@@ -1,0 +1,188 @@
+body {
+    background-color: dimgray;
+    margin: 0;
+    padding: 0;
+}
+
+.tabLink {
+    padding: 8px;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    float: left;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10%;
+    border-width: 1px;
+    width: 16%;
+}
+
+.tabContent {
+    background-color: grey;
+    padding: 8px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+}
+
+.tabLink:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: cadetblue;
+}
+
+.tabLink:active {
+    background-color: darkslategray;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: cadetblue;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    margin: 4px;
+}
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
+    text-align: center;
+    color: darkslategray;
+    margin: 12px;
+}
+
+h4 {
+    text-align: center;
+    color: slategray;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 8px;
+}
+
+.tabBar {
+    background-color: cornflowerblue;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.inventorySquare {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    overflow-y: visible;
+    float: left;
+    width: 19%;
+    height: fit-content;
+    margin: auto;
+    padding: 4px;
+    text-align: center;
+    background-color: lightslategray;
+}
+
+#inventoryDiv {
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    padding: 8px;
+    background-color: aliceblue;
+    overflow-y: scroll;
+}
+
+img {
+    margin: auto;
+    width: 128px;
+    height: 128px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rockButtons {
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    width: 75%;
+    margin: auto;
+}
+
+.craftingButtons {
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    width: 75%;
+    margin: auto;
+}
+
+.settingButton {
+    font-size: 36px;
+    text-align: center;
+    border-radius: 16px;
+    border-color: black;
+    border-style: solid;
+    padding: 12px;
+}
+
+.settingButton:hover {
+    background-color: cornflowerblue;
+    transition: 0.5s;
+}
+
+button {
+    background-color: lightgray;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: darkgray;
+    transition: 0.5s;
+}
+
+button:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+.mainDiv {
+    border-color: black;
+    border-style: solid;
+    border-width: 4px;
+    background-color: silver;
+    width: 25%;
+    float: left;
+    padding: 8px;
+}
+
+#visualGain {
+    margin: 0;
+    color: red;
+    text-align: center;
+    transition: 0.5s;
+    margin: 0;
+    visibility: hidden;
+}
+
+#visualGainDiv {
+    border-color: black;
+    border-style: solid;
+    border-width: 4px;
+    background-color: silver;
+    width: 18%;
+    float: left;
+    padding: 8px;
+}
+
+.smeltButtons {
+    font-size: 18px;
+    width: 75%;
+    margin: auto;
+    display: block;
+}

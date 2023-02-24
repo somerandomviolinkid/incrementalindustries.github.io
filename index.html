@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Incremental industries</title>
+    <link href="stylesheet.css" rel="stylesheet">
+</header>
+
+<body>
+    <h1>Incremental industries</h1>
+    <h2>By Bobby M, 2023</h2>
+    <div class="tabBar">
+        <button id="defaultTab" class="tabLink" onclick="openTab(event, 'resourcesTab')">Resources</button>
+        <button class="tabLink" onclick="openTab(event, 'inventoryTab')">Inventory</button>
+        <button class="tabLink" onclick="openTab(event, 'craftingTab')">Crafting</button>
+        <button class="tabLink" onclick="openTab(event, 'buildingsTab')">Buildings</button>
+        <button class="tabLink" onclick="openTab(event, 'researchTab')">Research</button>
+        <button class="tabLink" onclick="openTab(event, 'settingsTab')">Settings</button>
+    </div>
+
+    <div id="resourcesTab" class="tabContent">
+        <h3>Resources</h3>
+        <div class="mainDiv">
+            <h4>Rock</h4>
+            <button id="mineRock" class="rockButtons" onclick="mineRock()">Pick up some rocks<br><img
+                    src="assets/pickaxe.png" width="32px" height="32px"></button>
+            <button id="crushRock" class="rockButtons" onclick="crushRock()">Separate rocks into ores<br><img
+                    src="assets/hammer.png" width="32px" height="32px"></button>
+            <button class="smeltButtons" id="smeltMagnetite" onclick="smeltOre('magnetite')">Smelt magnetite</button>
+            <button class="smeltButtons" id="smeltChalcopyrite" onclick="smeltOre('chalcopyrite')">Smelt chalcopyrite</button>
+            <button class="smeltButtons" id="smeltPentlandite" onclick="smeltOre('pentlandite')">Smelt pentlandite</button>
+            <button class="smeltButtons" id="smeltIlmenite" onclick="smeltOre('ilmenite')">Smelt ilmenite</button>
+        </div>
+        <div class="mainDiv">
+            <h4>Wood</h4>
+            <button id="chopWood" class="rockButtons" onclick="chopWood()">Chop wood<br><img src="assets/axe.png"
+                    width="32px" height="32px"></button>
+        </div>
+        <div class="mainDiv">
+            <h4>Oil</h4>
+        </div>
+        <div id="visualGainDiv">
+            <h4>Information</h4>
+            <p id="miningAmountCount"></p>
+            <p id="choppingAmountCount"></p>
+            <p id="crushingAmountCount"></p>
+            <p id="smeltingAmountCount"></p>
+            <p id="visualGain"></p>
+        </div>
+    </div>
+
+    <div id="inventoryTab" class="tabContent">
+        <h3>Inventory</h3>
+        <div id="inventoryDiv"></div>
+    </div>
+
+    <div id="craftingTab" class="tabContent">
+        <h3>Crafting</h3>
+        <div class="mainDiv">
+            <h4>Tools</h4>
+            <button id="ironPickaxeCraft" class="craftingButtons"
+                onclick="craftTool('pickaxe', 'ironPickaxeCraft')">Craft an iron pickaxe<br>Increases mining amount to
+                2.5<br><img src="assets/pickaxe.png"><br>Costs 1 kg wood and 1 kg iron</button>
+            <button id="ironAxeCraft" class="craftingButtons" onclick="craftTool('axe', 'ironAxeCraft')">Craft an iron
+                axe<br>Increases wood chopping amount to
+                3<br><img src="assets/axe.png"><br>Costs 1 kg wood and 0.75 kg iron</button>
+            <button id="ironHammerCraft" class="craftingButtons" onclick="craftTool('hammer', 'ironHammerCraft')">Craft
+                an iron hammer<br>Increases ore crushing amount to
+                2<br><img src="assets/hammer.png"><br>Costs 1 kg wood and 0.5 kg iron</button>
+        </div>
+    </div>
+
+    <div id="buildingsTab" class="tabContent">
+        <h3>Buildings</h3>
+    </div>
+
+    <div id="researchTab" class="tabContent">
+        <h3>Research</h3>
+    </div>
+
+    <div id="settingsTab" class="tabContent">
+        <h3>Settings</h3>
+        <button class="settingButton" onclick="saveData()">Save data</button>
+        <button class="settingButton" onclick="resetData()">Reset data</button>
+        <button class="settingButton" onclick="importData()">Import data</button>
+        <button class="settingButton" onclick="exportData()">Export data</button>
+    </div>
+
+</body>
+
+<script src="indexes/rocks.js"></script>
+<script src="indexes/resources.js"></script>
+<script src="indexes/craftingRecipes.js"></script>
+
+<script src="scripts/util.js"></script>
+
+<script src="scripts/data.js"></script>
+<script src="scripts/page.js"></script>
+<script src="scripts/game.js"></script>
+
+<script src="scripts/saving.js"></script>
+<script src="scripts/init.js"></script>
+
+</html>
