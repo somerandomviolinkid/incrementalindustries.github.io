@@ -1,6 +1,1 @@
-const toolsBoost = {
-    wood: 1.5,
-    stone: 2.5,
-    copper: 4,
-    iron: 5
-}
+const toolsBoost = [1, 1.5, 2.5, 4, 5]

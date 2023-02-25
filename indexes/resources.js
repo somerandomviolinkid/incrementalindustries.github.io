@@ -35,6 +35,11 @@ let resources = {
         title: 'Wood',
         tag: 'resource'
     },
+    stick: {
+        unit: '',
+        title: 'Stick',
+        tag: 'resource'
+    },
 
     //minerals
     magnetite: {
@@ -139,6 +144,41 @@ let resources = {
         tag: 'metal'
     },
     //metal products
+    smallIronPlate:{
+        unit: '',
+        title: 'Small iron plate',
+        tag: 'metalProducts'
+    },
+    mediumIronPlate:{
+        unit: '',
+        title: 'Medium iron plate',
+        tag: 'metalProducts'
+    },
+    largeIronPlate:{
+        unit: '',
+        title: 'Large iron plate',
+        tag: 'metalProducts'
+    },
+    smallCopperPlate:{
+        unit: '',
+        title: 'Small copper plate',
+        tag: 'metalProducts'
+    },
+    mediumCopperPlate:{
+        unit: '',
+        title: 'Medium copper plate',
+        tag: 'metalProducts'
+    },
+    largeCopperPlate:{
+        unit: '',
+        title: 'Large copper plate',
+        tag: 'metalProducts'
+    },
+    copperFoil: {
+        unit: 'kg',
+        title: 'Copper foil',
+        tag: 'metalProducts'
+    },
     copperWire: {
         unit: '',
         title: 'Copper wire',

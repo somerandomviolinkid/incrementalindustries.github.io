@@ -1,10 +1,23 @@
 //all of the manual beginning game stuff
 
-function craftTool(toolName, toolTier, buttonName) {
-    if (data.resources[toolTier].amount >= toolCraftingRecipes[toolName].materialAmount && data.resources.wood.amount >= toolCraftingRecipes[toolName].woodAmount) {
-        data.resources[toolTier].amount -= toolCraftingRecipes[toolName].materialAmount;
-        data.resources.wood.amount -= toolCraftingRecipes[toolName].woodAmount;
+function craftTool(toolName, boostName, toolMaterial, toolTier, buttonName, nextButtonName) {
+    if (data.resources[toolMaterial].amount >= toolCraftingRecipes[toolName].materialAmount && data.resources.stick.amount >= toolCraftingRecipes[toolName].stickAmount) {
+
+        data.resources[toolMaterial].amount -= toolCraftingRecipes[toolName].materialAmount;
+        data.resources.stick.amount -= toolCraftingRecipes[toolName].stickAmount;
+
+        data.tools[toolName][toolTier] = true;
+        data.stats[boostName] = toolsBoost[toolTier];
+
         document.getElementById(buttonName).style.display = 'none';
+
+        if (nextButtonName !== null) {
+            document.getElementById(nextButtonName).style.display = 'block';
+        }
+
+        updateInformationDiv();
+        updateResourceCount('stick');
+        updateResourceCount(toolMaterial);
     }
 }
 
@@ -18,21 +31,11 @@ function mineRock() {
     visualGains(visualGainData1);
 }
 
-function chopWood() {
-    const z = randomNumber(data.stats.chopAmount * 0.75, data.stats.chopAmount * 1.25);
-    data.resources.wood.amount += z;
-
-    disableButton('chopWood', 1000);
-    updateResourceCount('wood');
-    const visualGainData2 = [{ amountGained: z, resourceName: 'wood', isPositive: true }];
-    visualGains(visualGainData2);
-}
-
 function crushRock() {
     if (data.resources.rock.amount >= data.stats.crushAmount) {
 
         let totalCrushedOres = 0;
-        let visualGainData3 = [];
+        let visualGainData2 = [];
 
         for (i in rocksIndex) {
 
@@ -43,7 +46,7 @@ function crushRock() {
             totalCrushedOres += z;
 
             updateResourceCount(x);
-            visualGainData3.push({ amountGained: z, resourceName: rocksIndex[i].title.toString(), isPositive: true })
+            visualGainData2.push({ amountGained: z, resourceName: rocksIndex[i].title.toString(), isPositive: true })
         }
 
 
@@ -51,10 +54,10 @@ function crushRock() {
         data.resources.stone.amount += (data.stats.crushAmount - totalCrushedOres) * 0.75;
         data.resources.rock.amount -= data.stats.crushAmount;
 
-        visualGainData3.push({ amountGained: (data.stats.crushAmount - totalCrushedOres) * 0.75, resourceName: 'stone', isPositive: true });
-        visualGainData3.push({ amountGained: (data.stats.crushAmount), resourceName: 'rock', isPositive: false });
+        visualGainData2.push({ amountGained: (data.stats.crushAmount - totalCrushedOres) * 0.75, resourceName: 'stone', isPositive: true });
+        visualGainData2.push({ amountGained: (data.stats.crushAmount), resourceName: 'rock', isPositive: false });
 
-        visualGains(visualGainData3);
+        visualGains(visualGainData2);
 
         disableButton('crushRock', 1000);
 
@@ -68,27 +71,29 @@ function crushRock() {
 function smeltOre(oreType) {
     if (data.resources[oreType].amount >= data.stats.smeltAmount && data.resources.coal.amount >= data.stats.smeltAmount) {
 
-        let visualGainData4 = [];
+        let visualGainData3 = [];
 
         data.resources[oreType].amount -= data.stats.smeltAmount;
         data.resources.coal.amount -= data.stats.smeltAmount;
 
-        visualGainData4.push({ amountGained: data.stats.smeltAmount, resourceName: oreType, isPositive: false });
-        visualGainData4.push({ amountGained: data.stats.smeltAmount, resourceName: 'coal', isPositive: false });
+        visualGainData3.push({ amountGained: data.stats.smeltAmount, resourceName: oreType, isPositive: false });
+        visualGainData3.push({ amountGained: data.stats.smeltAmount, resourceName: 'coal', isPositive: false });
 
         for (x in rocksIndex[oreType].smeltYields) {
 
             data.resources[rocksIndex[oreType].smeltYields[x].title].amount += rocksIndex[oreType].smeltYields[x].amount * data.stats.smeltAmount;
             updateResourceCount(rocksIndex[oreType].smeltYields[x].title);
 
-            visualGainData4.push({ amountGained: (rocksIndex[oreType].smeltYields[x].amount * data.stats.smeltAmount), resourceName: rocksIndex[oreType].smeltYields[x].title, isPositive: true });
+            visualGainData3.push(
+                { amountGained: (rocksIndex[oreType].smeltYields[x].amount * data.stats.smeltAmount), resourceName: rocksIndex[oreType].smeltYields[x].title, isPositive: true }
+            );
 
         }
 
         updateResourceCount('coal');
         updateResourceCount(oreType);
 
-        visualGains(visualGainData4);
+        visualGains(visualGainData3);
 
         const smeltButtons = document.getElementsByClassName("smeltButtons");
         for (let l = 0; l < smeltButtons.length; l++) {
@@ -97,3 +102,36 @@ function smeltOre(oreType) {
     }
 }
 
+function chopWood() {
+    const z = randomNumber(data.stats.chopAmount * 0.75, data.stats.chopAmount * 1.25);
+    data.resources.wood.amount += z;
+
+    disableButton('chopWood', 1000);
+    updateResourceCount('wood');
+    const visualGainData4 = [{ amountGained: z, resourceName: 'wood', isPositive: true }];
+    visualGains(visualGainData4);
+}
+
+function smashWood() {
+    if (data.resources.wood.amount >= 1 && data.resources.stone.amount >= 0.25) {
+        const z = Math.floor(randomNumber(3, 5));
+        data.resources.stick.amount += z;
+
+        data.resources.wood.amount -= 1;
+        data.resources.stone.amount -= 0.25;
+
+        disableButton('smashWood', 2500);
+
+        updateResourceCount('wood');
+        updateResourceCount('stone');
+        updateResourceCount('stick');
+
+        const visualGainData5 = [
+            { amountGained: z, resourceName: 'stick', isPositive: true }, 
+            { amountGained: 1, resourceName: 'wood', isPositive: false }, 
+            { amountGained: 0.25, resourceName: 'stone', isPositive: false }
+        ]
+
+        visualGains(visualGainData5);
+    }
+}
