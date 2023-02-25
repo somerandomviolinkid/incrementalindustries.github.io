@@ -22,6 +22,9 @@ let data = {
         wood: {
             amount: 0,
         },
+        stick: {
+            amount: 0
+        },
         //minerals
         magnetite: {
             amount: 0,
@@ -85,6 +88,27 @@ let data = {
             amount: 0,
         },
         //metal products
+        smallIronPlate:{
+            amount: 0
+        },
+        mediumIronPlate:{
+            amount: 0
+        },
+        largeIronPlate:{
+            amount: 0
+        },
+        smallCopperPlate:{
+            amount: 0
+        },
+        mediumCopperPlate:{
+            amount: 0
+        },
+        largeCopperPlate:{
+            amount: 0
+        },
+        copperFoil: {
+            amount: 0
+        },
         copperWire: {
             amount: 0,
         },
@@ -98,13 +122,13 @@ let data = {
     },
     stats: {
         mineAmount: 1,
-        crushAmount: 1,
         chopAmount: 1,
+        crushAmount: 1,
         smeltAmount: 0.1
     },
     tools: {
-        pickaxe: [false, false, false, false],
-        axe: [false, false, false, false],
-        hammer: [false, false, false, false]
+        pickaxe: [true, false, false, false, false],
+        axe: [true, false, false, false, false],
+        hammer: [true, false, false, false, false]
     }
 }

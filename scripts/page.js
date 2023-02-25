@@ -60,3 +60,31 @@ function updateInformationDiv() {
 }
 
 updateInformationDiv();
+
+//opens crafting menu for crafts
+function openCraftingMenu(recipeName) {
+    console.log(recipeName);
+    document.getElementById("craftingDiv").style.display = "none";
+    document.getElementById("craftingMenuDiv").style.display = "block";
+
+    let componentsText = "";
+    for (r in craftingRecipes[recipeName].components) {
+        componentsText += craftingRecipes[recipeName].components[r].amount.toString() + " " + resources[craftingRecipes[recipeName].components[r].title].title.toString() + "<br />";
+    }
+
+    document.getElementById("craftingRecipeTitle").innerHTML = craftingRecipes[recipeName].info.title;
+    document.getElementById("craftingRecipeImg").src = "assets/" + recipeName.toString() + ".png";
+    document.getElementById("craftingRecipeComponents").innerHTML = componentsText;
+    document.getElementById("craftRecipeButton").innerHTML = "Craft " + craftingRecipes[recipeName].info.title;
+
+    document.getElementById("craftRecipeButton").addEventListener("click", function() {
+        craftItem(recipeName);
+    });
+}
+
+function closeCraftingMenu() {
+    document.getElementById("craftingDiv").style.display = "block";
+    document.getElementById("craftingMenuDiv").style.display = "none";
+}
+
+closeCraftingMenu();
