@@ -25,10 +25,18 @@
                     src="assets/pickaxe.png" width="32px" height="32px"></button>
             <button id="crushRock" class="rockButtons" onclick="crushRock()">Separate rocks into ores<br><img
                     src="assets/hammer.png" width="32px" height="32px"></button>
-            <button class="smeltButtons" id="smeltMagnetite" onclick="smeltOre('magnetite')">Smelt magnetite</button>
-            <button class="smeltButtons" id="smeltChalcopyrite" onclick="smeltOre('chalcopyrite')">Smelt chalcopyrite</button>
-            <button class="smeltButtons" id="smeltPentlandite" onclick="smeltOre('pentlandite')">Smelt pentlandite</button>
-            <button class="smeltButtons" id="smeltIlmenite" onclick="smeltOre('ilmenite')">Smelt ilmenite</button>
+
+            <button class="smeltButtons" id="smeltButton0" onclick="smeltOre('magnetite')">Smelt magnetite</button>
+            <button class="smeltButtons" id="smeltButton1" onclick="smeltOre('chalcopyrite')">Smelt chalcopyrite</button>
+            <button class="smeltButtons" id="smeltButton2" onclick="smeltOre('pentlandite')">Smelt pentlandite</button>
+            <button class="smeltButtons" id="smeltButton3" onclick="smeltOre('ilmenite')">Smelt ilmenite</button>
+            <button class="smeltButtons" id="smeltButton4" onclick="smeltOre('patronite')">Smelt patronite</button>
+            <button class="smeltButtons" id="smeltButton5" onclick="smeltOre('chromite')">Smelt chromite</button>
+            <button class="smeltButtons" id="smeltButton6" onclick="smeltOre('cassiterite')">Smelt cassiterite</button>
+            <button class="smeltButtons" id="smeltButton7" onclick="smeltOre('bauxite')">Smelt bauxite</button>
+            <button class="smeltButtons" id="smeltButton8" onclick="smeltOre('galena')">Smelt galena</button>
+            <button class="smeltButtons" id="smeltButton9" onclick="smeltOre('acanthite')">Smelt acanthite</button>
+
         </div>
         <div class="mainDiv">
             <h4>Wood</h4>
@@ -38,13 +46,12 @@
         <div class="mainDiv">
             <h4>Oil</h4>
         </div>
-        <div id="visualGainDiv">
+        <div id="informationDiv">
             <h4>Information</h4>
             <p id="miningAmountCount"></p>
             <p id="choppingAmountCount"></p>
             <p id="crushingAmountCount"></p>
             <p id="smeltingAmountCount"></p>
-            <p id="visualGain"></p>
         </div>
     </div>
 
@@ -57,15 +64,45 @@
         <h3>Crafting</h3>
         <div class="mainDiv">
             <h4>Tools</h4>
-            <button id="ironPickaxeCraft" class="craftingButtons"
-                onclick="craftTool('pickaxe', 'ironPickaxeCraft')">Craft an iron pickaxe<br>Increases mining amount to
-                2.5<br><img src="assets/pickaxe.png"><br>Costs 1 kg wood and 1 kg iron</button>
-            <button id="ironAxeCraft" class="craftingButtons" onclick="craftTool('axe', 'ironAxeCraft')">Craft an iron
-                axe<br>Increases wood chopping amount to
-                3<br><img src="assets/axe.png"><br>Costs 1 kg wood and 0.75 kg iron</button>
-            <button id="ironHammerCraft" class="craftingButtons" onclick="craftTool('hammer', 'ironHammerCraft')">Craft
-                an iron hammer<br>Increases ore crushing amount to
-                2<br><img src="assets/hammer.png"><br>Costs 1 kg wood and 0.5 kg iron</button>
+
+            <button id="pickaxeTier1Button" class="craftingButtons"
+                onclick="craftTool('pickaxe', 'wood', 'pickaxeTier1Button')">Craft a wood pickaxe<br><img
+                    src="assets/pickaxe.png"><br>Costs 2 kg wood</button>
+            <button id="pickaxeTier2Button" class="craftingButtons"
+                onclick="craftTool('pickaxe', 'stone', 'pickaxeTier2Button')">Craft a stone pickaxe<br><img
+                    src="assets/pickaxe.png"><br>Costs 1 kg wood and 1 kg stone</button>
+            <button id="pickaxeTier3Button" class="craftingButtons"
+                onclick="craftTool('pickaxe', 'stone', 'pickaxeTier3Button')">Craft a copper pickaxe<br><img
+                    src="assets/pickaxe.png"><br>Costs 1 kg wood and 1 kg copper</button>
+            <button id="pickaxeTier4Button" class="craftingButtons"
+                onclick="craftTool('pickaxe', 'stone', 'pickaxeTier4Button')">Craft an iron pickaxe<br><img
+                    src="assets/pickaxe.png"><br>Costs 1 kg wood and 1 kg iron</button>
+
+            <button id="axeTier1Button" class="craftingButtons"
+                onclick="craftTool('axe', 'wood', 'axeTier1Button')">Craft a wood axe<br><img
+                    src="assets/axe.png"><br>Costs 2 kg wood</button>
+            <button id="axeTier2Button" class="craftingButtons"
+                onclick="craftTool('axe', 'stone', 'axeTier2Button')">Craft a stone axe<br><img
+                    src="assets/axe.png"><br>Costs 1 kg wood and 1 kg stone</button>
+            <button id="axeTier3Button" class="craftingButtons"
+                onclick="craftTool('axe', 'stone', 'axeTier3Button')">Craft a copper axe<br><img
+                    src="assets/axe.png"><br>Costs 1 kg wood and 1 kg copper</button>
+            <button id="axeTier4Button" class="craftingButtons"
+                onclick="craftTool('axe', 'stone', 'axeTier4Button')">Craft an iron axe<br><img
+                    src="assets/axe.png"><br>Costs 1 kg wood and 1 kg iron</button>
+
+            <button id="hammerTier1Button" class="craftingButtons"
+                onclick="craftTool('hammer', 'wood', 'hammerTier1Button')">Craft a wood hammer<br><img
+                    src="assets/hammer.png"><br>Costs 2 kg wood</button>
+            <button id="hammerTier2Button" class="craftingButtons"
+                onclick="craftTool('hammer', 'stone', 'hammerTier2Button')">Craft a stone hammer<br><img
+                    src="assets/hammer.png"><br>Costs 1 kg wood and 1 kg stone</button>
+            <button id="hammerTier3Button" class="craftingButtons"
+                onclick="craftTool('hammer', 'stone', 'hammerTier3Button')">Craft a copper hammer<br><img
+                    src="assets/hammer.png"><br>Costs 1 kg wood and 1 kg copper</button>
+            <button id="hammerTier4Button" class="craftingButtons"
+                onclick="craftTool('hammer', 'stone', 'hammerTier4Button')">Craft an iron hammer<br><img
+                    src="assets/hammer.png"><br>Costs 1 kg wood and 1 kg iron</button>
         </div>
     </div>
 
@@ -87,7 +124,10 @@
 
 </body>
 
+<script src="scripts/config.js"></script>
+
 <script src="indexes/rocks.js"></script>
+<script src="indexes/tools.js"></script>
 <script src="indexes/resources.js"></script>
 <script src="indexes/craftingRecipes.js"></script>
 
