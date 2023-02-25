@@ -1,93 +1,158 @@
 let resources = {
     //raw resources
     money: {
-        type: 'countable',
+        unit: '',
         title: 'Money',
         tag: 'resource'
     },
     rock: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Rock',
         tag: 'resource'
     },
     stone: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Stone',
         tag: 'resource'
     },
+    sand: {
+        unit: 'kg',
+        title: 'Sand',
+        tag: 'resource'
+    },
     coal: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Coal',
         tag: 'resource'
     },
     oil: {
-        type: 'liquid',
+        unit: 'L',
         title: 'Oil',
         tag: 'resource'
     },
     wood: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Wood',
         tag: 'resource'
     },
 
     //minerals
     magnetite: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Magnetite',
         tag: 'mineral'
     },
     chalcopyrite: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Chalcopyrite',
         tag: 'mineral'
     },
     ilmenite: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Ilmenite',
         tag: 'mineral'
     },
     pentlandite: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Pentlandite',
         tag: 'mineral'
     },
-
+    patronite: {
+        unit: 'kg',
+        title: 'Patronite',
+        tag: 'mineral'
+    },
+    chromite: {
+        unit: 'kg',
+        title: 'Chromite',
+        tag: 'mineral'
+    },
+    cassiterite: {
+        unit: 'kg',
+        title: 'Cassiterite',
+        tag: 'mineral'
+    },
+    bauxite: {
+        unit: 'kg',
+        title: 'Bauxite',
+        tag: 'mineral'
+    },
+    galena: {
+        unit: 'kg',
+        title: 'Galena',
+        tag: 'mineral'
+    },
+    acanthite: {
+        unit: 'kg',
+        title: 'Acanthite',
+        tag: 'mineral'
+    },
     //metals
     moltenIron: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Molten iron',
         tag: 'metal'
     },
     moltenCopper: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Molten copper',
         tag: 'metal'
     },
     moltenNickel: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Molten nickel',
         tag: 'metal'
     },
     moltenTitanium: {
-        type: 'uncountable',
+        unit: 'kg',
         title: 'Molten titanium',
         tag: 'metal'
     },
-    copperWire: {
-        type: 'countable',
-        title: 'Copper wire',
+    moltenVanadium: {
+        unit: 'kg',
+        title: 'Molten vanadium',
         tag: 'metal'
+    },
+    moltenChromium: {
+        unit: 'kg',
+        title: 'Molten chromium',
+        tag: 'metal'
+    },
+    moltenSilver: {
+        unit: 'kg',
+        title: 'Molten silver',
+        tag: 'metal'
+    },
+    moltenTin: {
+        unit: 'kg',
+        title: 'Molten tin',
+        tag: 'metal'
+    },
+    moltenAluminium: {
+        unit: 'kg',
+        title: 'Molten aluminium',
+        tag: 'metal'
+    },
+    moltenLead: {
+        unit: 'kg',
+        title: 'Molten lead',
+        tag: 'metal'
+    },
+    //metal products
+    copperWire: {
+        unit: '',
+        title: 'Copper wire',
+        tag: 'metalProducts'
     },
 
     //electronics
     transistor: {
-        type: 'countable',
+        unit: '',
         title: 'Transistor',
         tag: 'electronic'
     },
     register8: {
-        type: 'countable',
+        unit: '',
         title: '8-bit register',
         tag: 'electronic'
     },

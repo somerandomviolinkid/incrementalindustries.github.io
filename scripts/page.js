@@ -27,28 +27,28 @@ function disableButton(buttonName, cooldownMs) {
 }
 
 function updateResourceCount(resourceName) {
-    if (resources[resourceName].type === 'countable') {
-        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount;
-    } else if (resources[resourceName].type === 'uncountable') {
-        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(3) + " kg";
-    } else if (resources[resourceName].type === 'liquid') {
-        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(3) + " L";
-    }
+    document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(significantDigits) + resources[resourceName].unit;
 }
 
 //amount gained then resource name
-function visualGains() {
-    document.getElementById("visualGain").style.visibility = 'visible';
+//thanks to asterisk man and escapee for bug fixes and rewriting this
+function visualGains(data) {
+    let infoDiv = document.getElementById("informationDiv");
 
-    for (let x of arguments) {
-        document.getElementById("visualGain").innerHTML = "+ " + x.amountGained.toFixed(3) + " " + x.resourceName + "<br />";
+    for (const y of data) {
+
+        let currentVisualGain = document.createElement("p");
+        currentVisualGain.className = "visualGain";
+        infoDiv.appendChild(currentVisualGain);
+
+        currentVisualGain.innerHTML = (y.isPositive ? "+" : "-") + " " + y.amountGained.toFixed(significantDigits) + " " + y.resourceName;
+
+        function removeVisualGain() {
+            currentVisualGain.remove();
+        }
+
+        setTimeout(removeVisualGain, visualGainTimeout);
     }
-
-    function hideText() {
-        document.getElementById("visualGain").style.visibility = 'hidden';  
-    }
-
-    setTimeout(hideText, 750);
 }
 
 //updates stuff on resources menu

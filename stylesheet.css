@@ -161,16 +161,15 @@ button:disabled {
     padding: 8px;
 }
 
-#visualGain {
+.visualGain {
     margin: 0;
     color: red;
     text-align: center;
     transition: 0.5s;
     margin: 0;
-    visibility: hidden;
 }
 
-#visualGainDiv {
+#informationDiv {
     border-color: black;
     border-style: solid;
     border-width: 4px;

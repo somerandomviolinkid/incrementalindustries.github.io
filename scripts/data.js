@@ -10,6 +10,9 @@ let data = {
         stone: {
             amount: 0,
         },
+        sand: {
+            amount: 0
+        },
         coal: {
             amount: 0,
         },
@@ -32,6 +35,24 @@ let data = {
         pentlandite: {
             amount: 0
         },
+        patronite: {
+            amount: 0
+        },
+        chromite: {
+            amount: 0
+        },
+        cassiterite: {
+            amount: 0
+        },
+        bauxite: {
+            amount: 0
+        },
+        galena: {
+            amount: 0
+        },
+        acanthite: {
+            amount: 0
+        },
         //metals
         moltenIron: {
             amount: 0,
@@ -45,6 +66,25 @@ let data = {
         moltenTitanium: {
             amount: 0,
         },
+        moltenVanadium: {
+            amount: 0,
+        },
+        moltenChromium: {
+            amount: 0,
+        },
+        moltenSilver: {
+            amount: 0,
+        },
+        moltenTin: {
+            amount: 0,
+        },
+        moltenAluminium: {
+            amount: 0,
+        },
+        moltenLead: {
+            amount: 0,
+        },
+        //metal products
         copperWire: {
             amount: 0,
         },
@@ -63,9 +103,8 @@ let data = {
         smeltAmount: 0.1
     },
     tools: {
-        ironPickaxe: false,
-        ironAxe: false,
-        ironHammer: false
+        pickaxe: [false, false, false, false],
+        axe: [false, false, false, false],
+        hammer: [false, false, false, false]
     }
-
 }

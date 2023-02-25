@@ -56,10 +56,85 @@ const rocksIndex = {
             }
         }
     },
+    patronite: {
+        title: 'patronite',
+        chanceNormal: 0.005,
+        chanceVein: 0.02,
+        smeltYields: {
+            yield1: {
+                title: 'moltenVanadium',
+                amount: 0.25
+            },
+        }
+    },
+    chromite: {
+        title: 'chromite',
+        chanceNormal: 0.004,
+        chanceVein: 0.03,
+        smeltYields: {
+            yield1: {
+                title: 'moltenIron',
+                amount: 0.29
+            },
+            yield2: {
+                title: 'moltenChromium',
+                amount: 0.27
+            },
+        }
+    },
+    cassiterite: {
+        title: 'cassiterite',
+        chanceNormal: 0.012,
+        chanceVein: 0.15,
+        smeltYields: {
+            yield1: {
+                title: 'moltenTin',
+                amount: 0.7
+            },
+        }
+    },
+    bauxite: {
+        title: 'bauxite',
+        chanceNormal: 0.01,
+        chanceVein: 0.08,
+        smeltYields: {
+            yield1: {
+                title: 'moltenAluminium',
+                amount: 0.4
+            },
+        }
+    },
+    galena: {
+        title: 'galena',
+        chanceNormal: 0.008,
+        chanceVein: 0.02,
+        smeltYields: {
+            yield1: {
+                title: 'moltenLead',
+                amount: 0.77
+            },
+        }
+    },
+    acanthite: {
+        title: 'acanthite',
+        chanceNormal: 0.005,
+        chanceVein: 0.018,
+        smeltYields: {
+            yield1: {
+                title: 'moltenSilver',
+                amount: 0.78
+            },
+        }
+    },
     //others
     coal: {
         title: 'coal',
         chanceNormal: 0.1,
         chanceVein: 0.25
+    },
+    sand: {
+        title: 'sand',
+        chanceNormal: 0.08,
+        chanceVein: 0.4
     }
 }
