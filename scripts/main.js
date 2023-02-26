@@ -1,3 +1,4 @@
+//item crafting
 function craftItem(item) {
     let allowCraft = false;
 

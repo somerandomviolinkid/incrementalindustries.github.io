@@ -63,14 +63,17 @@ updateInformationDiv();
 
 //opens crafting menu for crafts
 function openCraftingMenu(recipeName) {
-    console.log(recipeName);
+
     document.getElementById("craftingDiv").style.display = "none";
     document.getElementById("craftingMenuDiv").style.display = "block";
 
     //loop through crafting components
     let componentsText = "";
-    for (r in craftingRecipes[recipeName].components) {
-        componentsText += craftingRecipes[recipeName].components[r].amount.toString() + " " + resources[craftingRecipes[recipeName].components[r].title].unit.toString() + " "+ resources[craftingRecipes[recipeName].components[r].title].title.toString() + "<br />";
+    for (const r in craftingRecipes[recipeName].components) {
+        componentsText += craftingRecipes[recipeName].components[r].amount.toString() + " " + resources[craftingRecipes[recipeName].components[r].title].unit.toString() + " " + resources[craftingRecipes[recipeName].components[r].title].title.toString() + "<br />";
+    }
+    for (const s in craftingRecipes[recipeName].tools) {
+        componentsText += "Requires " + craftingRecipes[recipeName].tools[s].display + "<br />";
     }
 
     //changes text and stuff inside crafting menu
@@ -87,7 +90,7 @@ function openCraftingMenu(recipeName) {
     document.getElementById("craftingRecipeComponents").innerHTML = componentsText;
     document.getElementById("craftRecipeButton").innerHTML = "Craft " + craftingRecipes[recipeName].info.title;
 
-    document.getElementById("craftRecipeButton").addEventListener("click", function() {
+    document.getElementById("craftRecipeButton").addEventListener("click", function () {
         craftItem(recipeName);
     });
 }

@@ -9,6 +9,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
+                display: 'iron hammer',
                 tier: 4
             }
         },
@@ -27,7 +28,8 @@ const craftingRecipes = {
         },
         tools: {
             tool1: {
-                title: 'hammer',
+                title: 'hammer', 
+                display: 'iron hammer',
                 tier: 4
             }
         },
@@ -47,6 +49,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
+                display: 'iron hammer',
                 tier: 4
             }
         },
@@ -66,6 +69,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
+                display: 'iron hammer',
                 tier: 4
             }
         },
@@ -85,6 +89,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
+                display: 'iron hammer',
                 tier: 4
             }
         },
@@ -104,6 +109,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
+                display: 'iron hammer',
                 tier: 4
             }
         },
@@ -123,6 +129,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
+                display: 'iron hammer',
                 tier: 4
             }
         },
