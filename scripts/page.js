@@ -90,9 +90,10 @@ function openCraftingMenu(recipeName) {
     document.getElementById("craftingRecipeComponents").innerHTML = componentsText;
     document.getElementById("craftRecipeButton").innerHTML = "Craft " + craftingRecipes[recipeName].info.title;
 
-    document.getElementById("craftRecipeButton").addEventListener("click", function () {
+    let recipeCraftButton = document.getElementById("craftRecipeButton");
+    recipeCraftButton.onclick = function () {
         craftItem(recipeName);
-    });
+    };
 }
 
 function closeCraftingMenu() {
@@ -132,7 +133,7 @@ function openSmeltingMenu() {
 
     document.getElementById(closeSmeltingMenuButtonID).innerHTML = "Close smelting menu";
 
-    document.getElementById(closeSmeltingMenuButtonID).onclick = function() {
+    document.getElementById(closeSmeltingMenuButtonID).onclick = function () {
         closeSmeltingMenu();
     }
 
@@ -152,7 +153,7 @@ function openSmeltingMenu() {
 
         document.getElementById("rocksDiv").appendChild(currentSmeltingButton);
         document.getElementById(currentSmeltingButtonID).innerHTML = "Smelt " + b + "<br />Yields " + yieldText + "<br />Costs 0.1 kg " + b + " and 0.1 kg coal";
-        document.getElementById(currentSmeltingButtonID).onclick = function() {
+        document.getElementById(currentSmeltingButtonID).onclick = function () {
             smeltOre(b.toString());
         }
     }
@@ -162,4 +163,12 @@ function openSmeltingMenu() {
 function highlightTab(tabName) {
     document.getElementById(tabName).style.color = "red";
     setTimeout(defaultTabColor, 1500, tabName);
+}
+
+function notEnoughResourcesAlert(buttonName) {
+    document.getElementById(buttonName).innerHTML = "Not enough resources!";
+    function hideAlert() {
+        document.getElementById(buttonName).innerHTML = "";
+    }
+    setTimeout(hideAlert, 1250);
 }

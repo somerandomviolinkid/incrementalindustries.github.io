@@ -7,7 +7,8 @@ function craftItem(item) {
             allowCraft = true;
             console.log(x + " success");
         } else {
-            return "craft failed";
+            notEnoughResourcesAlert('craftingAlert');
+            return;
         }
     }
 
@@ -15,18 +16,19 @@ function craftItem(item) {
         if (data.tools[craftingRecipes[item].tools[y].title][craftingRecipes[item].tools[y].tier]) {
             allowCraft = true;
             console.log(x + " success");
+        } else {
+            notEnoughResourcesAlert('craftingAlert');
+            return;
         }
     }
 
-    if (allowCraft == true) {
-        for (let x in craftingRecipes[item].components) {
-            data.resources[craftingRecipes[item].components[x].title].amount -= craftingRecipes[item].components[x].amount;
-        }
-
-        setTimeout(data.resources[item].amount += craftingRecipes[item].info.yield, craftingRecipes[item].info.timeS * 1000);
-        
-        closeCraftingMenu();
-
-        return "craft succesful";
+    for (let x in craftingRecipes[item].components) {
+        data.resources[craftingRecipes[item].components[x].title].amount -= craftingRecipes[item].components[x].amount;
     }
+
+    setTimeout(data.resources[item].amount += craftingRecipes[item].info.yield, craftingRecipes[item].info.timeS * 1000);
+
+    closeCraftingMenu();
+
+    return "craft succesful";
 }

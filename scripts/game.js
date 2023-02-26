@@ -18,6 +18,8 @@ function craftTool(toolName, boostName, toolMaterial, toolTier, buttonName, next
         updateInformationDiv();
         updateResourceCount('stick');
         updateResourceCount(toolMaterial);
+    } else {
+        notEnoughResourcesAlert('toolCraftingAlert');
     }
 }
 
@@ -64,6 +66,8 @@ function crushRock() {
         updateResourceCount('rock');
         updateResourceCount('stone');
 
+    } else {
+        notEnoughResourcesAlert('resourcesAlert');
     }
 
 }
@@ -99,6 +103,8 @@ function smeltOre(oreType) {
         for (let l = 0; l < smeltButtons.length; l++) {
             disableButton(smeltButtons[l].id, 5000);
         }
+    } else {
+        notEnoughResourcesAlert('resourcesAlert');
     }
 }
 
@@ -133,6 +139,8 @@ function smashWood() {
         ]
 
         visualGains(visualGainData5);
+    } else {
+        notEnoughResourcesAlert('resourcesAlert');
     }
 }
 
@@ -145,5 +153,7 @@ function cookWood() {
         ]
           
         visualGains(visualGainData6);
+    } else {
+        notEnoughResourcesAlert('resourcesAlert');
     }
 }

@@ -222,7 +222,7 @@ button:disabled {
     border-width: 4px;
     border-color: black;
     border-style: solid;
-    background-color: cornflowerblue;
+    background-color:dodgerblue;
     margin: auto;
     padding: 16px;
     text-align: center;  
@@ -257,4 +257,11 @@ a {
 #craftRecipeButton:hover {
     background-color: darkcyan;
     transition: 0.5s;
+}
+
+.notEnoughResourcesAlert {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    text-align: center;
 }
