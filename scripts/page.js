@@ -101,3 +101,53 @@ function closeCraftingMenu() {
 }
 
 closeCraftingMenu();
+
+function closeSmeltingMenu() {
+
+    document.getElementById("closeSmeltMenu").remove();
+
+    for (const b of minerals) {
+        let currentRemoveID = "smelt" + b + "Button";
+        document.getElementById(currentRemoveID).remove();
+    }
+
+    document.getElementById("mineRock").style.display = "block";
+    document.getElementById("crushRock").style.display = "block";
+    document.getElementById("smeltRock").style.display = "block";
+}
+
+function openSmeltingMenu() {
+
+    document.getElementById("mineRock").style.display = "none";
+    document.getElementById("crushRock").style.display = "none";
+    document.getElementById("smeltRock").style.display = "none";
+
+    let closeSmeltingMenuButton = document.createElement("button");
+
+    closeSmeltingMenuButton.className = "smeltButtons";
+    closeSmeltingMenuButton.id = "closeSmeltMenu";
+    let closeSmeltingMenuButtonID = closeSmeltingMenuButton.id;
+
+    document.getElementById("rocksDiv").appendChild(closeSmeltingMenuButton);
+
+    document.getElementById(closeSmeltingMenuButtonID).innerHTML = "Close smelting menu";
+
+    document.getElementById(closeSmeltingMenuButtonID).onclick = function() {
+        closeSmeltingMenu();
+    }
+
+    for (const b of minerals) {
+
+        let currentSmeltingButton = document.createElement("button");
+
+        currentSmeltingButton.className = "smeltButtons";
+        currentSmeltingButton.id = "smelt" + b + "Button";
+        let currentSmeltingButtonID = currentSmeltingButton.id;
+
+        document.getElementById("rocksDiv").appendChild(currentSmeltingButton);
+        document.getElementById(currentSmeltingButtonID).innerHTML = "Smelt " + b + "<br />Costs 0.1 " + b + " and 0.1 coal";
+        document.getElementById(currentSmeltingButtonID).onclick = function() {
+            smeltOre(b.toString());
+        }
+    }
+}

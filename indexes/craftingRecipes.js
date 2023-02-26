@@ -9,7 +9,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
-                display: 'iron hammer',
+                display: 'iron hammer or above',
                 tier: 4
             }
         },
@@ -29,7 +29,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer', 
-                display: 'iron hammer',
+                display: 'iron hammer or above',
                 tier: 4
             }
         },
@@ -49,7 +49,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
-                display: 'iron hammer',
+                display: 'iron hammer or above',
                 tier: 4
             }
         },
@@ -69,7 +69,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
-                display: 'iron hammer',
+                display: 'iron hammer or above',
                 tier: 4
             }
         },
@@ -89,7 +89,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
-                display: 'iron hammer',
+                display: 'iron hammer or above',
                 tier: 4
             }
         },
@@ -109,7 +109,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
-                display: 'iron hammer',
+                display: 'iron hammer or above',
                 tier: 4
             }
         },
@@ -129,7 +129,7 @@ const craftingRecipes = {
         tools: {
             tool1: {
                 title: 'hammer',
-                display: 'iron hammer',
+                display: 'iron hammer or above',
                 tier: 4
             }
         },
@@ -137,6 +137,26 @@ const craftingRecipes = {
             yield: 2,
             timeS: 5,
             title: 'Copper foil'
+        }
+    },
+    copperWire: {
+        components: {
+            component0: {
+                title: 'smallCopperPlate',
+                amount: 1
+            }
+        },
+        tools: {
+            tool1: {
+                title: 'wireCutters',
+                display: 'wire cutters',
+                tier: 0
+            }
+        },
+        info: {
+            yield: 8,
+            timeS: 5,
+            title: 'Copper wire'
         }
     },
 }

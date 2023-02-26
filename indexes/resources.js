@@ -144,32 +144,32 @@ let resources = {
         tag: 'metal'
     },
     //metal products
-    smallIronPlate:{
+    smallIronPlate: {
         unit: '',
         title: 'Small iron plate',
         tag: 'metalProducts'
     },
-    mediumIronPlate:{
+    mediumIronPlate: {
         unit: '',
         title: 'Medium iron plate',
         tag: 'metalProducts'
     },
-    largeIronPlate:{
+    largeIronPlate: {
         unit: '',
         title: 'Large iron plate',
         tag: 'metalProducts'
     },
-    smallCopperPlate:{
+    smallCopperPlate: {
         unit: '',
         title: 'Small copper plate',
         tag: 'metalProducts'
     },
-    mediumCopperPlate:{
+    mediumCopperPlate: {
         unit: '',
         title: 'Medium copper plate',
         tag: 'metalProducts'
     },
-    largeCopperPlate:{
+    largeCopperPlate: {
         unit: '',
         title: 'Large copper plate',
         tag: 'metalProducts'
@@ -183,7 +183,8 @@ let resources = {
     copperWire: {
         unit: '',
         title: 'Copper wire',
-        tag: 'metalProducts'
+        tag: 'metalProducts',
+        desc: 'A long piece of copper wire. Copper wire is useful for electronic machines and transferring power.'
     },
 
     //electronics

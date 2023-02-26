@@ -127,8 +127,15 @@ let data = {
         smeltAmount: 0.1
     },
     tools: {
+        //manual tools go hand, wood, stone, copper, iron
         pickaxe: [true, false, false, false, false],
         axe: [true, false, false, false, false],
-        hammer: [true, false, false, false, false]
+        hammer: [true, false, false, false, false],
+
+        //industrial tools are iron only
+        wireCutters: false,
+        wrench: false,
+        screwdriver: false,
+        file: false
     }
 }

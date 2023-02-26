@@ -227,7 +227,8 @@ button:disabled {
 a {
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
-    color: steelblue;
+    font-weight: 4px;
+    color: cyan;
 }
 
 #discordLinkDiv {

@@ -19,24 +19,14 @@
 
     <div id="resourcesTab" class="tabContent">
         <h3>Resources</h3>
-        <div class="mainDiv">
+        <div id="rocksDiv" class="mainDiv">
             <h4>Rock</h4>
             <button id="mineRock" class="rockButtons" onclick="mineRock()">Pick up some rocks<br><img
                     src="assets/pickaxe.png" width="32px" height="32px"></button>
             <button id="crushRock" class="rockButtons" onclick="crushRock()">Separate rocks into ores<br><img
                     src="assets/hammer.png" width="32px" height="32px"></button>
-
-            <button class="smeltButtons" id="smeltButton0" onclick="smeltOre('magnetite')">Smelt magnetite</button>
-            <button class="smeltButtons" id="smeltButton1" onclick="smeltOre('chalcopyrite')">Smelt
-                chalcopyrite</button>
-            <button class="smeltButtons" id="smeltButton2" onclick="smeltOre('pentlandite')">Smelt pentlandite</button>
-            <button class="smeltButtons" id="smeltButton3" onclick="smeltOre('ilmenite')">Smelt ilmenite</button>
-            <button class="smeltButtons" id="smeltButton4" onclick="smeltOre('patronite')">Smelt patronite</button>
-            <button class="smeltButtons" id="smeltButton5" onclick="smeltOre('chromite')">Smelt chromite</button>
-            <button class="smeltButtons" id="smeltButton6" onclick="smeltOre('cassiterite')">Smelt cassiterite</button>
-            <button class="smeltButtons" id="smeltButton7" onclick="smeltOre('bauxite')">Smelt bauxite</button>
-            <button class="smeltButtons" id="smeltButton8" onclick="smeltOre('galena')">Smelt galena</button>
-            <button class="smeltButtons" id="smeltButton9" onclick="smeltOre('acanthite')">Smelt acanthite</button>
+            <button id="smeltRock" class="rockButtons" onclick="openSmeltingMenu()">Smelt minerals into metals<br><img
+                src="assets/smelting.png" width="32px" height="32px"></button>
 
         </div>
         <div class="mainDiv">

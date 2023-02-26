@@ -138,3 +138,5 @@ const rocksIndex = {
         chanceVein: 0.4
     }
 }
+
+const minerals = ['magnetite', 'chalcopyrite', 'ilmenite', 'pentlandite', 'patronite', 'chromite', 'cassiterite', 'bauxite', 'galena', 'acanthite']
