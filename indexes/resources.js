@@ -177,7 +177,8 @@ let resources = {
     copperFoil: {
         unit: 'kg',
         title: 'Copper foil',
-        tag: 'metalProducts'
+        tag: 'metalProducts',
+        desc: 'A very thin sheet of copper metal, useful for electronics and other small applications.'
     },
     copperWire: {
         unit: '',

@@ -31,14 +31,14 @@ for (i in data.resources) {
 }
 
 //loads crafting recipes
-for (m in craftingRecipes) {
+for (const m in craftingRecipes) {
     //button for crafting recipe
     let currentCraftingRecipeButton = document.createElement("button");
     currentCraftingRecipeButton.className = "craftingRecipeButton";
     currentCraftingRecipeButton.id = m.toString() + "RecipeButton";
     document.getElementById("craftingDiv").appendChild(currentCraftingRecipeButton);
 
-    currentCraftingRecipeButtonID = currentCraftingRecipeButton.id;
+    let currentCraftingRecipeButtonID = currentCraftingRecipeButton.id;
     document.getElementById(currentCraftingRecipeButtonID).onclick = function() {
         openCraftingMenu(m.toString());
     }

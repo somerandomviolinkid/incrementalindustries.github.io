@@ -3,7 +3,7 @@ const craftingRecipes = {
         components: {
             component0: {
                 title: 'moltenIron',
-                amount: 48.75
+                amount: 12.5
             }
         },
         tools: {
@@ -22,7 +22,7 @@ const craftingRecipes = {
         components: {
             component0: {
                 title: 'moltenIron',
-                amount: 195
+                amount: 50
             }
         },
         tools: {
@@ -41,7 +41,7 @@ const craftingRecipes = {
         components: {
             component0: {
                 title: 'moltenIron',
-                amount: 780
+                amount: 200
             }
         },
         tools: {
@@ -60,7 +60,7 @@ const craftingRecipes = {
         components: {
             component0: {
                 title: 'moltenCopper',
-                amount: 48.75
+                amount: 14
             }
         },
         tools: {
@@ -79,7 +79,7 @@ const craftingRecipes = {
         components: {
             component0: {
                 title: 'moltenCopper',
-                amount: 195
+                amount: 56
             }
         },
         tools: {
@@ -98,7 +98,7 @@ const craftingRecipes = {
         components: {
             component0: {
                 title: 'moltenCopper',
-                amount: 780
+                amount: 224
             }
         },
         tools: {

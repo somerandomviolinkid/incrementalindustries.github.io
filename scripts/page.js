@@ -67,13 +67,23 @@ function openCraftingMenu(recipeName) {
     document.getElementById("craftingDiv").style.display = "none";
     document.getElementById("craftingMenuDiv").style.display = "block";
 
+    //loop through crafting components
     let componentsText = "";
     for (r in craftingRecipes[recipeName].components) {
-        componentsText += craftingRecipes[recipeName].components[r].amount.toString() + " " + resources[craftingRecipes[recipeName].components[r].title].title.toString() + "<br />";
+        componentsText += craftingRecipes[recipeName].components[r].amount.toString() + " " + resources[craftingRecipes[recipeName].components[r].title].unit.toString() + " "+ resources[craftingRecipes[recipeName].components[r].title].title.toString() + "<br />";
     }
 
+    //changes text and stuff inside crafting menu
     document.getElementById("craftingRecipeTitle").innerHTML = craftingRecipes[recipeName].info.title;
     document.getElementById("craftingRecipeImg").src = "assets/" + recipeName.toString() + ".png";
+
+    //check if there's a description
+    if (resources[recipeName].desc !== undefined) {
+        document.getElementById("craftingRecipeDesc").innerHTML = resources[recipeName].desc;
+    } else {
+        document.getElementById("craftingRecipeDesc").innerHTML = "";
+    }
+
     document.getElementById("craftingRecipeComponents").innerHTML = componentsText;
     document.getElementById("craftRecipeButton").innerHTML = "Craft " + craftingRecipes[recipeName].info.title;
 

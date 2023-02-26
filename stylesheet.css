@@ -92,7 +92,7 @@ h4 {
 #inventoryDiv {
     margin: auto;
     padding: 0;
-    width: 90%;
+    width: 98%;
     padding: 8px;
     background-color: aliceblue;
     overflow-y: scroll;
@@ -221,7 +221,7 @@ button:disabled {
     margin: auto;
     padding: 16px;
     text-align: center;  
-    width: fit-content;
+    width: 20%;
 }
 
 a {
@@ -232,4 +232,23 @@ a {
 
 #discordLinkDiv {
     text-align: center;
+}
+
+#craftingRecipeDesc {
+    font-size: 16px;
+    text-align: justify;
+}
+
+#craftRecipeButton {
+    font-size: 24px;
+    border-radius: 8px;
+    padding: 8px;
+    border-color: black;
+    border-style: solid;
+    background-color: gainsboro;
+}
+
+#craftRecipeButton:hover {
+    background-color: darkcyan;
+    transition: 0.5s;
 }
