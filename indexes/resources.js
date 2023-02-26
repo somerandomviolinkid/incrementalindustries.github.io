@@ -25,6 +25,11 @@ let resources = {
         title: 'Coal',
         tag: 'resource'
     },
+    charcoal: {
+        unit: 'kg',
+        title: 'Charcoal',
+        tag: 'resource'
+    },
     oil: {
         unit: 'L',
         title: 'Oil',
@@ -39,6 +44,12 @@ let resources = {
         unit: '',
         title: 'Stick',
         tag: 'resource'
+    },
+    rubber: {
+        unit: 'kg',
+        title: 'Rubber',
+        tag: 'resource',
+        desc: 'Rubber can be used for insulating wires and manufacturing tires.'
     },
 
     //minerals
@@ -185,6 +196,26 @@ let resources = {
         title: 'Copper wire',
         tag: 'metalProducts',
         desc: 'A long piece of copper wire. Copper wire is useful for electronic machines and transferring power.'
+    },
+    insulatedCopperWire: {
+        unit: '',
+        title: 'Insulated copper wire',
+        tag: 'metalProducts',
+        desc: 'A piece of insulated copper wire, now you can touch it without being electrocuted!'
+    },
+    basicMachineHull: {
+        unit: '',
+        singular: true,
+        title: 'Basic machine hull',
+        tag: 'metalProducts',
+        desc: 'A basic machine hull made from iron plates. Right now it doesn\'t do much but by adding wires it will be far more useful.'
+    },
+    basicMachineCase: {
+        unit: '',
+        singular: true,
+        title: 'Basic machine case',
+        tag: 'metalProducts',
+        desc: 'A basic machine case. Now that it has wires for electrical inputs, it can be used for basic machines.'
     },
 
     //electronics

@@ -1,3 +1,3 @@
 //config for game, change as needed
-let significantDigits = 3;
-let visualGainTimeout = 1500;
+let significantDigits = 2;
+let visualGainTimeout = 1250;

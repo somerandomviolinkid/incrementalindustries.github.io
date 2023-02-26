@@ -144,10 +144,22 @@ function openSmeltingMenu() {
         currentSmeltingButton.id = "smelt" + b + "Button";
         let currentSmeltingButtonID = currentSmeltingButton.id;
 
+        let yieldText = "";
+
+        for (let c in rocksIndex[b].smeltYields) {
+            yieldText += (rocksIndex[b].smeltYields[c].amount.toString() * data.stats.smeltAmount).toFixed(significantDigits) + " " + resources[rocksIndex[b].smeltYields[c].title].title + " ";
+        }
+
         document.getElementById("rocksDiv").appendChild(currentSmeltingButton);
-        document.getElementById(currentSmeltingButtonID).innerHTML = "Smelt " + b + "<br />Costs 0.1 " + b + " and 0.1 coal";
+        document.getElementById(currentSmeltingButtonID).innerHTML = "Smelt " + b + "<br />Yields " + yieldText + "<br />Costs 0.1 kg " + b + " and 0.1 kg coal";
         document.getElementById(currentSmeltingButtonID).onclick = function() {
             smeltOre(b.toString());
         }
     }
+}
+
+//highlights tab when something new happens
+function highlightTab(tabName) {
+    document.getElementById(tabName).style.color = "red";
+    setTimeout(defaultTabColor, 1500, tabName);
 }

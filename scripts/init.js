@@ -17,7 +17,12 @@ for (i in data.resources) {
 
     //text inside square
     let currentResourceCount = document.createElement("p");
-    currentResourceCount.innerHTML = resources[i].title + ": " + data.resources[i].amount.toFixed(significantDigits) + " " + resources[i].unit;
+    if (resources[i].singular === undefined) {
+        currentResourceCount.innerHTML = resources[i].title + ": " + data.resources[i].amount.toFixed(significantDigits) + " " + resources[i].unit;
+    } else {
+        currentResourceCount.innerHTML = resources[i].title + ": " + data.resources[i].amount.toFixed(0) + " " + resources[i].unit;
+    }
+    
     currentResourceCount.id = i + "Count";
     document.getElementById(currentInventorySquareID).appendChild(currentResourceCount);
 

@@ -183,10 +183,15 @@ button:disabled {
 }
 
 .smeltButtons {
-    font-size: 18px;
-    width: 75%;
+    font-size: 15px;
+    width: 98%;
     margin: auto;
     display: block;
+}
+
+#closeSmeltMenu {
+    width: 50%;
+    font-size: 18px;
 }
 
 #craftingDiv {

@@ -127,11 +127,23 @@ function smashWood() {
         updateResourceCount('stick');
 
         const visualGainData5 = [
-            { amountGained: z, resourceName: 'stick', isPositive: true }, 
-            { amountGained: 1, resourceName: 'wood', isPositive: false }, 
+            { amountGained: z, resourceName: 'stick', isPositive: true },
+            { amountGained: 1, resourceName: 'wood', isPositive: false },
             { amountGained: 0.25, resourceName: 'stone', isPositive: false }
         ]
 
         visualGains(visualGainData5);
+    }
+}
+
+function cookWood() {
+    if (data.resources.wood.amount >= data.stats.smeltAmount && data.resources.coal.amount >= data.stats.smeltAmount / 2) {
+        const z = randomNumber(0.5, 0.75);
+
+        const visualGainData6 = [
+            { amountGained: z, resourceName: 'charcoal', isPositive: true }
+        ]
+          
+        visualGains(visualGainData6);
     }
 }

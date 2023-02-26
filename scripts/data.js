@@ -16,6 +16,9 @@ let data = {
         coal: {
             amount: 0,
         },
+        charcoal: {
+            amount: 0,
+        },
         oil: {
             amount: 0,
         },
@@ -23,6 +26,9 @@ let data = {
             amount: 0,
         },
         stick: {
+            amount: 0
+        },
+        rubber: {
             amount: 0
         },
         //minerals
@@ -110,7 +116,16 @@ let data = {
             amount: 0
         },
         copperWire: {
-            amount: 0,
+            amount: 0
+        },
+        insulatedCopperWire: {
+            amount: 0
+        },
+        basicMachineHull: {
+            amount: 0
+        },
+        basicMachineCase: {
+            amount: 0
         },
         //electronics
         transistor: {
