@@ -1,6 +1,8 @@
 const startLoading = Date.now();
 loadData();
 
+document.getElementById("defaultTab").click();
+
 //looks at screen resolution and decides how big inventory div should be
 console.log("screen resolution is: " + screen.width + " x " + screen.height);
 document.getElementById("inventoryDiv").style.height = screen.height * (16 / 27) + "px";
@@ -83,6 +85,9 @@ for (let j = 1; j < data.tools.hammer.length; j++) {
         document.getElementById("hammerTier" + (j) + "Button").style.display = 'none';
     }
 }
+
+//starts saving process
+setInterval(saveData, 15000);
 
 //loading time counter
 const loadingTime = Date.now() - startLoading;

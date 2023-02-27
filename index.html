@@ -9,12 +9,26 @@
     <h1>Incremental industries</h1>
     <h2>By Bobby M, 2023</h2>
     <div class="tabBar">
+        <button id="tutorialTabLink" class="tabLink" onclick="openTab(event, 'tutorialTab')">Tutorial</button>
         <button id="defaultTab" class="tabLink" onclick="openTab(event, 'resourcesTab')">Resources</button>
         <button class="tabLink" onclick="openTab(event, 'inventoryTab')">Inventory</button>
         <button class="tabLink" onclick="openTab(event, 'craftingTab')">Crafting</button>
         <button class="tabLink" onclick="openTab(event, 'buildingsTab')">Buildings</button>
         <button class="tabLink" onclick="openTab(event, 'researchTab')">Research</button>
         <button class="tabLink" onclick="openTab(event, 'settingsTab')">Settings</button>
+    </div>
+
+    <div id="tutorialTab" class="tabContent">
+        <p>Welcome to incremental industries! First off you're going to want to mine some rock. Then, you can smash it
+            into many different ores and minerals. These will be helpful later on as they will be your main source of
+            metal in the early to mid game. After you get a decent amount of ores and coal, you can start smelting ores
+            into metal. This process takes a little bit, so once you have some resources you can craft better tools and
+            faster ways of smelting. Note: you can see everything you have in the inventory tab, and you can find
+            everything crafting related in the crafting tab. Once you have iron tools and a decent supply of metals, you
+            can start working your way toward your first machines. In order to make machines though, you'll need power
+            so make sure you have a coal or gas burner that can generate power. It is recommended to make an electric
+            drill, a wiremill, and a metal caster as ores, wires, and plates will continue to be important throughout
+            the game.</p>
     </div>
 
     <div id="resourcesTab" class="tabContent">
@@ -47,7 +61,7 @@
             <p id="choppingAmountCount"></p>
             <p id="crushingAmountCount"></p>
             <p id="smeltingAmountCount"></p>
-            <p id="resourcesAlert" class="notEnoughResourcesAlert"></p> 
+            <p id="resourcesAlert" class="notEnoughResourcesAlert"></p>
         </div>
     </div>
 
@@ -100,7 +114,7 @@
                 onclick="craftTool('hammer', 'crushAmount', 'stone', 4, 'hammerTier4Button')">Craft an iron
                 hammer<br><img src="assets/hammer.png"><br>Costs 0.5 kg molten iron and 1 stick</button>
 
-            <p id="toolCraftingAlert" class="notEnoughResourcesAlert"></p> 
+            <p id="toolCraftingAlert" class="notEnoughResourcesAlert"></p>
         </div>
         <div id="craftingDiv">
 
@@ -112,7 +126,7 @@
             <p id="craftingRecipeDesc"></p>
             <p id="craftingRecipeComponents"></p>
             <button id="craftRecipeButton" onclick="craftItem()"></button>
-            <p id="craftingAlert" class="notEnoughResourcesAlert"></p> 
+            <p id="craftingAlert" class="notEnoughResourcesAlert"></p>
         </div>
     </div>
 

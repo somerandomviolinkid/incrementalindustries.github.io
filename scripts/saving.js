@@ -8,7 +8,10 @@ function saveData() {
 function loadData() {
     //loads stuff from local storage
     const saveString = localStorage.getItem("saveKey");
-    if (!saveString) return;
+    if (!saveString) {
+        highlightTab("tutorialTabLink");
+        return;
+    }
     const save = JSON.parse(saveString);
     
     data = save.data;
@@ -43,5 +46,3 @@ async function importData() {
         loadData();
     } catch (err) { }
 }
-
-setInterval(saveData, 15000);

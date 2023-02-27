@@ -16,8 +16,7 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-document.getElementById("defaultTab").click();
-
+//disables buttons
 function disableButton(buttonName, cooldownMs) {
     function enableButton() {
         document.getElementById(buttonName).disabled = false;
@@ -26,6 +25,7 @@ function disableButton(buttonName, cooldownMs) {
     setTimeout(enableButton, cooldownMs);
 }
 
+//updates specific inventory square
 function updateResourceCount(resourceName) {
     document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(significantDigits) + resources[resourceName].unit;
 }
@@ -152,7 +152,7 @@ function openSmeltingMenu() {
         }
 
         document.getElementById("rocksDiv").appendChild(currentSmeltingButton);
-        document.getElementById(currentSmeltingButtonID).innerHTML = "Smelt " + b + "<br />Yields " + yieldText + "<br />Costs 0.1 kg " + b + " and 0.1 kg coal";
+        document.getElementById(currentSmeltingButtonID).innerHTML = "Smelt " + b + "<br />Yields: " + yieldText + "<br />Costs 0.1 kg " + b + " and 0.1 kg coal";
         document.getElementById(currentSmeltingButtonID).onclick = function () {
             smeltOre(b.toString());
         }
@@ -160,9 +160,13 @@ function openSmeltingMenu() {
 }
 
 //highlights tab when something new happens
+function defaultTabColor(tabName) {
+    document.getElementById(tabName).style.color = "black";
+}
+
 function highlightTab(tabName) {
     document.getElementById(tabName).style.color = "red";
-    setTimeout(defaultTabColor, 1500, tabName);
+    setTimeout(defaultTabColor, 2500, tabName);
 }
 
 function notEnoughResourcesAlert(buttonName) {

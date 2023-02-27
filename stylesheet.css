@@ -265,3 +265,11 @@ a {
     font-size: 24px;
     text-align: center;
 }
+
+#tutorialTabLink {
+    width: 10%;
+}
+
+.tabBar button.active {
+    background-color: slategray;
+  }
