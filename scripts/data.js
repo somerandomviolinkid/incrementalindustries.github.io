@@ -102,6 +102,15 @@ let data = {
         moltenLead: {
             amount: 0,
         },
+        moltenUranium: {
+            amount: 0,
+        },
+        moltenPlatinum: {
+            amount: 0,
+        },
+        moltenGold: {
+            amount: 0,
+        },
         //metal products
         smallIronPlate:{
             amount: 0
@@ -139,10 +148,13 @@ let data = {
         basicMachineCase: {
             amount: 0
         },
+        ironRod: {
+            amount: 0
+        },
         steelRod: {
             amount: 0
         },
-        sttelDrillBit: {
+        steelDrillBit: {
             amount: 0
         },
         //electronics

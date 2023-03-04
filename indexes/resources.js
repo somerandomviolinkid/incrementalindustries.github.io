@@ -169,6 +169,21 @@ let resources = {
         title: 'Molten lead',
         tag: 'metal'
     },
+    moltenUranium: {
+        unit: 'kg',
+        title: 'Molten uranium',
+        tag: 'metal'
+    },
+    moltenPlatinum: {
+        unit: 'kg',
+        title: 'Molten platinum',
+        tag: 'metal'
+    },
+    moltenGold: {
+        unit: 'kg',
+        title: 'Molten gold',
+        tag: 'metal'
+    },
     //metal products
     smallIronPlate: {
         unit: '',
@@ -245,13 +260,19 @@ let resources = {
         tag: 'machinePart',
         desc: 'A basic machine case. Now that it has wires for electrical inputs, it can be used for basic machines.'
     },
+    ironRod: {
+        unit: '',
+        singular: true,
+        title: 'Iron rod',
+        tag: 'machinePart',
+    },
     steelRod: {
         unit: '',
         singular: true,
         title: 'Steel rod',
         tag: 'machinePart',
     },
-    sttelDrillBit: {
+    steelDrillBit: {
         unit: '',
         singular: true,
         title: 'Steel drill bit',
