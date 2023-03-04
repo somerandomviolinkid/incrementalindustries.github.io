@@ -1,51 +1,4 @@
 const craftingRecipes = {
-    stoneFurnace: {
-        components: {
-            component0: {
-                title: 'stone',
-                amount: 5
-            }
-        },
-        info: {
-            yield: 1,
-            timeS: 4,
-            title: 'Stone furnace',
-        }
-    },
-    copperFurnace: {
-        components: {
-            component0: {
-                title: 'stoneFurnace',
-                amount: 1
-            },
-            component1: {
-                title: 'smallCopperPlate',
-                amount: 4
-            }
-        },
-        info: {
-            yield: 1,
-            timeS: 4,
-            title: 'Copper furnace',
-        }
-    },
-    ironFurnace: {
-        components: {
-            component0: {
-                title: 'copperFurnace',
-                amount: 1
-            },
-            component1: {
-                title: 'smallIronPlate',
-                amount: 4
-            }
-        },
-        info: {
-            yield: 1,
-            timeS: 4,
-            title: 'Stone furnace'
-        }
-    },
     smallIronPlate: {
         components: {
             component0: {
@@ -63,7 +16,8 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 2.5,
-            title: 'Small iron plate'
+            title: 'Small iron plate',
+            type: 'manual'
         }
     },
     mediumIronPlate: {
@@ -83,7 +37,8 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 10,
-            title: 'Medium iron plate'
+            title: 'Medium iron plate',
+            type: 'manual'
         }
     },
     largeIronPlate: {
@@ -103,7 +58,8 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 40,
-            title: 'Large iron plate'
+            title: 'Large iron plate',
+            type: 'manual'
         }
     },
     smallCopperPlate: {
@@ -123,7 +79,8 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 2.5,
-            title: 'Small iron plate'
+            title: 'Small copper plate',
+            type: 'manual'
         }
     },
     mediumCopperPlate: {
@@ -143,7 +100,8 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 10,
-            title: 'Medium copper plate'
+            title: 'Medium copper plate',
+            type: 'manual'
         }
     },
     largeCopperPlate: {
@@ -163,7 +121,8 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 40,
-            title: 'Large copper plate'
+            title: 'Large copper plate',
+            type: 'manual'
         }
     },
     copperFoil: {
@@ -183,7 +142,8 @@ const craftingRecipes = {
         info: {
             yield: 2,
             timeS: 5,
-            title: 'Copper foil'
+            title: 'Copper foil',
+            type: 'manual'
         }
     },
     copperWire: {
@@ -203,7 +163,8 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 2,
-            title: 'Copper wire'
+            title: 'Copper wire',
+            type: 'manual'
         }
     },
     insulatedCopperWire: {
@@ -227,7 +188,8 @@ const craftingRecipes = {
         info: {
             yield: 8,
             timeS: 5,
-            title: 'Insulated copper wire'
+            title: 'Insulated copper wire',
+            type: 'manual'
         }
     },
     basicMachineHull: {
@@ -247,7 +209,8 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 20,
-            title: 'Basic machine hull'
+            title: 'Basic machine hull',
+            type: 'manual'
         }
 
     },
@@ -272,11 +235,65 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 10,
-            title: 'Basic machine case'
+            title: 'Basic machine case',
+            type: 'manual'
+        }
+    },
+
+    //machines
+    stoneFurnace: {
+        components: {
+            component0: {
+                title: 'stone',
+                amount: 5
+            }
+        },
+        info: {
+            yield: 1,
+            timeS: 4,
+            title: 'Stone furnace',
+            type: 'machine'
+        }
+    },
+    copperFurnace: {
+        components: {
+            component0: {
+                type: 'machine',
+                title: 'stoneFurnace',
+                amount: 1
+            },
+            component1: {
+                title: 'smallCopperPlate',
+                amount: 4
+            }
+        },
+        info: {
+            yield: 1,
+            timeS: 4,
+            title: 'Copper furnace',
+            type: 'machine'
+        }
+    },
+    ironFurnace: {
+        components: {
+            component0: {
+                type: 'machine',
+                title: 'copperFurnace',
+                amount: 1
+            },
+            component1: {
+                title: 'smallIronPlate',
+                amount: 4
+            }
+        },
+        info: {
+            yield: 1,
+            timeS: 4,
+            title: 'Iron furnace',
+            type: 'machine'
         }
     }
 }
-
 
 const toolCraftingRecipes = {
     pickaxe: {

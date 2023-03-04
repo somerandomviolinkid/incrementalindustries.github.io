@@ -69,8 +69,15 @@ function openCraftingMenu(recipeName) {
 
     //loop through crafting components
     let componentsText = "";
+
     for (const r in craftingRecipes[recipeName].components) {
-        componentsText += craftingRecipes[recipeName].components[r].amount.toString() + " " + resources[craftingRecipes[recipeName].components[r].title].unit.toString() + " " + resources[craftingRecipes[recipeName].components[r].title].title.toString() + "<br />";
+        let t = craftingRecipes[recipeName].components[r].title;
+        if (craftingRecipes[recipeName].components[r].type === 'machine') {
+            componentsText += craftingRecipes[recipeName].components[r].amount.toString() + " " + machines[t].unit.toString() + " " + machines[t].title.toString() + "<br />";
+        } else {
+            componentsText += craftingRecipes[recipeName].components[r].amount.toString() + " " + resources[t].unit.toString() + " " + resources[t].title.toString() + "<br />";
+        }
+
     }
     for (const s in craftingRecipes[recipeName].tools) {
         componentsText += "Requires " + craftingRecipes[recipeName].tools[s].display + "<br />";
@@ -80,11 +87,20 @@ function openCraftingMenu(recipeName) {
     document.getElementById("craftingRecipeTitle").innerHTML = craftingRecipes[recipeName].info.title;
     document.getElementById("craftingRecipeImg").src = "assets/" + recipeName.toString() + ".png";
 
-    //check if there's a description
-    if (resources[recipeName].desc !== undefined) {
-        document.getElementById("craftingRecipeDesc").innerHTML = resources[recipeName].desc;
+    if (craftingRecipes[recipeName].info.type === 'machine') {
+        //check if there's a description
+        if (machines[recipeName].desc !== undefined) {
+            document.getElementById("craftingRecipeDesc").innerHTML = machines[recipeName].desc;
+        } else {
+            document.getElementById("craftingRecipeDesc").innerHTML = "";
+        }
     } else {
-        document.getElementById("craftingRecipeDesc").innerHTML = "";
+        //check if there's a description
+        if (resources[recipeName].desc !== undefined) {
+            document.getElementById("craftingRecipeDesc").innerHTML = resources[recipeName].desc;
+        } else {
+            document.getElementById("craftingRecipeDesc").innerHTML = "";
+        }
     }
 
     document.getElementById("craftingRecipeComponents").innerHTML = componentsText;

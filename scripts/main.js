@@ -33,6 +33,7 @@ for (let x in craftingRecipes[item].components) {
 
     if (resources[item].boost === true) {
         data.stats[resources[item].boostName] = resources[item].boostAmount;
+        updateInformationDiv();
     }
 
     return "craft succesful";

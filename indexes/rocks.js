@@ -126,6 +126,39 @@ const rocksIndex = {
             },
         }
     },
+    sperrylite: {
+        title: 'sperrylite',
+        chanceNormal: 0.002,
+        chanceVein: 0.05,
+        smeltYields: {
+            yield1: {
+                title: 'moltenPlatinum',
+                amount: 0.5
+            },
+        }
+    },
+    uraninite: {
+        title: 'uraninite',
+        chanceNormal: 0.001,
+        chanceVein: 0.04,
+        smeltYields: {
+            yield1: {
+                title: 'moltenUranium',
+                amount: 0.79
+            },
+        }
+    },
+    goldOre: {
+        title: 'goldOre',
+        chanceNormal: 0.003,
+        chanceVein: 0.08,
+        smeltYields: {
+            yield1: {
+                title: 'moltenGold',
+                amount: 0.9
+            },
+        }
+    },
     //others
     coal: {
         title: 'coal',
@@ -139,4 +172,18 @@ const rocksIndex = {
     }
 }
 
-const minerals = ['magnetite', 'chalcopyrite', 'ilmenite', 'pentlandite', 'patronite', 'chromite', 'cassiterite', 'bauxite', 'galena', 'acanthite']
+const minerals = [
+    'magnetite', 
+    'chalcopyrite', 
+    'ilmenite', 
+    'pentlandite', 
+    'patronite', 
+    'chromite', 
+    'cassiterite', 
+    'bauxite', 
+    'galena', 
+    'acanthite', 
+    'sperrylite', 
+    'uraninite', 
+    'goldOre'
+]

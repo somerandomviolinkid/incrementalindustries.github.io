@@ -24,7 +24,7 @@ for (const i in resources) {
     } else {
         currentResourceCount.innerHTML = resources[i].title + ": " + data.resources[i].amount.toFixed(0) + " " + resources[i].unit;
     }
-    
+
     currentResourceCount.id = i + "Count";
     currentResourceCount.className = "resourceCount";
     document.getElementById(currentInventorySquareID).appendChild(currentResourceCount);
@@ -38,8 +38,11 @@ for (const i in resources) {
 
 }
 
-//loads crafting recipes
+//loads most crafting recipes
 for (const m in craftingRecipes) {
+
+
+
     //button for crafting recipe
     let currentCraftingRecipeButton = document.createElement("button");
     currentCraftingRecipeButton.className = "craftingRecipeButton";
@@ -47,7 +50,7 @@ for (const m in craftingRecipes) {
     document.getElementById("craftingDiv").appendChild(currentCraftingRecipeButton);
 
     let currentCraftingRecipeButtonID = currentCraftingRecipeButton.id;
-    document.getElementById(currentCraftingRecipeButtonID).onclick = function() {
+    document.getElementById(currentCraftingRecipeButtonID).onclick = function () {
         openCraftingMenu(m.toString());
     }
 
@@ -62,6 +65,7 @@ for (const m in craftingRecipes) {
     document.getElementById(currentCraftingRecipeButtonID).appendChild(currentRecipeImage);
 
     console.log("Successfully loaded recipe for " + m);
+
 }
 
 //pickaxe crafting loading
