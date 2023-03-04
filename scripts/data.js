@@ -139,7 +139,7 @@ let data = {
         mineAmount: 1,
         chopAmount: 1,
         crushAmount: 1,
-        smeltAmount: 0.1
+        smeltAmount: 0
     },
     tools: {
         //manual tools go hand, wood, stone, copper, iron
@@ -152,5 +152,27 @@ let data = {
         wrench: false,
         screwdriver: false,
         file: false
+    },
+    machines: {
+        stoneFurnace: {
+            unlocked: false,
+            inInventory: false
+        },
+        copperFurnace: {
+            unlocked: false,
+            inInventory: false
+        },
+        ironFurnace: {
+            unlocked: false,
+            inInventory: false
+        },
+        wiremillLV: {
+            unlocked: false,
+            inInventory: false
+        },
+        drillLV: {
+            unlocked: false,
+            inInventory: false
+        }
     }
 }

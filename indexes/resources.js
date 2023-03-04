@@ -157,31 +157,37 @@ let resources = {
     //metal products
     smallIronPlate: {
         unit: '',
+        singular: true,
         title: 'Small iron plate',
         tag: 'metalProducts'
     },
     mediumIronPlate: {
         unit: '',
+        singular: true,
         title: 'Medium iron plate',
         tag: 'metalProducts'
     },
     largeIronPlate: {
         unit: '',
+        singular: true,
         title: 'Large iron plate',
         tag: 'metalProducts'
     },
     smallCopperPlate: {
         unit: '',
+        singular: true,
         title: 'Small copper plate',
         tag: 'metalProducts'
     },
     mediumCopperPlate: {
         unit: '',
+        singular: true,
         title: 'Medium copper plate',
         tag: 'metalProducts'
     },
     largeCopperPlate: {
         unit: '',
+        singular: true,
         title: 'Large copper plate',
         tag: 'metalProducts'
     },
@@ -217,16 +223,60 @@ let resources = {
         tag: 'metalProducts',
         desc: 'A basic machine case. Now that it has wires for electrical inputs, it can be used for basic machines.'
     },
-
+    //furnaces
+    stoneFurnace: {
+        unit:'',
+        singular: true,
+        title: 'Stone furnace',
+        tag: 'machines',
+        desc: 'A simple stone furnace. It doesn\'t smelt ore very quickly but later on you can upgrade it into more efficient furnaces.',
+        oneTime: true
+    },
+    copperFurnace: {
+        unit:'',
+        singular: true,
+        title: 'Copper furnace',
+        tag: 'machines',
+        desc: 'An improved version of the stone furnace. It smelts ore in larger quantites than the stone furnace.',
+        oneTime: true
+    },
+    ironFurnace: {
+        unit:'',
+        singular: true,
+        title: 'Iron furnace',
+        tag: 'machines',
+        desc: 'The best primitive smelting device. It both smelts ores faster and has a higher fuel efficiency.',
+        oneTime: true
+    },
+    //machines
+    wiremillLV: {
+        unit:'',
+        singular: true,
+        title: 'LV wiremill'
+    },
+    drillLV: {
+        unit:'',
+        singular: true,
+        title: 'LV drilling machine'
+    },
     //electronics
+    electricMoter: {
+        unit:'',
+        singular: true,
+        title: 'Electric moter',
+        tag:'electronic',
+        desc: 'A simple electric motor that can drive your industries.'
+    },
     transistor: {
         unit: '',
         title: 'Transistor',
+        singular: true,
         tag: 'electronic'
     },
     register8: {
         unit: '',
         title: '8-bit register',
+        singular: true,
         tag: 'electronic'
     },
 

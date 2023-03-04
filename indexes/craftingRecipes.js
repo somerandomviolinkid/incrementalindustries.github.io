@@ -1,4 +1,17 @@
 const craftingRecipes = {
+    stoneFurnace: {
+        components: {
+            component0: {
+                title: 'stone',
+                amount: 5
+            }
+        },
+        info: {
+            yield: 1,
+            timeS: 4,
+            title: 'Stone furnace'
+        }
+    },
     smallIronPlate: {
         components: {
             component0: {
@@ -156,7 +169,7 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 2,
-            title: 'Insulated copper wire'
+            title: 'Copper wire'
         }
     },
     insulatedCopperWire: {

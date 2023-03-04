@@ -157,3 +157,4 @@ function cookWood() {
         notEnoughResourcesAlert('resourcesAlert');
     }
 }
+

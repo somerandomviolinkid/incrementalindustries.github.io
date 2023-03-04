@@ -1,10 +1,7 @@
-//item crafting
+//manual item crafting
 function craftItem(item) {
-    let allowCraft = false;
-
-    for (let x in craftingRecipes[item].components) {
+for (let x in craftingRecipes[item].components) {
         if (data.resources[craftingRecipes[item].components[x].title] >= craftingRecipes[item].components[x].amount) {
-            allowCraft = true;
             console.log(x + " success");
         } else {
             notEnoughResourcesAlert('craftingAlert');
@@ -14,7 +11,6 @@ function craftItem(item) {
 
     for (let y in craftingRecipes[item].tools) {
         if (data.tools[craftingRecipes[item].tools[y].title][craftingRecipes[item].tools[y].tier]) {
-            allowCraft = true;
             console.log(x + " success");
         } else {
             notEnoughResourcesAlert('craftingAlert');
@@ -29,6 +25,11 @@ function craftItem(item) {
     setTimeout(data.resources[item].amount += craftingRecipes[item].info.yield, craftingRecipes[item].info.timeS * 1000);
 
     closeCraftingMenu();
+
+    if (resources[item].oneTime === true) {
+        document.getElementById(item.toString() + "RecipeButton").style.display = "none";
+        data.resources[item].crafted = true;
+    }
 
     return "craft succesful";
 }
