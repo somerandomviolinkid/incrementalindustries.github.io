@@ -163,12 +163,14 @@ function openSmeltingMenu() {
 
         let yieldText = "";
 
+        let z = data.stats.smeltAmount;
+
         for (let c in rocksIndex[b].smeltYields) {
-            yieldText += (rocksIndex[b].smeltYields[c].amount.toString() * data.stats.smeltAmount).toFixed(significantDigits) + " " + resources[rocksIndex[b].smeltYields[c].title].title + " ";
+            yieldText += (rocksIndex[b].smeltYields[c].amount.toString() * z).toFixed(significantDigits) + " " + resources[rocksIndex[b].smeltYields[c].title].title + " ";
         }
 
         document.getElementById("rocksDiv").appendChild(currentSmeltingButton);
-        document.getElementById(currentSmeltingButtonID).innerHTML = "Smelt " + b + "<br />Yields: " + yieldText + "<br />Costs 0.1 kg " + b + " and 0.1 kg coal";
+        document.getElementById(currentSmeltingButtonID).innerHTML = "Smelt " + b + "<br />Yields: " + yieldText + "<br />Costs " + z + " kg " + b + " and " + z + " kg coal";
         document.getElementById(currentSmeltingButtonID).onclick = function () {
             smeltOre(b.toString());
         }

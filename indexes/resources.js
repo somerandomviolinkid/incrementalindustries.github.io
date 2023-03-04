@@ -42,6 +42,7 @@ let resources = {
     },
     stick: {
         unit: '',
+        singular: true,
         title: 'Stick',
         tag: 'resource'
     },

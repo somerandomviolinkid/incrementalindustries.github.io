@@ -38,33 +38,36 @@ for (const i in resources) {
 
 }
 
-//loads most crafting recipes
+//loads crafting recipes
 for (const m in craftingRecipes) {
 
+    if (craftingRecipes[m].info.type === 'machine' && data.resources[m.toString()].crafted === true && machines[m].oneTime === true) {
+        console.log("Player has already crafted " + m);
+    } else {
 
+        //button for crafting recipe
+        let currentCraftingRecipeButton = document.createElement("button");
+        currentCraftingRecipeButton.className = "craftingRecipeButton";
+        currentCraftingRecipeButton.id = m.toString() + "RecipeButton";
+        document.getElementById("craftingDiv").appendChild(currentCraftingRecipeButton);
 
-    //button for crafting recipe
-    let currentCraftingRecipeButton = document.createElement("button");
-    currentCraftingRecipeButton.className = "craftingRecipeButton";
-    currentCraftingRecipeButton.id = m.toString() + "RecipeButton";
-    document.getElementById("craftingDiv").appendChild(currentCraftingRecipeButton);
+        let currentCraftingRecipeButtonID = currentCraftingRecipeButton.id;
+        document.getElementById(currentCraftingRecipeButtonID).onclick = function () {
+            openCraftingMenu(m.toString());
+        }
 
-    let currentCraftingRecipeButtonID = currentCraftingRecipeButton.id;
-    document.getElementById(currentCraftingRecipeButtonID).onclick = function () {
-        openCraftingMenu(m.toString());
+        //crafting recipe title text
+        let currentCraftingRecipeTitle = document.createElement("p");
+        currentCraftingRecipeTitle.innerHTML = craftingRecipes[m].info.title;
+        document.getElementById(currentCraftingRecipeButtonID).appendChild(currentCraftingRecipeTitle);
+
+        //image
+        let currentRecipeImage = document.createElement("img");
+        currentRecipeImage.src = "assets/" + m.toString() + ".png";
+        document.getElementById(currentCraftingRecipeButtonID).appendChild(currentRecipeImage);
+
+        console.log("Successfully loaded recipe for " + m);
     }
-
-    //crafting recipe title text
-    let currentCraftingRecipeTitle = document.createElement("p");
-    currentCraftingRecipeTitle.innerHTML = craftingRecipes[m].info.title;
-    document.getElementById(currentCraftingRecipeButtonID).appendChild(currentCraftingRecipeTitle);
-
-    //image
-    let currentRecipeImage = document.createElement("img");
-    currentRecipeImage.src = "assets/" + m.toString() + ".png";
-    document.getElementById(currentCraftingRecipeButtonID).appendChild(currentRecipeImage);
-
-    console.log("Successfully loaded recipe for " + m);
 
 }
 
