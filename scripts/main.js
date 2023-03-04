@@ -31,5 +31,9 @@ for (let x in craftingRecipes[item].components) {
         data.resources[item].crafted = true;
     }
 
+    if (resources[item].boost === true) {
+        data.stats[resources[item].boostName] = resources[item].boostAmount;
+    }
+
     return "craft succesful";
 }

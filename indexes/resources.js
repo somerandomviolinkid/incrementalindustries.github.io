@@ -103,6 +103,21 @@ let resources = {
         title: 'Acanthite',
         tag: 'mineral'
     },
+    uraninite: {
+        unit: 'kg',
+        title: 'Uraninite',
+        tag: 'mineral'
+    },
+    sperrylite: {
+        unit: 'kg',
+        title: 'Sperrylite',
+        tag: 'mineral'
+    },
+    goldOre: {
+        unit: 'kg',
+        title: 'Gold ore',
+        tag: 'mineral'
+    },
     //metals
     moltenIron: {
         unit: 'kg',
@@ -209,63 +224,47 @@ let resources = {
         tag: 'metalProducts',
         desc: 'A piece of insulated copper wire, now you can touch it without being electrocuted!'
     },
+    magneticIronRod: {
+        unit: '',
+        singular: true,
+        title: 'Magnetic iron rod',
+        tag: 'metalProducts'
+    },
+    //machine parts
     basicMachineHull: {
         unit: '',
         singular: true,
         title: 'Basic machine hull',
-        tag: 'metalProducts',
+        tag: 'machinePart',
         desc: 'A basic machine hull made from iron plates. Right now it doesn\'t do much but by adding wires it will be far more useful.'
     },
     basicMachineCase: {
         unit: '',
         singular: true,
         title: 'Basic machine case',
-        tag: 'metalProducts',
+        tag: 'machinePart',
         desc: 'A basic machine case. Now that it has wires for electrical inputs, it can be used for basic machines.'
     },
-    //furnaces
-    stoneFurnace: {
-        unit:'',
+    steelRod: {
+        unit: '',
         singular: true,
-        title: 'Stone furnace',
-        tag: 'machines',
-        desc: 'A simple stone furnace. It doesn\'t smelt ore very quickly but later on you can upgrade it into more efficient furnaces.',
-        oneTime: true
+        title: 'Steel rod',
+        tag: 'machinePart',
     },
-    copperFurnace: {
-        unit:'',
+    sttelDrillBit: {
+        unit: '',
         singular: true,
-        title: 'Copper furnace',
-        tag: 'machines',
-        desc: 'An improved version of the stone furnace. It smelts ore in larger quantites than the stone furnace.',
-        oneTime: true
-    },
-    ironFurnace: {
-        unit:'',
-        singular: true,
-        title: 'Iron furnace',
-        tag: 'machines',
-        desc: 'The best primitive smelting device. It both smelts ores faster and has a higher fuel efficiency.',
-        oneTime: true
-    },
-    //machines
-    wiremillLV: {
-        unit:'',
-        singular: true,
-        title: 'LV wiremill'
-    },
-    drillLV: {
-        unit:'',
-        singular: true,
-        title: 'LV drilling machine'
+        title: 'Steel drill bit',
+        tag: 'machinePart',
+        desc: 'A steel drill bit that can cut into hard rock to extract valuable ores.'
     },
     //electronics
-    electricMoter: {
-        unit:'',
+    electricMotor: {
+        unit: '',
         singular: true,
-        title: 'Electric moter',
-        tag:'electronic',
-        desc: 'A simple electric motor that can drive your industries.'
+        title: 'Electric motor',
+        tag: 'electronic',
+        desc: 'A simple electric motor made with a small magnet that can drives basic machinery.'
     },
     transistor: {
         unit: '',
@@ -279,5 +278,18 @@ let resources = {
         singular: true,
         tag: 'electronic'
     },
-
+    //chemicals
+    sulfuricAcid: {
+        unit: 'L',
+        title: 'Sulfuric acid',
+        tag: 'chemical',
+        desc: 'A strong but easily manufactured industrial acid that has many different useful applications.',
+        chemicalFormula: 'H2SO4'
+    },
+    titaniumTetrachloride: {
+        unit: 'L',
+        title: 'Titanium tetrachloride',
+        tag: 'chemical',
+        chemicalFormula: 'TiCl4'
+    }
 }

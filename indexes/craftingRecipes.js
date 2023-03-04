@@ -9,6 +9,40 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 4,
+            title: 'Stone furnace',
+        }
+    },
+    copperFurnace: {
+        components: {
+            component0: {
+                title: 'stoneFurnace',
+                amount: 1
+            },
+            component1: {
+                title: 'smallCopperPlate',
+                amount: 4
+            }
+        },
+        info: {
+            yield: 1,
+            timeS: 4,
+            title: 'Copper furnace',
+        }
+    },
+    ironFurnace: {
+        components: {
+            component0: {
+                title: 'copperFurnace',
+                amount: 1
+            },
+            component1: {
+                title: 'smallIronPlate',
+                amount: 4
+            }
+        },
+        info: {
+            yield: 1,
+            timeS: 4,
             title: 'Stone furnace'
         }
     },

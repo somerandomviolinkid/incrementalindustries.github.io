@@ -62,6 +62,15 @@ let data = {
         acanthite: {
             amount: 0
         },
+        uraninite: {
+            amount: 0
+        },
+        sperrylite: {
+            amount: 0
+        },
+        goldOre: {
+            amount: 0
+        },
         //metals
         moltenIron: {
             amount: 0,
@@ -121,10 +130,19 @@ let data = {
         insulatedCopperWire: {
             amount: 0
         },
+        magneticIronRod: {
+            amount: 0
+        },
         basicMachineHull: {
             amount: 0
         },
         basicMachineCase: {
+            amount: 0
+        },
+        steelRod: {
+            amount: 0
+        },
+        sttelDrillBit: {
             amount: 0
         },
         //electronics
@@ -133,6 +151,37 @@ let data = {
         },
         register8: {
             amount: 0,
+        },
+        electricMotor: {
+            amount: 0
+        },
+        //chemicals
+        sulfuricAcid: {
+            amount: 0
+        },
+        titaniumTetrachloride: {
+            amount: 0
+        },
+        //machines
+        stoneFurnace: {
+            crafted: false,
+            inInventory: false
+        },
+        copperFurnace: {
+            crafted: false,
+            inInventory: false
+        },
+        ironFurnace: {
+            crafted: false,
+            inInventory: false
+        },
+        wiremillLV: {
+            crafted: false,
+            inInventory: false
+        },
+        drillLV: {
+            crafted: false,
+            inInventory: false
         }
     },
     stats: {
@@ -153,26 +202,4 @@ let data = {
         screwdriver: false,
         file: false
     },
-    machines: {
-        stoneFurnace: {
-            unlocked: false,
-            inInventory: false
-        },
-        copperFurnace: {
-            unlocked: false,
-            inInventory: false
-        },
-        ironFurnace: {
-            unlocked: false,
-            inInventory: false
-        },
-        wiremillLV: {
-            unlocked: false,
-            inInventory: false
-        },
-        drillLV: {
-            unlocked: false,
-            inInventory: false
-        }
-    }
 }

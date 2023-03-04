@@ -98,6 +98,12 @@ h4 {
     overflow-y: scroll;
 }
 
+.resourceCount {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 img {
     margin: auto;
     width: 128px;

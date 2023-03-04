@@ -8,7 +8,7 @@ console.log("screen resolution is: " + screen.width + " x " + screen.height);
 document.getElementById("inventoryDiv").style.height = screen.height * (16 / 27) + "px";
 
 //loads inventory
-for (i in data.resources) {
+for (const i in resources) {
     //inventory square
     let currentInventorySquare = document.createElement("div");
     currentInventorySquare.className = "inventorySquare";
@@ -26,6 +26,7 @@ for (i in data.resources) {
     }
     
     currentResourceCount.id = i + "Count";
+    currentResourceCount.className = "resourceCount";
     document.getElementById(currentInventorySquareID).appendChild(currentResourceCount);
 
     //image
