@@ -171,6 +171,7 @@ button:disabled {
     width: 25%;
     float: left;
     padding: 8px;
+    height: fit-content;
 }
 
 .visualGain {

@@ -43,7 +43,7 @@
                     src="assets/smelting.png" width="32px" height="32px"></button>
 
         </div>
-        <div class="mainDiv">
+        <div id="woodDiv" class="mainDiv">
             <h4>Wood</h4>
             <button id="chopWood" class="rockButtons" onclick="chopWood()">Chop wood<br><img src="assets/axe.png"
                     width="32px" height="32px"></button>
@@ -61,6 +61,7 @@
             <p id="choppingAmountCount"></p>
             <p id="crushingAmountCount"></p>
             <p id="smeltingAmountCount"></p>
+            <button id="switchFuelsButton" onclick="switchFuelSource()"></button>
             <p id="resourcesAlert" class="notEnoughResourcesAlert"></p>
         </div>
     </div>

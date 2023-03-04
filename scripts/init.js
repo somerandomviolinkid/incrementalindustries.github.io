@@ -7,6 +7,11 @@ document.getElementById("defaultTab").click();
 console.log("screen resolution is: " + screen.width + " x " + screen.height);
 document.getElementById("inventoryDiv").style.height = screen.height * (16 / 27) + "px";
 
+const rockHeight = document.getElementById("woodDiv").offsetHeight;
+console.log(rockHeight);
+document.getElementById("rocksDiv").style.height = rockHeight.toString() + "px";
+document.getElementById("woodDiv").style.height = rockHeight.toString() + "px";
+
 //loads inventory
 for (const i in resources) {
     //inventory square
@@ -85,7 +90,6 @@ for (let i = 1; i < data.tools.axe.length; i++) {
         document.getElementById("axeTier" + (i) + "Button").style.display = 'none';
     }
 }
-
 
 //hammer crafting loading
 for (let j = 1; j < data.tools.hammer.length; j++) {

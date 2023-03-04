@@ -131,6 +131,8 @@ function closeSmeltingMenu() {
     document.getElementById("mineRock").style.display = "block";
     document.getElementById("crushRock").style.display = "block";
     document.getElementById("smeltRock").style.display = "block";
+
+    document.getElementById("rocksDiv").style.overflowY = "auto";
 }
 
 function openSmeltingMenu() {
@@ -138,6 +140,8 @@ function openSmeltingMenu() {
     document.getElementById("mineRock").style.display = "none";
     document.getElementById("crushRock").style.display = "none";
     document.getElementById("smeltRock").style.display = "none";
+
+    document.getElementById("rocksDiv").style.overflowY = "scroll";
 
     let closeSmeltingMenuButton = document.createElement("button");
 
@@ -194,3 +198,16 @@ function notEnoughResourcesAlert(buttonName) {
     }
     setTimeout(hideAlert, 1250);
 }
+
+function switchFuelSource() {
+
+    if (fuelSource === 'coal') {
+        fuelSource = 'charcoal';
+    } else {
+        fuelSource = 'coal';
+    }
+
+    document.getElementById("switchFuelsButton").innerHTML = "Current fuel source: " + fuelSource;
+}
+
+document.getElementById("switchFuelsButton").innerHTML = "Current fuel source: " + fuelSource;
