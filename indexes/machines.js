@@ -19,7 +19,7 @@ const machines = {
         oneTime: true,
         boost: true,
         boostName: 'smeltAmount',
-        boostAmount: 2
+        boostAmount: 1
     },
     copperFurnace: {
         unit: '',
@@ -30,7 +30,7 @@ const machines = {
         oneTime: true,
         boost: true,
         boostName: 'smeltAmount',
-        boostAmount: 3
+        boostAmount: 2
     },
     ironFurnace: {
         unit: '',

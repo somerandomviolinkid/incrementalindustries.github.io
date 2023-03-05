@@ -3,6 +3,7 @@ function saveData() {
     window.localStorage.setItem("saveKey", JSON.stringify({
         data
     }))
+    console.log("saved data");
 }
 
 function loadData() {

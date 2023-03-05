@@ -1,1 +1,1 @@
-const toolsBoost = [1, 1.5, 2.5, 4, 5]
+const toolsBoost = [1, 1.5, 2.5, 4, 5, 10]

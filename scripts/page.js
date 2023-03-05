@@ -59,8 +59,6 @@ function updateInformationDiv() {
     document.getElementById("smeltingAmountCount").innerHTML = "Smelting amount: " + data.stats.smeltAmount;
 }
 
-updateInformationDiv();
-
 //opens crafting menu for crafts
 function openCraftingMenu(recipeName) {
 

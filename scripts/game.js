@@ -11,7 +11,7 @@ function craftTool(toolName, boostName, toolMaterial, toolTier, buttonName, next
 
         document.getElementById(buttonName).style.display = 'none';
 
-        if (nextButtonName !== null) {
+        if (nextButtonName !== undefined) {
             document.getElementById(nextButtonName).style.display = 'block';
         }
 
@@ -41,7 +41,7 @@ function crushRock() {
 
         for (i in rocksIndex) {
 
-            const z = randomNumber(rocksIndex[i].chanceNormal * 0.75, rocksIndex[i].chanceNormal * 1.25);
+            const z = randomNumber(rocksIndex[i].chanceNormal * 0.75 * data.stats.crushAmount, rocksIndex[i].chanceNormal * 1.25 * data.stats.crushAmount);
             const x = rocksIndex[i].title.toString();
 
             data.resources[x].amount += z;

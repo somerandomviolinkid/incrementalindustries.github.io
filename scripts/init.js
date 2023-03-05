@@ -3,15 +3,6 @@ loadData();
 
 document.getElementById("defaultTab").click();
 
-//looks at screen resolution and decides how big inventory div should be
-console.log("screen resolution is: " + screen.width + " x " + screen.height);
-document.getElementById("inventoryDiv").style.height = screen.height * (16 / 27) + "px";
-
-const rockHeight = document.getElementById("woodDiv").offsetHeight;
-console.log(rockHeight);
-document.getElementById("rocksDiv").style.height = rockHeight.toString() + "px";
-document.getElementById("woodDiv").style.height = rockHeight.toString() + "px";
-
 //loads inventory
 for (const i in resources) {
     //inventory square
@@ -102,6 +93,16 @@ for (let j = 1; j < data.tools.hammer.length; j++) {
 setInterval(saveData, 15000);
 
 updateInformationDiv();
+
+//looks at screen resolution and decides how big inventory div should be
+console.log("screen resolution is: " + screen.width + " x " + screen.height);
+document.getElementById("inventoryDiv").style.height = screen.height * (16 / 27) + "px";
+
+const rockHeight = document.getElementById("woodDiv").offsetHeight;
+console.log(rockHeight);
+document.getElementById("rocksDiv").style.height = rockHeight.toString() + "px";
+document.getElementById("woodDiv").style.height = rockHeight.toString() + "px";
+document.getElementById("toolCraftingDiv").style.height = (rockHeight.toString() * 1.1) + "px";
 
 //loading time counter
 const loadingTime = Date.now() - startLoading;

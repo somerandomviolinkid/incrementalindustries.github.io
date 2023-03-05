@@ -264,10 +264,10 @@ let data = {
         smeltAmount: 0
     },
     tools: {
-        //manual tools go hand, wood, stone, copper, iron
-        pickaxe: [true, false, false, false, false],
-        axe: [true, false, false, false, false],
-        hammer: [true, false, false, false, false],
+        //manual tools go hand, wood, stone, copper, iron, lead
+        pickaxe: [true, false, false, false, false, false],
+        axe: [true, false, false, false, false, false],
+        hammer: [true, false, false, false, false, false],
 
         castingBasin: false,
 
