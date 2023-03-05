@@ -164,8 +164,22 @@ function cookWood() {
 
         visualGains(visualGainData6);
         disableButton('cookWood', 1000);
+
+        updateResourceCount(fuelSource);
+        updateResourceCount('charcoal');
     } else {
         notEnoughResourcesAlert('resourcesAlert');
     }
+}
+
+function getWater() {
+    const z = randomNumber(1, 2);
+    data.resources.water.amount += z;
+
+    const visualGainData7 = [{ amountGained: z, resourceName: 'water', isPositive: true }]
+    visualGains(visualGainData7);
+
+    disableButton('getWater', 1000);
+    updateResourceCount('water');
 }
 

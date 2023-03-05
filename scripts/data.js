@@ -17,6 +17,14 @@ let data = {
             amount: 0,
             crafted: false,
         },
+        clay: {
+            amount: 0,
+            crafted: false,
+        },
+        water: {
+            amount: 0,
+            crafted: false,
+        },
         coal: {
             amount: 0,
             crafted: false,
@@ -38,6 +46,11 @@ let data = {
             crafted: false,
         },
         rubber: {
+            amount: 0,
+            crafted: false,
+        },
+        //primitive
+        blastBricks: {
             amount: 0,
             crafted: false,
         },
@@ -144,6 +157,27 @@ let data = {
             crafted: false,
         },
         moltenGold: {
+            amount: 0,
+            crafted: false,
+        },
+        //advanced metals
+        moltenSteel: {
+            amount: 0,
+            crafted: false,
+        },
+        moltenCupronickel: {
+            amount: 0,
+            crafted: false,
+        },
+        moltenKanthal: {
+            amount: 0,
+            crafted: false,
+        },
+        moltenNichrome: {
+            amount: 0,
+            crafted: false,
+        },
+        moltenStainlessSteel: {
             amount: 0,
             crafted: false,
         },

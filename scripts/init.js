@@ -100,9 +100,11 @@ document.getElementById("inventoryDiv").style.height = screen.height * (16 / 27)
 
 const rockHeight = document.getElementById("woodDiv").offsetHeight;
 console.log(rockHeight);
+
 document.getElementById("rocksDiv").style.height = rockHeight.toString() + "px";
 document.getElementById("woodDiv").style.height = rockHeight.toString() + "px";
 document.getElementById("toolCraftingDiv").style.height = (rockHeight.toString() * 1.1) + "px";
+document.getElementById("craftingDiv").style.height = (rockHeight.toString() * 1.1) + "px";
 
 //loading time counter
 const loadingTime = Date.now() - startLoading;

@@ -20,6 +20,16 @@ let resources = {
         title: 'Sand',
         tag: 'resource'
     },
+    clay: {
+        unit: 'kg',
+        title: 'Clay',
+        tag: 'resource'
+    },
+    water: {
+        unit: 'L',
+        title: 'Water',
+        tag: 'resource'
+    },
     coal: {
         unit: 'kg',
         title: 'Coal',
@@ -51,6 +61,14 @@ let resources = {
         title: 'Rubber',
         tag: 'resource',
         desc: 'Rubber can be used for insulating wires and manufacturing tires.'
+    },
+    //primitive thingies
+    blastBricks: {
+        unit: '',
+        singular: true,
+        title: 'Blast bricks',
+        tag: 'primitive',
+        desc: 'Some blast bricks that can be used to construct the blast furnace which is the main way of making early game steel.'
     },
 
     //minerals
@@ -119,7 +137,8 @@ let resources = {
         title: 'Gold ore',
         tag: 'mineral'
     },
-    //metals
+
+    //elemental metals
     moltenIron: {
         unit: 'kg',
         title: 'Molten iron',
@@ -183,6 +202,32 @@ let resources = {
     moltenGold: {
         unit: 'kg',
         title: 'Molten gold',
+        tag: 'metal'
+    },
+    //advanced metals
+    moltenSteel: {
+        unit: 'kg',
+        title: 'Molten steel',
+        tag: 'metal'
+    },
+    moltenCupronickel: {
+        unit: 'kg',
+        title: 'Molten cupronickel',
+        tag: 'metal'
+    },
+    moltenKanthal: {
+        unit: 'kg',
+        title: 'Molten kanthal',
+        tag: 'metal'
+    },
+    moltenNichrome: {
+        unit: 'kg',
+        title: 'Molten nichrome',
+        tag: 'metal'
+    },
+    moltenStainlessSteel: {
+        unit: 'kg',
+        title: 'Molten stainless steel',
         tag: 'metal'
     },
     //metal products

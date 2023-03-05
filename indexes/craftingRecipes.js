@@ -302,6 +302,28 @@ const craftingRecipes = {
             title: 'Iron furnace',
             type: 'machine'
         }
+    },
+    blastBricks: {
+        components: {
+            component0: {
+                title: 'clay',
+                amount: 5
+            },
+            component1: {
+                title: 'sand',
+                amount: 5
+            },
+            component2: {
+                title: 'water',
+                amount: 2
+            }
+        },
+        info: {
+            yield: 2,
+            timeS: 1,
+            title: 'Blast bricks',
+            type: 'machine'
+        }
     }
 }
 

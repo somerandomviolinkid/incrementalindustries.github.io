@@ -169,6 +169,11 @@ const rocksIndex = {
         title: 'sand',
         chanceNormal: 0.08,
         chanceVein: 0.4
+    },
+    clay: {
+        title: 'clay',
+        chanceNormal: 0.075,
+        chanceVein: 0.32
     }
 }
 
