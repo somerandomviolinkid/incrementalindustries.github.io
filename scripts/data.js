@@ -148,27 +148,27 @@ let data = {
             crafted: false,
         },
         //metal products
-        smallIronPlate:{
+        smallIronPlate: {
             amount: 0,
             crafted: false,
         },
-        mediumIronPlate:{
+        mediumIronPlate: {
             amount: 0,
             crafted: false,
         },
-        largeIronPlate:{
+        largeIronPlate: {
             amount: 0,
             crafted: false,
         },
-        smallCopperPlate:{
+        smallCopperPlate: {
             amount: 0,
             crafted: false,
         },
-        mediumCopperPlate:{
+        mediumCopperPlate: {
             amount: 0,
             crafted: false,
         },
-        largeCopperPlate:{
+        largeCopperPlate: {
             amount: 0,
             crafted: false,
         },
@@ -269,7 +269,7 @@ let data = {
         axe: [true, false, false, false, false, false],
         hammer: [true, false, false, false, false, false],
 
-        castingBasin: false,
+        castingBasin: [false, false],
 
         //industrial tools are iron only
         wireCutters: false,

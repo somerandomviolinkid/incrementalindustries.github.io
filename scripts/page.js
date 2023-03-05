@@ -27,7 +27,12 @@ function disableButton(buttonName, cooldownMs) {
 
 //updates specific inventory square
 function updateResourceCount(resourceName) {
-    document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(significantDigits) + resources[resourceName].unit;
+    if (resources[resourceName].singular === true) {
+        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(0) + resources[resourceName].unit;
+    } else {
+        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(significantDigits) + resources[resourceName].unit;
+    }
+    
 }
 
 //amount gained then resource name

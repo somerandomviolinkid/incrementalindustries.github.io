@@ -11,8 +11,8 @@ function craftItem(item) {
 
     if (craftingRecipes[item].tools !== undefined) {
         for (let y in craftingRecipes[item].tools) {
-            if (data.tools[craftingRecipes[item].tools[y].title][craftingRecipes[item].tools[y].tier]) {
-                console.log(x + " success");
+            if (data.tools[craftingRecipes[item].tools[y].title]) {
+                console.log(y + " success");
             } else {
                 notEnoughResourcesAlert('craftingAlert');
                 return;
@@ -25,8 +25,13 @@ function craftItem(item) {
     }
 
     setTimeout(data.resources[item].amount += craftingRecipes[item].info.yield, craftingRecipes[item].info.timeS * 1000);
+    updateResourceCount(item);
 
     closeCraftingMenu();
+
+    if (craftingRecipes[item].info.type === 'manual') {
+        return;
+    }
 
     if (machines[item].oneTime !== undefined) {
         if (machines[item].oneTime === true) {
@@ -44,6 +49,7 @@ function craftItem(item) {
 
     if (machines[item].toolUnlock !== undefined) {
         data.tools[machines[item].toolName] = true;
+        console.log(data.tools[machines[item].toolName]);
     }
 
     return "craft succesful";
