@@ -101,6 +101,8 @@ for (let j = 1; j < data.tools.hammer.length; j++) {
 //starts saving process
 setInterval(saveData, 15000);
 
+updateInformationDiv();
+
 //loading time counter
 const loadingTime = Date.now() - startLoading;
 console.log("Loaded successfully in " + loadingTime + " ms.")

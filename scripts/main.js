@@ -42,5 +42,9 @@ function craftItem(item) {
         }
     }
 
+    if (machines[item].toolUnlock !== undefined) {
+        data.tools[machines[item].toolName] = true;
+    }
+
     return "craft succesful";
 }

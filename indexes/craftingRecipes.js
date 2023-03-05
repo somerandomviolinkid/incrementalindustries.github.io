@@ -8,9 +8,8 @@ const craftingRecipes = {
         },
         tools: {
             tool1: {
-                title: 'hammer',
-                display: 'iron hammer or above',
-                tier: 4
+                title: 'castingBasin',
+                display: 'casting basin',
             }
         },
         info: {
@@ -29,9 +28,8 @@ const craftingRecipes = {
         },
         tools: {
             tool1: {
-                title: 'hammer',
-                display: 'iron hammer or above',
-                tier: 4
+                title: 'castingBasin',
+                display: 'casting basin',
             }
         },
         info: {
@@ -50,9 +48,8 @@ const craftingRecipes = {
         },
         tools: {
             tool1: {
-                title: 'hammer',
-                display: 'iron hammer or above',
-                tier: 4
+                title: 'castingBasin',
+                display: 'casting basin',
             }
         },
         info: {
@@ -71,9 +68,8 @@ const craftingRecipes = {
         },
         tools: {
             tool1: {
-                title: 'hammer',
-                display: 'iron hammer or above',
-                tier: 4
+                title: 'castingBasin',
+                display: 'casting basin',
             }
         },
         info: {
@@ -92,9 +88,8 @@ const craftingRecipes = {
         },
         tools: {
             tool1: {
-                title: 'hammer',
-                display: 'iron hammer or above',
-                tier: 4
+                title: 'castingBasin',
+                display: 'casting basin',
             }
         },
         info: {
@@ -113,9 +108,8 @@ const craftingRecipes = {
         },
         tools: {
             tool1: {
-                title: 'hammer',
-                display: 'iron hammer or above',
-                tier: 4
+                title: 'castingBasin',
+                display: 'casting basin',
             }
         },
         info: {
@@ -240,8 +234,8 @@ const craftingRecipes = {
         }
     },
 
-    //machines
-    stoneFurnace: {
+    //primitive machines
+    castingBasin: {
         components: {
             component0: {
                 title: 'stone',
@@ -251,6 +245,20 @@ const craftingRecipes = {
         info: {
             yield: 1,
             timeS: 4,
+            title: 'Casting basin',
+            type: 'machine'
+        }
+    },
+    stoneFurnace: {
+        components: {
+            component0: {
+                title: 'stone',
+                amount: 8
+            }
+        },
+        info: {
+            yield: 1,
+            timeS: 10,
             title: 'Stone furnace',
             type: 'machine'
         }
@@ -269,7 +277,7 @@ const craftingRecipes = {
         },
         info: {
             yield: 1,
-            timeS: 4,
+            timeS: 10,
             title: 'Copper furnace',
             type: 'machine'
         }
@@ -288,7 +296,7 @@ const craftingRecipes = {
         },
         info: {
             yield: 1,
-            timeS: 4,
+            timeS: 10,
             title: 'Iron furnace',
             type: 'machine'
         }

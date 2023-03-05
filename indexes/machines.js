@@ -1,5 +1,15 @@
 const machines = {    
     //furnaces
+    castingBasin: {
+        unit: '',
+        singular: true,
+        title: 'Casting basin',
+        tag: 'machines',
+        desc: 'A stone basin where you can pour molten metal to create metal plates, which will be useful for many different applications.',
+        oneTime: true,
+        toolUnlock: true,
+        toolName: 'castingBasin'
+    },
     stoneFurnace: {
         unit: '',
         singular: true,
@@ -9,7 +19,7 @@ const machines = {
         oneTime: true,
         boost: true,
         boostName: 'smeltAmount',
-        boostAmount: 0.2
+        boostAmount: 2
     },
     copperFurnace: {
         unit: '',
@@ -20,7 +30,7 @@ const machines = {
         oneTime: true,
         boost: true,
         boostName: 'smeltAmount',
-        boostAmount: 0.4
+        boostAmount: 3
     },
     ironFurnace: {
         unit: '',
@@ -31,7 +41,7 @@ const machines = {
         oneTime: true,
         boost: true,
         boostName: 'smeltAmount',
-        boostAmount: 1
+        boostAmount: 5
     },
     //machines
     wiremillLV: {

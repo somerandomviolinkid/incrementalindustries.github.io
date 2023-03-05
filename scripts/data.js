@@ -230,7 +230,11 @@ let data = {
             amount: 0,
             crafted: false,
         },
-        //machines
+        //primitive machines
+        castingBasin: {
+            crafted: false,
+            inInventory: false
+        },
         stoneFurnace: {
             crafted: false,
             inInventory: false
@@ -243,6 +247,7 @@ let data = {
             crafted: false,
             inInventory: false
         },
+        //actual machines
         wiremillLV: {
             crafted: false,
             inInventory: false
@@ -263,6 +268,8 @@ let data = {
         pickaxe: [true, false, false, false, false],
         axe: [true, false, false, false, false],
         hammer: [true, false, false, false, false],
+
+        castingBasin: false,
 
         //industrial tools are iron only
         wireCutters: false,

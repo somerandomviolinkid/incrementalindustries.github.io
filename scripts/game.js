@@ -110,7 +110,7 @@ function smeltOre(oreType) {
 
         const smeltButtons = document.getElementsByClassName("smeltButtons");
         for (let l = 0; l < smeltButtons.length; l++) {
-            disableButton(smeltButtons[l].id, 5000);
+            disableButton(smeltButtons[l].id, 1000);
         }
     } else {
         notEnoughResourcesAlert('resourcesAlert');
@@ -135,7 +135,7 @@ function smashWood() {
         data.resources.wood.amount -= 1;
         data.resources.stone.amount -= 0.25;
 
-        disableButton('smashWood', 2500);
+        disableButton('smashWood', 1000);
 
         updateResourceCount('wood');
         updateResourceCount('stone');
@@ -163,7 +163,7 @@ function cookWood() {
         ]
 
         visualGains(visualGainData6);
-        disableButton('cookWood', 5000);
+        disableButton('cookWood', 1000);
     } else {
         notEnoughResourcesAlert('resourcesAlert');
     }
