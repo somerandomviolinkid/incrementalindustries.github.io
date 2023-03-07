@@ -4,8 +4,8 @@ function randomNumber(min, max) {
 }
 
 //new resource creation stuff
-let newResources = resources;
-let newData = data;
+let newResources = [];
+let newData = [];
 
 class newResource {
     constructor(unit, title, singular, tag, desc) {
@@ -33,20 +33,20 @@ function createNewResource() {
     let desc = document.getElementById("descInput").value;
 
     resourceName = new newResource(unit, title, singular, tag, desc);
-    newResources.append(newResource);
+    resourceName = Object.entries(resourceName);
+    newResources.push(resourceName);
     console.log(newResources);
 
     resourceName = new newResourceData();
-    newData.append(resourceName);
+    resourceName = Object.entries(resourceName);
+    newData.push(resourceName);
     console.log(newData);
 }
     
 function exportNewResources() {
     //exports json file that you can copy paste into
-    resources.append(newResources);
-    data.resources.append(newData);
 
-    const json0 = resources;
+    const json0 = newResources;
     const fileName0 = "newResources.json";
     const a0 = document.createElement('a');
     const type0 = fileName0.split(".").pop();
@@ -54,7 +54,7 @@ function exportNewResources() {
     a0.download = fileName0;
     a0.click();
 
-    const json1 = data;
+    const json1 = newData;
     const fileName1 = "newData.json";
     const a1 = document.createElement('a');
     const type1 = fileName1.split(".").pop();
