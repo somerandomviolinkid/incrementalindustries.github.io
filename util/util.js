@@ -4,8 +4,8 @@ function randomNumber(min, max) {
 }
 
 //new resource creation stuff
-let newResources = [];
-let newData = [];
+let newResources = {};
+let newData = {};
 
 class newResource {
     constructor(unit, title, singular, tag, desc) {
@@ -32,33 +32,31 @@ function createNewResource() {
     let tag = document.getElementById("tagInput").value;
     let desc = document.getElementById("descInput").value;
 
-    resourceName = new newResource(unit, title, singular, tag, desc);
-    resourceName = Object.entries(resourceName);
-    newResources.push(resourceName);
-    console.log(newResources);
+    const resourceResources = new newResource(unit, title, singular, tag, desc);
+    newResources = Object.assign({resourceName: resourceResources});
+    console.log(resourceResources);
 
-    resourceName = new newResourceData();
-    resourceName = Object.entries(resourceName);
-    newData.push(resourceName);
-    console.log(newData);
+    const resourceData = new newResourceData();
+    newData = Object.assign({resourceName: resourceData});
+    console.log(resourceData);
 }
     
 function exportNewResources() {
     //exports json file that you can copy paste into
 
-    const json0 = newResources;
+    resources = Object.assign(newResources);
     const fileName0 = "newResources.json";
     const a0 = document.createElement('a');
     const type0 = fileName0.split(".").pop();
-    a0.href = URL.createObjectURL(new Blob([json0], { type: `text/${type0 === "txt" ? "plain" : type0}` }));
+    a0.href = URL.createObjectURL(new Blob([resources], { type: `text/${type0 === "txt" ? "plain" : type0}` }));
     a0.download = fileName0;
     a0.click();
 
-    const json1 = newData;
+    data.resources = Object.assign(newData);
     const fileName1 = "newData.json";
     const a1 = document.createElement('a');
     const type1 = fileName1.split(".").pop();
-    a1.href = URL.createObjectURL(new Blob([json1], { type: `text/${type1 === "txt" ? "plain" : type1}` }));
+    a1.href = URL.createObjectURL(new Blob([data.resources], { type: `text/${type1 === "txt" ? "plain" : type1}` }));
     a1.download = fileName1;
     a1.click();
 

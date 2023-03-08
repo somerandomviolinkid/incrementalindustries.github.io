@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Modding and dev tools</title>
+    <link href="stylesheet.css" rel="stylesheet">
+</header>
+
+<body>
+
+    <a href="index.html" target="_blank">Main game</a><br>
+    <button onclick="exportNewResources()">Export data and resources file</button><br>
+
+    <form>
+        <label for="resourceNameInput">Resource name:</label>
+        <input id="resourceNameInput" type="text"><br>
+
+        <label for="unitNameInput">Resource unit:</label>
+        <input id="unitNameInput" type="text"><br>
+
+        <label for="titleInput">Resource title:</label>
+        <input id="titleInput" type="text"><br>
+
+        <label for="singularInput">Resource singular?:</label>
+        <input id="singularInput" type="text"><br>
+
+        <label for="tagInput">Resource tag:</label>
+        <input id="tagInput" type="text"><br>
+
+        <label for="descInput">Resource description:</label>
+        <input id="descInput" type="text"><br>
+
+        <input type="reset" value="Reset">
+    </form>
+
+    <button onclick="createNewResource()">Create new resource</button><br>
+</body>
+
+<script src="scripts/data.js"></script>
+<script src="indexes/resources.js"></script>
+
+<script src="util/util.js"></script>
+
+</html>
