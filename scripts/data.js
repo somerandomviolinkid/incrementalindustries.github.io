@@ -10,7 +10,7 @@ let data = {
             crafted: false,
         },
         stone: {
-            amount: 0,
+            amount: 10,
             crafted: false,
         },
         sand: {
@@ -298,10 +298,10 @@ let data = {
         smeltAmount: 0
     },
     tools: {
-        //manual tools go hand, wood, stone, copper, iron, lead
-        pickaxe: [true, false, false, false, false, false],
-        axe: [true, false, false, false, false, false],
-        hammer: [true, false, false, false, false, false],
+        //manual tools go hand, wood, stone, tin, copper, iron, lead, steel
+        pickaxe: [true, false, false, false, false, false, false, false],
+        axe: [true, false, false, false, false, false, false, false],
+        hammer: [true, false, false, false, false, false, false, false],
 
         castingBasin: [false, false],
 

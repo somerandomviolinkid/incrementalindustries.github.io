@@ -32,7 +32,7 @@ function updateResourceCount(resourceName) {
     } else {
         document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(significantDigits) + resources[resourceName].unit;
     }
-    
+
 }
 
 //amount gained then resource name
@@ -214,3 +214,16 @@ function switchFuelSource() {
 }
 
 document.getElementById("switchFuelsButton").innerHTML = "Current fuel source: " + fuelSource;
+
+let width = 0;
+
+function updateProgressBar(totalTime) {
+    document.getElementById("progressBar").style.width = width + '%';
+    width += (1 / (totalTime * 10 / (framerateMS)));
+}
+
+function resetProgressBar() {
+    document.getElementById("progressBar").style.width = 0 + '%';
+    document.getElementById("progressBar").style.visibility = "hidden";
+    width = 0;
+}

@@ -1,5 +1,8 @@
 //manual item crafting
 function craftItem(item) {
+
+    const craftingTime = craftingRecipes[item].info.timeS * 1000;
+
     for (let x in craftingRecipes[item].components) {
         if (data.resources[craftingRecipes[item].components[x].title].amount >= craftingRecipes[item].components[x].amount) {
             console.log(x + " success");
@@ -24,15 +27,31 @@ function craftItem(item) {
         data.resources[craftingRecipes[item].components[x].title].amount -= craftingRecipes[item].components[x].amount;
     }
 
-    setTimeout(data.resources[item].amount += craftingRecipes[item].info.yield, craftingRecipes[item].info.timeS * 1000);
-    updateResourceCount(item);
+    //disables buttons
+    disableButton('craftingMenuClose', craftingTime);
+    disableButton('craftRecipeButton', craftingTime);
 
-    closeCraftingMenu();
+    //progress bar
+    document.getElementById("progressBarContainer").style.visibility = "visible";
+    let progressBarInterval = setInterval(updateProgressBar, framerateMS, craftingRecipes[item].info.timeS);
+
+    //yields items
+    function yieldItems() {
+        data.resources[item].amount += craftingRecipes[item].info.yield;
+        clearInterval(progressBarInterval);
+        resetProgressBar();
+    }
+
+    setTimeout(yieldItems, craftingTime);
+    if (resources[item] !== undefined) {
+        updateResourceCount(item);
+    }
 
     if (craftingRecipes[item].info.type === 'manual') {
         return;
     }
 
+    //checks if the crafting recipe can only be crafting once
     if (machines[item].oneTime !== undefined) {
         if (machines[item].oneTime === true) {
             document.getElementById(item.toString() + "RecipeButton").style.display = "none";
@@ -40,6 +59,7 @@ function craftItem(item) {
         }
     }
 
+    //furnace boost
     if (machines[item].boost !== undefined) {
         if (machines[item].boost === true) {
             data.stats[machines[item].boostName] = machines[item].boostAmount;
@@ -47,6 +67,7 @@ function craftItem(item) {
         }
     }
 
+    //tool unlock
     if (machines[item].toolUnlock !== undefined) {
         data.tools[machines[item].toolName] = true;
         console.log(data.tools[machines[item].toolName]);

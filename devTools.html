@@ -8,7 +8,7 @@
 <body>
 
     <a href="index.html" target="_blank">Main game</a><br>
-    <button onclick="exportNewResources()">Export data and resources file</button><br>
+    <button class="devButton" onclick="exportNewResources()">Export data and resources file</button><br>
 
     <form>
         <label for="resourceNameInput">Resource name:</label>
@@ -21,7 +21,7 @@
         <input id="titleInput" type="text"><br>
 
         <label for="singularInput">Resource singular?:</label>
-        <input id="singularInput" type="text"><br>
+        <input id="singularInput" type="checkbox"><br>
 
         <label for="tagInput">Resource tag:</label>
         <input id="tagInput" type="text"><br>
@@ -29,15 +29,15 @@
         <label for="descInput">Resource description:</label>
         <input id="descInput" type="text"><br>
 
-        <input type="reset" value="Reset">
+        <input id="resetFormButton" type="reset" value="Reset">
     </form>
 
-    <button onclick="createNewResource()">Create new resource</button><br>
+    <button class="devButton" onclick="createNewResource()">Create new resource</button><br>
 </body>
 
 <script src="scripts/data.js"></script>
 <script src="indexes/resources.js"></script>
 
-<script src="util/util.js"></script>
+<script src="scripts/devTools.js"></script>
 
 </html>

@@ -205,7 +205,7 @@ button:disabled {
 }
 
 #craftingDiv {
-    width:auto;
+    width: auto;
     overflow-y: scroll;
     padding: 4px;
     margin: 0;
@@ -233,10 +233,10 @@ button:disabled {
     border-width: 4px;
     border-color: black;
     border-style: solid;
-    background-color:dodgerblue;
+    background-color: dodgerblue;
     margin: auto;
     padding: 16px;
-    text-align: center;  
+    text-align: center;
     width: 20%;
 }
 
@@ -283,4 +283,61 @@ a {
 
 .tabBar button.active {
     background-color: slategray;
-  }
+}
+
+form {
+    border-radius: 8px;
+    border-color: black;
+    border-style: solid;
+    padding: 8px;
+    width: 25%;
+    background-color: slategray;
+    overflow: hidden;
+}
+
+label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+}
+
+input {
+    float: right;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    height: 20px;
+}
+
+#resetFormButton {
+    margin: auto;
+    cursor: pointer;
+}
+
+#resetFormButton:hover {
+    background-color: darkgrey;
+    transition: 0.5s;
+}
+
+.devButton {
+    padding: 4px;
+    border-radius: 4px;
+    border-color: black;
+    border-style: solid;
+    font-size: 18px;
+}
+
+#progressBarContainer {
+    visibility: hidden;
+    padding: 0;
+    margin: auto;
+    width: 75%;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    background-color: white;
+}
+
+#progressBar {
+    background-color: green;
+    height: 32px;
+}
