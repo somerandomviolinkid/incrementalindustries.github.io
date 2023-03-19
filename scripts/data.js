@@ -315,6 +315,14 @@ let data = {
         primitiveBlastFurnace: {
             unlocked: true,
             built: false
+        },
+        electricBlastFurnace: {
+            unlocked: true,
+            built: false
+        },
+        cleanroom: {
+            unlocked: true,
+            built: false
         }
     }
 }

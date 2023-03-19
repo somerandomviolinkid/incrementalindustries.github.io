@@ -39,7 +39,6 @@ for (const m in craftingRecipes) {
 
     if (craftingRecipes[m].info.type === 'machine' && data.resources[m.toString()].crafted === true && machines[m].oneTime === true) {
         console.log("Player has already crafted " + m);
-        return;
     } else {
 
         //button for crafting recipe
@@ -68,21 +67,64 @@ for (const m in craftingRecipes) {
 
 }
 
-//loads building building
+//loads building div
 for (const v in buildings) {
 
-    //building construction button
     if (data.buildings[v].unlocked === true && data.buildings[v].built === false) {
+        //building construction button
+
+        //button itself
         let currentBuildingConstructionButton = document.createElement("button");
-        currentBuildingConstructionButton.className = "buildingConstructionButton";
+        currentBuildingConstructionButton.className = "buildingButton";
+        currentBuildingConstructionButton.id = v.toString() + "BuildingButton";
+        document.getElementById("mainBuildingDiv").appendChild(currentBuildingConstructionButton);
 
-    }
+        let currentBuildingConstructionButtonID = currentBuildingConstructionButton.id;
+        document.getElementById(currentBuildingConstructionButtonID).onclick = function () {
+            openBuildingCraftingMenu(v.toString());
+        }
 
-    //building opening buttons
-    if (data.buildings[v].built === true) {
+        //text
+        let currentBuildingText = document.createElement("p");
+        currentBuildingText.innerHTML = "Build " + buildings[v].info.title.toString();
+        document.getElementById(currentBuildingConstructionButtonID).appendChild(currentBuildingText);
+
+        //image
+        let currentBuildingImage = document.createElement("img");
+        currentBuildingImage.className = "buildingImg";
+        currentBuildingImage.src = "assets/" + v.toString() + ".png";
+        document.getElementById(currentBuildingConstructionButtonID).appendChild(currentBuildingImage);
+
+        console.log("Successfully loaded building data for " + v);
+
+    } else if (data.buildings[v].built === true) {
+        //building opening buttons 
+
+        //button itself
         let currentBuildingOpeningButton = document.createElement("button");
-        currentBuildingOpeningButton.className = "buildingOpeningButton";
+        currentBuildingOpeningButton.className = "buildingButton";
+        currentBuildingOpeningButton.id = v.toString() + "BuildingButton";
+        document.getElementById("mainBuildingDiv").appendChild(currentBuildingOpeningButton);
+
+        let currentBuildingOpeningButtonID = currentBuildingOpeningButton.id;
+        document.getElementById(currentBuildingOpeningButtonID).onclick = function () {
+            openBuildingInteriorMenu(v.toString());
+        }
+
+        //text
+        let currentBuildingText = document.createElement("p");
+        currentBuildingText.innerHTML = "Open " + buildings[v].info.title.toString();
+        document.getElementById(currentBuildingOpeningButtonID).appendChild(currentBuildingText);
+
+        //image
+        let currentBuildingImage = document.createElement("img");
+        currentBuildingImage.className = "buildingImg";
+        currentBuildingImage.src = "assets/" + v.toString() + ".png";
+        document.getElementById(currentBuildingOpeningButtonID).appendChild(currentBuildingImage);
+
+        console.log("Successfully loaded building data for " + v);
     }
+
 }
 
 
