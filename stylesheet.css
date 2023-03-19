@@ -365,3 +365,23 @@ input {
     width: 256px;
     height: 256px;
 }
+
+.sortButton {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    height: 64px;
+    width: 96px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: cornflowerblue;
+    display: inline;
+    float: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+#inventoryHeader {
+    float: left;
+    display: inline;
+}

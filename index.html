@@ -78,7 +78,15 @@
     </div>
 
     <div id="inventoryTab" class="tabContent">
-        <h3>Inventory</h3>
+        <div id="inventoryHeadDiv">
+            <h3 id="inventoryHeader">Inventory</h3>
+
+            <button class="sortButton" onclick="showAllInventory()">Show all</button>
+            <button class="sortButton" onclick="sortInventory('resource')">Resources</button>
+            <button class="sortButton" onclick="sortInventory('electronic')">Electronics</button>
+            <button class="sortButton" onclick="sortInventory('mineral')">Minerals</button>
+            <button class="sortButton" onclick="sortInventory('metal')">Metals</button>
+        </div>
         <div id="inventoryDiv"></div>
     </div>
 

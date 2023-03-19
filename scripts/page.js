@@ -230,3 +230,23 @@ function resetProgressBar() {
     document.getElementById(progressBarID).style.visibility = "hidden";
     width = 0;
 }
+
+//sorts inventory
+function sortInventory(tag) {
+    const elements = document.getElementsByClassName("inventorySquare");
+    for (let a = 0; a < elements.length; a++) {
+        document.getElementById(elements[a].id).style.display = "none";
+    }
+    const sortedElements = document.getElementsByClassName(tag);
+    for (let b = 0; b < sortedElements.length; b++) {
+        document.getElementById(sortedElements[b].id).style.display = "inline";
+    }
+}
+
+//unsorts inventory i guess
+function showAllInventory() {
+    const elements = document.getElementsByClassName("inventorySquare");
+    for (let a = 0; a < elements.length; a++) {
+        document.getElementById(elements[a].id).style.display = "inline";
+    }
+}

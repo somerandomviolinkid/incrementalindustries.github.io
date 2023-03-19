@@ -8,6 +8,7 @@ for (const i in resources) {
     //inventory square
     let currentInventorySquare = document.createElement("div");
     currentInventorySquare.className = "inventorySquare";
+    currentInventorySquare.className += " " + resources[i].tag;
     currentInventorySquare.id = "inventorySquare" + i;
     document.getElementById("inventoryDiv").appendChild(currentInventorySquare);
 
