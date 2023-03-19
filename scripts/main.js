@@ -1,3 +1,4 @@
+//all of the stuff that is used throughout the entire game??
 //manual item crafting
 function craftItem(item) {
 
@@ -30,16 +31,20 @@ function craftItem(item) {
     //disables buttons
     disableButton('craftingMenuClose', craftingTime);
     disableButton('craftRecipeButton', craftingTime);
+    const tabLinks = document.getElementsByClassName("tabLink");
+    for (let l = 0; l < tabLinks.length; l++) {
+        disableButton(tabLinks[l].id, craftingTime);
+    }
 
     //progress bar
     document.getElementById("progressBarContainer").style.visibility = "visible";
-    let progressBarInterval = setInterval(updateProgressBar, framerateMS, craftingRecipes[item].info.timeS);
+    let progressBarInterval = setInterval(updateProgressBar, framerateMS, craftingRecipes[item].info.timeS, 'craftingProgressBar');
 
     //yields items
     function yieldItems() {
         data.resources[item].amount += craftingRecipes[item].info.yield;
         clearInterval(progressBarInterval);
-        resetProgressBar();
+        resetProgressBar('craftingProgressBar');
     }
 
     setTimeout(yieldItems, craftingTime);
@@ -74,4 +79,11 @@ function craftItem(item) {
     }
 
     return "craft succesful";
+}
+
+//building building function
+function buildBuilding(building) {
+
+    const buildingTime = buildings[building].info.timeS * 1000;
+
 }

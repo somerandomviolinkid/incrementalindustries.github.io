@@ -5,7 +5,9 @@ const buildings = {
                 title: 'blastBricks',
                 amount: 10
             }
+        },
+        info:{
+            timeS: 30,
         }
-        
     }
 }

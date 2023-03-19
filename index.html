@@ -11,11 +11,11 @@
     <div class="tabBar">
         <button id="tutorialTabLink" class="tabLink" onclick="openTab(event, 'tutorialTab')">Tutorial</button>
         <button id="defaultTab" class="tabLink" onclick="openTab(event, 'resourcesTab')">Resources</button>
-        <button class="tabLink" onclick="openTab(event, 'inventoryTab')">Inventory</button>
-        <button class="tabLink" onclick="openTab(event, 'craftingTab')">Crafting</button>
-        <button class="tabLink" onclick="openTab(event, 'buildingsTab')">Buildings</button>
-        <button class="tabLink" onclick="openTab(event, 'researchTab')">Research</button>
-        <button class="tabLink" onclick="openTab(event, 'settingsTab')">Settings</button>
+        <button id="tablink1" class="tabLink" onclick="openTab(event, 'inventoryTab')">Inventory</button>
+        <button id="tablink2" class="tabLink" onclick="openTab(event, 'craftingTab')">Crafting</button>
+        <button id="tablink3" class="tabLink" onclick="openTab(event, 'buildingsTab')">Buildings</button>
+        <button id="tablink4" class="tabLink" onclick="openTab(event, 'researchTab')">Research</button>
+        <button id="tablink5" class="tabLink" onclick="openTab(event, 'settingsTab')">Settings</button>
     </div>
 
     <div id="tutorialTab" class="tabContent">
@@ -163,8 +163,8 @@
             <p id="craftingRecipeDesc"></p>
             <p id="craftingRecipeComponents"></p>
             <button id="craftRecipeButton" onclick="craftItem()"></button>
-            <div id="progressBarContainer">
-                <div id="progressBar"></div>
+            <div id="craftingProgressBarContainer" class="progressBarContainer">
+                <div id="craftingProgressBar" class="progressBar"></div>
             </div>
             <p id="craftingAlert" class="notEnoughResourcesAlert"></p>
         </div>
@@ -172,6 +172,9 @@
 
     <div id="buildingsTab" class="tabContent">
         <h3>Buildings</h3>
+        <div id="mainBuildingDiv"></div>
+        <div id="buildingMenuDiv"></div>
+        <div id="buildingBuildingDiv"></div>
     </div>
 
     <div id="researchTab" class="tabContent">
@@ -202,6 +205,7 @@
 <script src="indexes/tools.js"></script>
 <script src="indexes/resources.js"></script>
 <script src="indexes/machines.js"></script>
+<script src="indexes/buildings.js"></script>
 <script src="indexes/craftingRecipes.js"></script>
 
 <script src="scripts/data.js"></script>

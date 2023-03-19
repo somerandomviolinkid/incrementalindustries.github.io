@@ -322,7 +322,7 @@ const craftingRecipes = {
             yield: 2,
             timeS: 1,
             title: 'Blast bricks',
-            type: 'machine'
+            type: 'manual'
         }
     }
 }

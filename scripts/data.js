@@ -311,4 +311,10 @@ let data = {
         screwdriver: false,
         file: false
     },
+    buildings:{
+        primitiveBlastFurnace: {
+            unlocked: true,
+            built: false
+        }
+    }
 }

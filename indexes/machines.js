@@ -43,7 +43,7 @@ const machines = {
         boostName: 'smeltAmount',
         boostAmount: 5
     },
-    //machines
+    //actual machines
     wiremillLV: {
         unit: '',
         singular: true,

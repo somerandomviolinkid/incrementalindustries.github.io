@@ -30,7 +30,7 @@ for (const i in resources) {
     currentResourceImage.src = "assets/" + i.toString() + ".png";
     document.getElementById(currentInventorySquareID).appendChild(currentResourceImage);
 
-    console.log("Successfully loaded data for " + i)
+    console.log("Successfully loaded data for " + i);
 
 }
 
@@ -39,6 +39,7 @@ for (const m in craftingRecipes) {
 
     if (craftingRecipes[m].info.type === 'machine' && data.resources[m.toString()].crafted === true && machines[m].oneTime === true) {
         console.log("Player has already crafted " + m);
+        return;
     } else {
 
         //button for crafting recipe
@@ -66,6 +67,24 @@ for (const m in craftingRecipes) {
     }
 
 }
+
+//loads building building
+for (const v in buildings) {
+
+    //building construction button
+    if (data.buildings[v].unlocked === true && data.buildings[v].built === false) {
+        let currentBuildingConstructionButton = document.createElement("button");
+        currentBuildingConstructionButton.className = "buildingConstructionButton";
+
+    }
+
+    //building opening buttons
+    if (data.buildings[v].built === true) {
+        let currentBuildingOpeningButton = document.createElement("button");
+        currentBuildingOpeningButton.className = "buildingOpeningButton";
+    }
+}
+
 
 //pickaxe crafting loading
 for (let h = 1; h < data.tools.pickaxe.length; h++) {

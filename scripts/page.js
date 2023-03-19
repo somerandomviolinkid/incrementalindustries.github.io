@@ -122,6 +122,7 @@ function closeCraftingMenu() {
 
 closeCraftingMenu();
 
+//opens smelting menu
 function closeSmeltingMenu() {
 
     document.getElementById("closeSmeltMenu").remove();
@@ -138,6 +139,7 @@ function closeSmeltingMenu() {
     document.getElementById("rocksDiv").style.overflowY = "auto";
 }
 
+//closes smelting menu
 function openSmeltingMenu() {
 
     document.getElementById("mineRock").style.display = "none";
@@ -217,13 +219,14 @@ document.getElementById("switchFuelsButton").innerHTML = "Current fuel source: "
 
 let width = 0;
 
-function updateProgressBar(totalTime) {
-    document.getElementById("progressBar").style.width = width + '%';
+//progress bar
+function updateProgressBar(totalTime, progressBarID) {
+    document.getElementById(progressBarID).style.width = width + '%';
     width += (1 / (totalTime * 10 / (framerateMS)));
 }
 
 function resetProgressBar() {
-    document.getElementById("progressBar").style.width = 0 + '%';
-    document.getElementById("progressBar").style.visibility = "hidden";
+    document.getElementById(progressBarID).style.width = 0 + '%';
+    document.getElementById(progressBarID).style.visibility = "hidden";
     width = 0;
 }

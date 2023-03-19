@@ -326,7 +326,7 @@ input {
     font-size: 18px;
 }
 
-#progressBarContainer {
+.progressBarContainer {
     visibility: hidden;
     padding: 0;
     margin: auto;
@@ -337,7 +337,7 @@ input {
     background-color: white;
 }
 
-#progressBar {
+.progressBar {
     background-color: green;
     height: 32px;
 }

@@ -1,5 +1,4 @@
-//all of the manual beginning game stuff
-
+//all of the manual one time thingy stuff i dont fucking know
 function craftTool(toolName, boostName, toolMaterial, toolTier, buttonName, nextButtonName) {
     if (data.resources[toolMaterial].amount >= toolCraftingRecipes[toolName].materialAmount && data.resources.stick.amount >= toolCraftingRecipes[toolName].stickAmount) {
 
