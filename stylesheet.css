@@ -381,6 +381,10 @@ input {
     font-size: 16px;
 }
 
+.sortButton :active {
+    background-color: darkslategray;
+}
+
 #inventoryHeader {
     float: left;
     display: inline;

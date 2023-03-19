@@ -28,9 +28,9 @@ function disableButton(buttonName, cooldownMs) {
 //updates specific inventory square
 function updateResourceCount(resourceName) {
     if (resources[resourceName].singular === true) {
-        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(0) + resources[resourceName].unit;
+        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(0) + " " + resources[resourceName].unit;
     } else {
-        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(significantDigits) + resources[resourceName].unit;
+        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(significantDigits) + " " + resources[resourceName].unit;
     }
 
 }
@@ -225,7 +225,7 @@ function updateProgressBar(totalTime, progressBarID) {
     width += (1 / (totalTime * 10 / (framerateMS)));
 }
 
-function resetProgressBar() {
+function resetProgressBar(progressBarID) {
     document.getElementById(progressBarID).style.width = 0 + '%';
     document.getElementById(progressBarID).style.visibility = "hidden";
     width = 0;
@@ -233,14 +233,19 @@ function resetProgressBar() {
 
 //sorts inventory
 function sortInventory(tag) {
+    const startSort = Date.now();
     const elements = document.getElementsByClassName("inventorySquare");
     for (let a = 0; a < elements.length; a++) {
         document.getElementById(elements[a].id).style.display = "none";
     }
+
     const sortedElements = document.getElementsByClassName(tag);
     for (let b = 0; b < sortedElements.length; b++) {
         document.getElementById(sortedElements[b].id).style.display = "inline";
     }
+
+    const endSort = Date.now() - startSort;
+    console.log("Sorted inventory in " + endSort + " ms.");
 }
 
 //unsorts inventory i guess
@@ -249,4 +254,19 @@ function showAllInventory() {
     for (let a = 0; a < elements.length; a++) {
         document.getElementById(elements[a].id).style.display = "inline";
     }
+}
+
+//building building menu
+function openBuildingCraftingMenu(building) {
+
+}
+
+//building interior menu
+function openBuildingInteriorMenu(building) {
+
+}
+
+//closes building menu
+function closeBuildingMenu() {
+
 }

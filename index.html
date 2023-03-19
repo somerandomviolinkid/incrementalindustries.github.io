@@ -81,11 +81,11 @@
         <div id="inventoryHeadDiv">
             <h3 id="inventoryHeader">Inventory</h3>
 
-            <button class="sortButton" onclick="showAllInventory()">Show all</button>
-            <button class="sortButton" onclick="sortInventory('resource')">Resources</button>
             <button class="sortButton" onclick="sortInventory('electronic')">Electronics</button>
-            <button class="sortButton" onclick="sortInventory('mineral')">Minerals</button>
             <button class="sortButton" onclick="sortInventory('metal')">Metals</button>
+            <button class="sortButton" onclick="sortInventory('mineral')">Minerals</button>
+            <button class="sortButton" onclick="sortInventory('resource')">Resources</button>
+            <button class="sortButton" onclick="showAllInventory()">Show all</button>
         </div>
         <div id="inventoryDiv"></div>
     </div>
@@ -115,7 +115,7 @@
                 a lead pickaxe<br><img src="assets/pickaxe.png"><br>Costs 1 kg molten lead and 1 stick</button>
             <button id="pickaxeTier7Button" class="craftingButtons"
                 onclick="craftTool('pickaxe', 'mineAmount', 'moltenSteel', 7, 'pickaxeTier7Button')">Craft a steel
-                pickaxe<br><img src="assets/pickaxe.png"><br>Costs 1 kg molten lead and 1 stick</button>
+                pickaxe<br><img src="assets/pickaxe.png"><br>Costs 1 kg molten steel and 1 stick</button>
 
             <button id="axeTier1Button" class="craftingButtons"
                 onclick="craftTool('axe', 'chopAmount', 'wood', 1, 'axeTier1Button', 'axeTier2Button')">Craft a wood
@@ -125,19 +125,19 @@
                 axe<br><img src="assets/axe.png"><br>Costs 0.75 kg stone and 1 stick</button>
             <button id="axeTier3Button" class="craftingButtons"
                 onclick="craftTool('axe', 'chopAmount', 'moltenTin', 3, 'axeTier3Button', 'axeTier4Button')">Craft a
-                copper axe<br><img src="assets/axe.png"><br>Costs 0.75 kg molten copper and 1 stick</button>
+                tin axe<br><img src="assets/axe.png"><br>Costs 0.75 kg molten tin and 1 stick</button>
             <button id="axeTier4Button" class="craftingButtons"
-                onclick="craftTool('axe', 'chopAmount', 'moltenCopper', 4, 'axeTier4Button', 'axeTier5Button')">Craft an
-                iron axe<br><img src="assets/axe.png"><br>Costs 0.75 kg molten iron and 1 stick</button>
+                onclick="craftTool('axe', 'chopAmount', 'moltenCopper', 4, 'axeTier4Button', 'axeTier5Button')">Craft a
+                copper axe<br><img src="assets/axe.png"><br>Costs 0.75 kg molten copper and 1 stick</button>
             <button id="axeTier5Button" class="craftingButtons"
-                onclick="craftTool('axe', 'chopAmount', 'moltenIron', 5, 'axeTier5Button', 'axeTier6Button')">Craft a
-                lead axe<br><img src="assets/axe.png"><br>Costs 0.75 kg molten lead and 1 stick</button>
-            <button id="axeTier6Button" class="craftingButtons"
-                onclick="craftTool('axe', 'chopAmount', 'moltenLead', 6, 'axeTier6Button', 'axeTier7Button')">Craft an
+                onclick="craftTool('axe', 'chopAmount', 'moltenIron', 5, 'axeTier5Button', 'axeTier6Button')">Craft an
                 iron axe<br><img src="assets/axe.png"><br>Costs 0.75 kg molten iron and 1 stick</button>
+            <button id="axeTier6Button" class="craftingButtons"
+                onclick="craftTool('axe', 'chopAmount', 'moltenLead', 6, 'axeTier6Button', 'axeTier7Button')">Craft a
+                lead axe<br><img src="assets/axe.png"><br>Costs 0.75 kg molten lead and 1 stick</button>
             <button id="axeTier7Button" class="craftingButtons"
-                onclick="craftTool('axe', 'chopAmount', 'moltenSteel', 7, 'axeTier7Button')">Craft a lead axe<br><img
-                    src="assets/axe.png"><br>Costs 0.75 kg molten lead and 1 stick</button>
+                onclick="craftTool('axe', 'chopAmount', 'moltenSteel', 7, 'axeTier7Button')">Craft a steel axe<br><img
+                    src="assets/axe.png"><br>Costs 0.75 kg molten steel and 1 stick</button>
 
             <button id="hammerTier1Button" class="craftingButtons"
                 onclick="craftTool('hammer', 'crushAmount', 'wood', 1, 'hammerTier1Button', 'hammerTier2Button')">Craft
@@ -147,22 +147,22 @@
                 a stone hammer<br><img src="assets/hammer.png"><br>Costs 0.5 kg stone and 1 stick</button>
             <button id="hammerTier3Button" class="craftingButtons"
                 onclick="craftTool('hammer', 'crushAmount', 'moltenTin', 3, 'hammerTier3Button', 'hammerTier4Button')">Craft
-                a copper hammer<br><img src="assets/hammer.png"><br>Costs 0.5 kg molten copper and 1 stick</button>
+                a tin hammer<br><img src="assets/hammer.png"><br>Costs 0.5 kg molten tin and 1 stick</button>
             <button id="hammerTier4Button" class="craftingButtons"
                 onclick="craftTool('hammer', 'crushAmount', 'moltenCopper', 4, 'hammerTier4Button', 'hammerTier5Button')">Craft
-                an iron
-                hammer<br><img src="assets/hammer.png"><br>Costs 0.5 kg molten iron and 1 stick</button>
+                an copper
+                hammer<br><img src="assets/hammer.png"><br>Costs 0.5 kg molten copper and 1 stick</button>
             <button id="hammerTier5Button" class="craftingButtons"
                 onclick="craftTool('hammer', 'crushAmount', 'moltenIron', 5, 'hammerTier5Button', 'hammerTier6Button')">Craft
-                a lead
-                hammer<br><img src="assets/axe.png"><br>Costs 0.5 kg molten lead and 1 stick</button>
+                an iron
+                hammer<br><img src="assets/axe.png"><br>Costs 0.5 kg molten iron and 1 stick</button>
             <button id="hammerTier6Button" class="craftingButtons"
                 onclick="craftTool('hammer', 'crushAmount', 'moltenLead', 6, 'hammerTier6Button', 'hammerTier7Button')">Craft
-                an iron
-                hammer<br><img src="assets/hammer.png"><br>Costs 0.5 kg molten iron and 1 stick</button>
+                a lead
+                hammer<br><img src="assets/hammer.png"><br>Costs 0.5 kg molten lead and 1 stick</button>
             <button id="hammerTier7Button" class="craftingButtons"
-                onclick="craftTool('hammer', 'crushAmount', 'moltenSteel', 7, 'hammerTier7Button')">Craft a lead
-                hammer<br><img src="assets/axe.png"><br>Costs 0.5 kg molten lead and 1 stick</button>
+                onclick="craftTool('hammer', 'crushAmount', 'moltenSteel', 7, 'hammerTier7Button')">Craft a steel
+                hammer<br><img src="assets/axe.png"><br>Costs 0.5 kg molten steel and 1 stick</button>
 
             <p id="toolCraftingAlert" class="notEnoughResourcesAlert"></p>
         </div>

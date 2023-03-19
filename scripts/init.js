@@ -16,7 +16,7 @@ for (const i in resources) {
 
     //text inside square
     let currentResourceCount = document.createElement("p");
-    if (resources[i].singular === undefined) {
+    if (resources[i].singular === false) {
         currentResourceCount.innerHTML = resources[i].title + ": " + data.resources[i].amount.toFixed(significantDigits) + " " + resources[i].unit;
     } else {
         currentResourceCount.innerHTML = resources[i].title + ": " + data.resources[i].amount.toFixed(0) + " " + resources[i].unit;

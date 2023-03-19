@@ -37,7 +37,7 @@ function craftItem(item) {
     }
 
     //progress bar
-    document.getElementById("progressBarContainer").style.visibility = "visible";
+    document.getElementById("craftingProgressBarContainer").style.visibility = "visible";
     let progressBarInterval = setInterval(updateProgressBar, framerateMS, craftingRecipes[item].info.timeS, 'craftingProgressBar');
 
     //yields items
