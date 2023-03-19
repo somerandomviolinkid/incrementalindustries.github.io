@@ -10,7 +10,7 @@ let data = {
             crafted: false,
         },
         stone: {
-            amount: 10,
+            amount: 0,
             crafted: false,
         },
         sand: {
