@@ -10,7 +10,7 @@ let data = {
             crafted: false,
         },
         stone: {
-            amount: 0,
+            amount: 8,
             crafted: false,
         },
         sand: {
@@ -195,7 +195,7 @@ let data = {
             crafted: false,
         },
         smallCopperPlate: {
-            amount: 0,
+            amount: 4,
             crafted: false,
         },
         mediumCopperPlate: {
