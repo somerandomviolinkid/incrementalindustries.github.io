@@ -55,6 +55,8 @@ function craftItem(item) {
     if (craftingRecipes[item].info.type === 'manual') {
         return;
     }
+    
+    closeCraftingMenu();
 
     //checks if the crafting recipe can only be crafting once
     if (machines[item].oneTime !== undefined) {

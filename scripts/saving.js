@@ -6,6 +6,13 @@ function saveData() {
     console.log("saved data");
 }
 
+function resetData() {
+    //do this if your workers go on strike
+    localStorage.clear();
+    location.reload();
+}
+
+
 function loadData() {
     //loads stuff from local storage
     const saveString = localStorage.getItem("saveKey");
@@ -14,14 +21,7 @@ function loadData() {
         return;
     }
     const save = JSON.parse(saveString);
-    
     data = save.data;
-}
-
-function resetData() {
-    //do this if your workers go on strike
-    localStorage.clear();
-    location.reload();
 }
 
 //henryL's code that i borrowed
@@ -45,5 +45,7 @@ async function importData() {
         const contents = await file.text();
         localStorage.setItem("saveKey", contents);
         loadData();
+        saveData();
+        location.reload();
     } catch (err) { }
 }
