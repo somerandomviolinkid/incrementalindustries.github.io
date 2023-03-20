@@ -259,6 +259,7 @@ function showAllInventory() {
 //building building menu
 function openBuildingCraftingMenu(building) {
     document.getElementById("mainBuildingDiv").style.display = "none";
+    document.getElementById("buildingBuildingDiv").style.display = "block";
 }
 
 //building interior menu
@@ -268,7 +269,6 @@ function openBuildingInteriorMenu(building) {
 
 //closes building menu
 function closeBuildingMenu() {
-    document.getElementById("buildingMenuDiv").style.display = "none";
     document.getElementById("buildingBuildingDiv").style.display = "none";
-    document.getElementById("mainBuildingDiv").style.display = "inline";
+    document.getElementById("mainBuildingDiv").style.display = "block";
 }
