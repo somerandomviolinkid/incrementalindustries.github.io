@@ -192,7 +192,7 @@
         <div class="buildingInterior" id="primitiveBlastFurnaceInterior">
             <button class="buildingMenuCloseButton" onclick="closeBuildingMenu()">Close menu</button>
             <p class="buildingTitle">Primitive blast furnace</p>
-            <button class="primitiveBlastFurnaceButton">Smelt magnetite</button>
+            <button class="primitiveBlastFurnaceButton" onclick="runPrimtiveBlastFurnace('magnetite')">Smelt magnetite</button>
             <button class="primitiveBlastFurnaceButton">Smelt chalcopyrite</button>
             <button class="primitiveBlastFurnaceButton">Smelt cassiterite</button>
             <p></p>
@@ -213,15 +213,22 @@
         <a href="https://github.com/somerandomviolinkid/incrementalindustries.github.io" target="_blank">Source code
             repository</a><br>
         <a href="devTools.html" target="_blank">Modding and dev tools</a>
+        <br>
+        <div id="settingsDiv">
+            <label for="sigFigSlider" id="sigFigSliderLabel"></label>
+            <input type="range" min="0" max="6" value="2" id="sigFigSlider" class="settingInputs"><br>
+            <label for="mspfSlider" id="mspfSliderLabel">Milliseconds per frame:</label>
+            <input type="range" min="5" max="200" id="mspfSlider" class="settingInputs">
+        </div>
+
     </div>
 
     <div id="discordLinkDiv">
         <a href="https://discord.gg/ZCTTjFwg2V" target="_blank">Discord</a>
+        <p id="saveIndicator">Saved data</p>
     </div>
 
 </body>
-
-<script src="scripts/config.js"></script>
 
 <script src="indexes/rocks.js"></script>
 <script src="indexes/tools.js"></script>
@@ -235,9 +242,10 @@
 <script src="scripts/game.js"></script>
 <script src="scripts/main.js"></script>
 
-<script src="scripts/util.js"></script>
-
 <script src="scripts/saving.js"></script>
+
+<script src="scripts/util.js"></script>
+<script src="scripts/config.js"></script>
 <script src="scripts/init.js"></script>
 
 </html>

@@ -7,18 +7,10 @@ function craftItem(item) {
     for (let x in craftingRecipes[item].components) {
         if (data.resources[craftingRecipes[item].components[x].title].amount >= craftingRecipes[item].components[x].amount) {
             console.log(x + " success");
-        } else if (machines[craftingRecipes[item].components[x].title] !== undefined) {
-            if (data.resources[craftingRecipes[item].components[x].title].crafted === true) {
-                console.log(x + " success");
-            } else {
-                notEnoughResourcesAlert('craftingAlert');
-                return;
-            }
         } else {
             notEnoughResourcesAlert('craftingAlert');
             return;
         }
-
     }
 
     if (craftingRecipes[item].tools !== undefined) {
@@ -53,12 +45,6 @@ function craftItem(item) {
         data.resources[item].amount += craftingRecipes[item].info.yield;
         clearInterval(progressBarInterval);
         resetProgressBar('craftingProgressBar');
-
-        if (machines[item].oneTime !== undefined) {
-            if (machines[item].oneTime === true) {
-                closeCraftingMenu();
-            }
-        }
     }
 
     setTimeout(yieldItems, craftingTime);
@@ -69,6 +55,8 @@ function craftItem(item) {
     if (craftingRecipes[item].info.type === 'manual') {
         return;
     }
+    
+    closeCraftingMenu();
 
     //checks if the crafting recipe can only be crafting once
     if (machines[item].oneTime !== undefined) {

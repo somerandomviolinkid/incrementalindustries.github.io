@@ -1,3 +1,4 @@
+//index for all building things
 const buildings = {
     primitiveBlastFurnace: {
         materials: {
@@ -8,7 +9,7 @@ const buildings = {
         },
         info:{
             timeS: 30,
-            title: 'primitive blast furnace'
+            title: 'primitive blast furnace',
         }
     },
     electricBlastFurnace: {

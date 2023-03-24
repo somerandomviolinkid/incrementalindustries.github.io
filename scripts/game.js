@@ -182,3 +182,19 @@ function getWater() {
     updateResourceCount('water');
 }
 
+function smeltSteel() {
+    const visualGainData8 = [
+        {amountGained: z, resourceName: 'molten steel', isPositive: true},
+        {amountGained: blastFurnaceAmount, resourceName: fuelSource, isPositive: false}
+    ]
+    visualGains(visualGainData8);
+}
+
+//building functions
+
+//primitive blast furnace
+function runPrimtiveBlastFurnace(ore) {
+    if (data.resources[ore].amount >= data.buildings.primitiveBlastFurnace.smeltAmount) {
+
+    }
+}

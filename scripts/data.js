@@ -10,7 +10,7 @@ let data = {
             crafted: false,
         },
         stone: {
-            amount: 8,
+            amount: 0,
             crafted: false,
         },
         sand: {
@@ -195,7 +195,7 @@ let data = {
             crafted: false,
         },
         smallCopperPlate: {
-            amount: 4,
+            amount: 0,
             crafted: false,
         },
         mediumCopperPlate: {
@@ -311,10 +311,11 @@ let data = {
         screwdriver: false,
         file: false
     },
-    buildings:{
+    buildings: {
         primitiveBlastFurnace: {
             unlocked: true,
-            built: false
+            built: false,
+            smeltAmount: 5
         },
         electricBlastFurnace: {
             unlocked: true,
@@ -324,5 +325,11 @@ let data = {
             unlocked: true,
             built: false
         }
+    },
+    settings: {
+        significantDigits: 2,
+        visualGainTimeout: 1000,
+        fuelSource: 'coal', //default fuel source, is changed throughout game
+        framerateMS: 20 //framerate in MS between frames, not actually the rate per frame bobby >:( !!!!
     }
 }

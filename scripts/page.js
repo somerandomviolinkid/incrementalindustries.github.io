@@ -30,7 +30,7 @@ function updateResourceCount(resourceName) {
     if (resources[resourceName].singular === true) {
         document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(0) + " " + resources[resourceName].unit;
     } else {
-        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(significantDigits) + " " + resources[resourceName].unit;
+        document.getElementById(resourceName + "Count").innerHTML = resources[resourceName].title + ": " + data.resources[resourceName].amount.toFixed(data.settings.significantDigits) + " " + resources[resourceName].unit;
     }
 
 }
@@ -46,13 +46,13 @@ function visualGains(data) {
         currentVisualGain.className = "visualGain";
         infoDiv.appendChild(currentVisualGain);
 
-        currentVisualGain.innerHTML = (y.isPositive ? "+" : "-") + " " + y.amountGained.toFixed(significantDigits) + " " + y.resourceName;
+        currentVisualGain.innerHTML = (y.isPositive ? "+" : "-") + " " + y.amountGained.toFixed(data.settings.significantDigits) + " " + y.resourceName;
 
         function removeVisualGain() {
             currentVisualGain.remove();
         }
 
-        setTimeout(removeVisualGain, visualGainTimeout);
+        setTimeout(removeVisualGain, data.settings.visualGainTimeout);
     }
 }
 
@@ -175,7 +175,7 @@ function openSmeltingMenu() {
         let z = data.stats.smeltAmount;
 
         for (let c in rocksIndex[b].smeltYields) {
-            yieldText += (rocksIndex[b].smeltYields[c].amount.toString() * z).toFixed(significantDigits) + " " + resources[rocksIndex[b].smeltYields[c].title].title + " ";
+            yieldText += (rocksIndex[b].smeltYields[c].amount.toString() * z).toFixed(data.settings.significantDigits) + " " + resources[rocksIndex[b].smeltYields[c].title].title + " ";
         }
 
         document.getElementById("rocksDiv").appendChild(currentSmeltingButton);
@@ -206,16 +206,16 @@ function notEnoughResourcesAlert(buttonName) {
 
 function switchFuelSource() {
 
-    if (fuelSource === 'coal') {
-        fuelSource = 'charcoal';
+    if (data.settings.fuelSource === 'coal') {
+        data.settings.fuelSource = 'charcoal';
     } else {
-        fuelSource = 'coal';
+        data.settings.fuelSource = 'coal';
     }
 
-    document.getElementById("switchFuelsButton").innerHTML = "Current fuel source: " + fuelSource;
+    document.getElementById("switchFuelsButton").innerHTML = "Current fuel source: " + data.settings.fuelSource;
 }
 
-document.getElementById("switchFuelsButton").innerHTML = "Current fuel source: " + fuelSource;
+document.getElementById("switchFuelsButton").innerHTML = "Current fuel source: " + data.settings.fuelSource;
 
 let width = 0;
 
@@ -235,6 +235,7 @@ function resetProgressBar(progressBarID) {
 function sortInventory(tag) {
     const startSort = Date.now();
     const elements = document.getElementsByClassName("inventorySquare");
+
     for (let a = 0; a < elements.length; a++) {
         document.getElementById(elements[a].id).style.display = "none";
     }
@@ -250,10 +251,15 @@ function sortInventory(tag) {
 
 //unsorts inventory i guess
 function showAllInventory() {
+    const startSort = Date.now();
     const elements = document.getElementsByClassName("inventorySquare");
+
     for (let a = 0; a < elements.length; a++) {
         document.getElementById(elements[a].id).style.display = "inline";
     }
+
+    const endSort = Date.now() - startSort;
+    console.log("Sorted inventory in " + endSort + " ms.");
 }
 
 //building building menu
