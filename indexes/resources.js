@@ -241,6 +241,7 @@ let resources = {
         title: 'Molten gold',
         tag: 'metal'
     },
+
     //advanced metals
     moltenSteel: {
         unit: 'kg',
@@ -272,6 +273,7 @@ let resources = {
         title: 'Molten stainless steel',
         tag: 'metal'
     },
+
     //metal products
     smallIronPlate: {
         unit: '',
@@ -369,6 +371,42 @@ let resources = {
         title: 'Steel drill bit',
         tag: 'machinePart',
         desc: 'A steel drill bit that can cut into hard rock to extract valuable ores.'
+    },
+    ironScrew: {
+        unit: '',
+        singular: true,
+        title: 'Iron screw',
+        tag: 'machinePart',
+    },
+    ironBolt: {
+        unit: '',
+        singular: true,
+        title: 'Iron bolt',
+        tag: 'machinePart',
+    },
+    ironGear: {
+        unit: '',
+        singular: true,
+        title: 'Iron gear',
+        tag: 'machinePart',
+    },
+    ironScaffolding: {
+        unit: '',
+        singular: true,
+        title: 'Iron scaffolding',
+        tag: 'machinePart',
+    },
+    steelScaffolding: {
+        unit: '',
+        singular: true,
+        title: 'Steel scaffolding',
+        tag: 'machinePart', 
+    },
+    stainlessSteelScaffolding: {
+        unit: '',
+        singular: true,
+        title: 'Stainless steel scaffolding',
+        tag: 'machinePart',  
     },
     //electronics
     electricMotor: {

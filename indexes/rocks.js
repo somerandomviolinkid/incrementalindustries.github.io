@@ -174,7 +174,7 @@ const rocksIndex = {
         title: 'clay',
         chanceNormal: 0.075,
         chanceVein: 0.32
-    }
+    },
 }
 
 const minerals = [

@@ -1,5 +1,28 @@
-//config for game, change as needed
-let significantDigits = 2;
-let visualGainTimeout = 1000;
-let fuelSource = 'coal'; //default fuel source, is changed throughout game
-let framerateMS = 20; //framerate in MS between frames, not actually the rate per frame bobby >:( !!!!
+//setting changes functions
+//significant digits change
+document.getElementById("sigFigSliderLabel").innerHTML = "Significant digits: " + data.settings.significantDigits;
+document.getElementById("sigFigSlider").value = data.settings.significantDigits;
+
+let sigFigSlider = document.getElementById("sigFigSlider");
+
+sigFigSlider.oninput = function () {
+    const startSigFigChange = Date.now();
+    document.getElementById("sigFigSliderLabel").innerHTML = "Significant digits: " + this.value;
+    data.settings.significantDigits = this.value;
+
+    for (const f in resources) {
+        updateResourceCount(f);
+    }
+
+    console.log(data.settings.significantDigits);
+    saveData();
+
+    const endSigFigChange = Date.now() - startSigFigChange;
+    console.log("Changed significant digits in " + endSigFigChange + " ms.");
+}
+
+sigFigSlider.value = data.settings.significantDigits.toString();
+
+//ms per frame change
+let mspfSlider = document.getElementById("mspfSlider");
+let mspfSliderDisplay = document.getElementById("mspfSliderLabel");
