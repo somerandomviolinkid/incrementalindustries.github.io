@@ -382,6 +382,14 @@ input {
 
 .buildingInterior {
     display: none;
+    background-color: slategray;
+    border-color: black;
+    border-style: solid;
+    border-width: 4px;
+    width: 66%;
+    margin: auto; 
+    overflow-x: hidden; 
+    padding: 8px;
 }
 
 .buildingImg {

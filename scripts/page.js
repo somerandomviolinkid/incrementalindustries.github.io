@@ -266,6 +266,8 @@ function showAllInventory() {
 function openBuildingCraftingMenu(building) {
     document.getElementById("mainBuildingDiv").style.display = "none";
     document.getElementById("buildingBuildingDiv").style.display = "block";
+
+    
 }
 
 //building interior menu
