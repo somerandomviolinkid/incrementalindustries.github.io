@@ -429,3 +429,8 @@ input {
     float: right;
     display: block;
 }
+
+#buildingCraftingImg {
+    height: 256px;
+    width: 256px;
+}

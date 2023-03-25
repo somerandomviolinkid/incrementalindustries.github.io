@@ -4,24 +4,26 @@ const buildings = {
         materials: {
             material1: {
                 title: 'blastBricks',
-                amount: 10
+                amount: 10,
+                type: 'manual'
             }
         },
-        info:{
+        info: {
             timeS: 30,
-            title: 'primitive blast furnace',
+            title: 'Primitive blast furnace',
         }
     },
     electricBlastFurnace: {
         materials: {
             material1: {
                 title: 'blastBricks',
-                amount: 10
+                amount: 10,
+                type: 'manual'
             }
         },
-        info:{
+        info: {
             timeS: 30,
-            title: 'electric blast furnace'
+            title: 'Electric blast furnace'
         }
     },
     cleanroom: {
@@ -31,9 +33,9 @@ const buildings = {
                 amount: 10
             }
         },
-        info:{
+        info: {
             timeS: 30,
-            title: 'cleanroom'
-        } 
+            title: 'Cleanroom'
+        }
     }
 }

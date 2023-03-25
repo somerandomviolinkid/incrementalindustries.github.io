@@ -267,7 +267,24 @@ function openBuildingCraftingMenu(building) {
     document.getElementById("mainBuildingDiv").style.display = "none";
     document.getElementById("buildingBuildingDiv").style.display = "block";
 
-    
+    //loop through crafting components
+    let componentsText = "";
+
+    for (const r in buildings[building].components) {
+        let t = buildings[building].components[r].title;
+        if (buildings[building].components[r].type === 'machine') {
+            componentsText += buildings[building].components[r].amount.toString() + " " + machines[t].unit.toString() + " " + machines[t].title.toString() + "<br />";
+        } else {
+            componentsText += buildings[building].components[r].amount.toString() + " " + resources[t].unit.toString() + " " + resources[t].title.toString() + "<br />";
+        }
+    }
+
+    //changes text and stuff inside crafting menu
+    document.getElementById("buildingCraftingTitle").innerHTML = buildings[building].info.title;
+    document.getElementById("buildingCraftingImg").src = "assets/" + building.toString() + ".png";
+
+    document.getElementById("buildingCraftComponents").innerHTML = componentsText;
+    document.getElementById("buildBuildingButton").innerHTML = "Craft " + buildings[building].info.title;
 }
 
 //building interior menu
