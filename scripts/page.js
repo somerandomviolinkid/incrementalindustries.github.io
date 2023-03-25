@@ -270,11 +270,16 @@ function openBuildingCraftingMenu(building) {
 
 //building interior menu
 function openBuildingInteriorMenu(building) {
-
+    document.getElementById("mainBuildingDiv").style.display = "none";
+    document.getElementById(building.toString() + "Interior").style.display = "block";
 }
 
 //closes building menu
 function closeBuildingMenu() {
     document.getElementById("buildingBuildingDiv").style.display = "none";
+    const interiors = document.getElementsByClassName("buildingInterior");
+    for (let a = 0; a < interiors.length; a++) {
+        document.getElementById(interiors[a].id).style.display = "none";
+    }
     document.getElementById("mainBuildingDiv").style.display = "block";
 }

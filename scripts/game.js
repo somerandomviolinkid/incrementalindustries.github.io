@@ -183,18 +183,21 @@ function getWater() {
 }
 
 function smeltSteel() {
-    const visualGainData8 = [
-        {amountGained: z, resourceName: 'molten steel', isPositive: true},
-        {amountGained: blastFurnaceAmount, resourceName: fuelSource, isPositive: false}
-    ]
-    visualGains(visualGainData8);
+    if (data.resources.moltenIron > data.buildings.primitiveBlastFurnace.smeltAmount) {
+        const visualGainData8 = [
+            { amountGained: z, resourceName: 'molten steel', isPositive: true },
+            { amountGained: blastFurnaceAmount, resourceName: fuelSource, isPositive: false }
+        ]
+        visualGains(visualGainData8);
+    }
 }
 
 //building functions
 
 //primitive blast furnace
 function runPrimtiveBlastFurnace(ore) {
-    if (data.resources[ore].amount >= data.buildings.primitiveBlastFurnace.smeltAmount) {
-
+    if (data.resources[ore].amount >= data.buildings.primitiveBlastFurnace.smeltAmount && data.resources[data.settings.fuelSource].amount >= data.buildings.primitiveBlastFurnace.smeltAmount) {
+        data.resources[ore].amount -= data.buildings.primitiveBlastFurnace.smeltAmount;
+        data.resources[data.settings.fuelSource].amount -= data.buildings.primitiveBlastFurnace.smeltAmount;
     }
 }

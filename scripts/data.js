@@ -314,7 +314,7 @@ let data = {
     buildings: {
         primitiveBlastFurnace: {
             unlocked: true,
-            built: false,
+            built: true,
             smeltAmount: 5
         },
         electricBlastFurnace: {
