@@ -251,11 +251,8 @@ function sortInventory(tag) {
 //unsorts inventory i guess
 function showAllInventory() {
     const startSort = Date.now();
-    const elements = document.getElementsByClassName("inventorySquare");
 
-    for (let a = 0; a < elements.length; a++) {
-        document.getElementById(elements[a].id).style.display = "inline";
-    }
+    doStuffToClass('inventorySquare', 'inline');
 
     const endSort = Date.now() - startSort;
     console.log("Sorted inventory in " + endSort + " ms.");
