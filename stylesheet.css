@@ -96,6 +96,9 @@ h4 {
     padding: 8px;
     background-color: aliceblue;
     overflow-y: scroll;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
 }
 
 .resourceCount {
@@ -243,12 +246,9 @@ button:disabled {
 a {
     font-family: 'Courier New', Courier, monospace;
     font-size: 32px;
+    margin: 0;
     font-weight: 4px;
     color: cyan;
-}
-
-#discordLinkDiv {
-    text-align: center;
 }
 
 #craftingRecipeDesc {
@@ -395,6 +395,7 @@ input {
 .buildingImg {
     width: 256px;
     height: 256px;
+    margin: auto;
 }
 
 .sortButton {
@@ -433,4 +434,22 @@ input {
 #buildingCraftingImg {
     height: 256px;
     width: 256px;
+    margin: auto;
+}
+
+#saveIndicator {
+    float: left;
+    display: inline;
+    margin: 0;
+    display: none;
+}
+
+#buildingCraftingDesc {
+    font-size: 18px;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#discordLink {
+    float: right;
 }

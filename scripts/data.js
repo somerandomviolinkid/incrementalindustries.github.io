@@ -242,6 +242,30 @@ let data = {
             amount: 0,
             crafted: false,
         },
+        ironScrew: {
+            amount: 0,
+            crafted: false,
+        },
+        ironBolt: {
+            amount: 0,
+            crafted: false,
+        },
+        ironGear: {
+            amount: 0,
+            crafted: false,
+        },
+        ironScaffolding: {
+            amount: 0,
+            crafted: false,
+        },
+        steelScaffolding: {
+            amount: 0,
+            crafted: false,
+        },
+        stainlessSteelScaffolding: {
+            amount: 0,
+            crafted: false,
+        },
         //electronics
         transistor: {
             amount: 0,
@@ -314,7 +338,7 @@ let data = {
     buildings: {
         primitiveBlastFurnace: {
             unlocked: true,
-            built: true,
+            built: false,
             smeltAmount: 5
         },
         electricBlastFurnace: {
@@ -328,7 +352,7 @@ let data = {
     },
     settings: {
         significantDigits: 2,
-        visualGainTimeout: 1000,
+        visualGainTimeout: 1250,
         fuelSource: 'coal', //default fuel source, is changed throughout game
         framerateMS: 20 //framerate in MS between frames, not actually the rate per frame bobby >:( !!!!
     }

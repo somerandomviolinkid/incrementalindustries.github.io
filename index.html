@@ -82,6 +82,8 @@
             <h3 id="inventoryHeader">Inventory</h3>
 
             <button class="sortButton" onclick="sortInventory('electronic')">Electronics</button>
+            <button class="sortButton" onclick="sortInventory('chemical')">Chemicals</button>
+            <button class="sortButton" onclick="sortInventory('machinePart')">Machine parts</button>
             <button class="sortButton" onclick="sortInventory('metal')">Metals</button>
             <button class="sortButton" onclick="sortInventory('mineral')">Minerals</button>
             <button class="sortButton" onclick="sortInventory('resource')">Resources</button>
@@ -202,7 +204,8 @@
             <button class="buildingMenuCloseButton" onclick="closeBuildingMenu()">Close menu</button>
             <p id="buildingTitle">Primitive blast furnace</p>
             <button class="primitiveBlastFurnaceButton" onclick="smeltSteel()">Smelt steel</button>
-            <button class="primitiveBlastFurnaceButton" onclick="runPrimtiveBlastFurnace('magnetite')">Smelt magnetite</button>
+            <button class="primitiveBlastFurnaceButton" onclick="runPrimtiveBlastFurnace('magnetite')">Smelt
+                magnetite</button>
             <button class="primitiveBlastFurnaceButton">Smelt chalcopyrite</button>
             <button class="primitiveBlastFurnaceButton">Smelt cassiterite</button>
             <p></p>
@@ -233,10 +236,8 @@
 
     </div>
 
-    <div id="discordLinkDiv">
-        <a href="https://discord.gg/ZCTTjFwg2V" target="_blank">Discord</a>
-        <p id="saveIndicator">Saved data</p>
-    </div>
+    <a id="discordLink" href="https://discord.gg/ZCTTjFwg2V" target="_blank">Discord</a>
+    <p id="saveIndicator">Saved data</p>
 
 </body>
 
