@@ -20,7 +20,7 @@ sigFigSlider.oninput = function () {
     console.log("Changed significant digits in " + endSigFigChange + " ms.");
 }
 
-sigFigSlider.value = data.settings.significantDigits.toString();
+sigFigSlider.defaultVal = data.settings.significantDigits.toString();
 
 //ms per frame change
 let mspfSlider = document.getElementById("mspfSlider");

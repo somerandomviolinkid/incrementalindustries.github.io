@@ -31,6 +31,8 @@ function loadData() {
     data = save.data;
 }
 
+loadData();
+
 //henryL's code that i borrowed
 function exportData() {
     //exports data as json file i think

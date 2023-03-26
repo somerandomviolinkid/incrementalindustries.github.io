@@ -1,3 +1,4 @@
+const startLoading = Date.now();
 const rocksIndex = {
     //minerals
     magnetite: {

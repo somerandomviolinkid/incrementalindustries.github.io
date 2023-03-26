@@ -1,6 +1,3 @@
-const startLoading = Date.now();
-loadData();
-
 document.getElementById("defaultTab").click();
 
 //loads inventory
