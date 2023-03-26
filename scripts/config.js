@@ -1,27 +1,36 @@
 //setting changes functions
 //significant digits change
-document.getElementById("sigFigSliderLabel").innerHTML = "Significant digits: " + data.settings.significantDigits;
-document.getElementById("sigFigSlider").value = data.settings.significantDigits;
-
 let sigFigSlider = document.getElementById("sigFigSlider");
+let sigFigSliderLabel = document.getElementById("sigFigSliderLabel");
+
+sigFigSliderLabel.innerHTML = "Significant digits: " + data.settings.significantDigits;
+sigFigSlider.value = data.settings.significantDigits.toString();
 
 sigFigSlider.oninput = function () {
     const startSigFigChange = Date.now();
-    document.getElementById("sigFigSliderLabel").innerHTML = "Significant digits: " + this.value;
+    sigFigSliderLabel.innerHTML = "Significant digits: " + this.value;
     data.settings.significantDigits = this.value;
 
     for (const f in resources) {
         updateResourceCount(f);
     }
 
-    console.log(data.settings.significantDigits);
-
     const endSigFigChange = Date.now() - startSigFigChange;
     console.log("Changed significant digits in " + endSigFigChange + " ms.");
 }
 
-sigFigSlider.defaultVal = data.settings.significantDigits.toString();
-
 //ms per frame change
 let mspfSlider = document.getElementById("mspfSlider");
-let mspfSliderDisplay = document.getElementById("mspfSliderLabel");
+let mspfSliderLabel = document.getElementById("mspfSliderLabel");
+
+mspfSliderLabel.innerHTML = "Milliseconds per frame: " + data.settings.mspf;
+mspfSlider.value = data.settings.mspf.toString();
+
+mspfSlider.oninput = function () {
+    const startMspfChange = Date.now();
+    mspfSliderLabel.innerHTML = "Milliseconds per frame: " + this.value;
+    data.settings.mspf = this.value;
+    
+    const endMspfChange = Date.now() - startMspfChange;
+    console.log("Changed significant digits in " + endMspfChange + " ms.");
+}
