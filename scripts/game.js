@@ -72,12 +72,12 @@ function crushRock() {
 }
 
 function smeltOre(oreType) {
-    if (data.resources[oreType].amount >= data.stats.smeltAmount && data.resources[fuelSource].amount >= data.stats.smeltAmount && data.stats.smeltAmount > 0) {
+    if (data.resources[oreType].amount >= data.stats.smeltAmount && data.resources[data.settings.fuelSource].amount >= data.stats.smeltAmount && data.stats.smeltAmount > 0) {
 
         let visualGainData3 = [];
 
         data.resources[oreType].amount -= data.stats.smeltAmount;
-        data.resources[fuelSource].amount -= data.stats.smeltAmount;
+        data.resources[data.settings.fuelSource].amount -= data.stats.smeltAmount;
 
         visualGainData3.push({
             amountGained: data.stats.smeltAmount,
@@ -86,7 +86,7 @@ function smeltOre(oreType) {
 
         visualGainData3.push({
             amountGained: data.stats.smeltAmount,
-            resourceName: fuelSource, isPositive: false
+            resourceName: data.settings.fuelSource, isPositive: false
         });
 
         for (x in rocksIndex[oreType].smeltYields) {
@@ -102,7 +102,7 @@ function smeltOre(oreType) {
 
         }
 
-        updateResourceCount(fuelSource);
+        updateResourceCount(data.settings.fuelSource);
         updateResourceCount(oreType);
 
         visualGains(visualGainData3);
@@ -153,18 +153,18 @@ function smashWood() {
 }
 
 function cookWood() {
-    if (data.resources.wood.amount * 2 >= data.stats.smeltAmount && data.resources[fuelSource].amount >= data.stats.smeltAmount && data.stats.smeltAmount > 0) {
+    if (data.resources.wood.amount * 2 >= data.stats.smeltAmount && data.resources[data.settings.fuelSource].amount >= data.stats.smeltAmount && data.stats.smeltAmount > 0) {
         const z = randomNumber(data.stats.smeltAmount * 1.25, data.stats.smeltAmount * 1.75);
 
         const visualGainData6 = [
             { amountGained: z, resourceName: 'charcoal', isPositive: true },
-            { amountGained: data.stats.smeltAmount, resourceName: fuelSource, isPositive: false }
+            { amountGained: data.stats.smeltAmount, resourceName: data.settings.fuelSource, isPositive: false }
         ]
 
         visualGains(visualGainData6);
         disableButton('cookWood', 1000);
 
-        updateResourceCount(fuelSource);
+        updateResourceCount(data.settings.fuelSource);
         updateResourceCount('charcoal');
     } else {
         notEnoughResourcesAlert('resourcesAlert');
@@ -186,7 +186,7 @@ function smeltSteel() {
     if (data.resources.moltenIron > data.buildings.primitiveBlastFurnace.smeltAmount) {
         const visualGainData8 = [
             { amountGained: z, resourceName: 'molten steel', isPositive: true },
-            { amountGained: blastFurnaceAmount, resourceName: fuelSource, isPositive: false }
+            { amountGained: blastFurnaceAmount, resourceName: data.settings.fuelSource, isPositive: false }
         ]
         visualGains(visualGainData8);
     }
@@ -198,6 +198,6 @@ function smeltSteel() {
 function runPrimtiveBlastFurnace(ore) {
     if (data.resources[ore].amount >= data.buildings.primitiveBlastFurnace.smeltAmount && data.resources[data.settings.fuelSource].amount >= data.buildings.primitiveBlastFurnace.smeltAmount) {
         data.resources[ore].amount -= data.buildings.primitiveBlastFurnace.smeltAmount;
-        data.resources[data.settings.fuelSource].amount -= data.buildings.primitiveBlastFurnace.smeltAmount;
+        data.resources[data.settings.data.settings.fuelSource].amount -= data.buildings.primitiveBlastFurnace.smeltAmount;
     }
 }

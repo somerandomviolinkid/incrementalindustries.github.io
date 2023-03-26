@@ -34,3 +34,19 @@ mspfSlider.oninput = function () {
     const endMspfChange = Date.now() - startMspfChange;
     console.log("Changed significant digits in " + endMspfChange + " ms.");
 }
+
+//visual gain timeout chance
+let vgTimeoutSlider = document.getElementById("vgTimeoutSlider");
+let vgTimeoutSliderLabel = document.getElementById("vgTimeoutSliderLabel");
+
+vgTimeoutSliderLabel.innerHTML = "Visual gain timeout (milliseconds): " + data.settings.visualGainTimeout;
+vgTimeoutSlider.value = data.settings.visualGainTimeout.toString();
+
+vgTimeoutSlider.oninput = function () {
+    const startvgTimeoutChange = Date.now();
+    vgTimeoutSliderLabel.innerHTML = "Visual gain timeout (milliseconds): " + this.value;
+    data.settings.visualGainTimeout = this.value;
+    
+    const endvgTimeoutChange = Date.now() - startvgTimeoutChange;
+    console.log("Changed visual gains timeout in " + endvgTimeoutChange + " ms.");
+}
