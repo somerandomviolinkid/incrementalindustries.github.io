@@ -82,6 +82,8 @@
             <h3 id="inventoryHeader">Inventory</h3>
 
             <button class="sortButton" onclick="sortInventory('electronic')">Electronics</button>
+            <button class="sortButton" onclick="sortInventory('chemical')">Chemicals</button>
+            <button class="sortButton" onclick="sortInventory('machinePart')">Machine parts</button>
             <button class="sortButton" onclick="sortInventory('metal')">Metals</button>
             <button class="sortButton" onclick="sortInventory('mineral')">Minerals</button>
             <button class="sortButton" onclick="sortInventory('resource')">Resources</button>
@@ -188,9 +190,25 @@
         <div id="mainBuildingDiv"></div>
         <div id="buildingBuildingDiv">
             <button class="buildingMenuCloseButton" onclick="closeBuildingMenu()">Close menu</button>
+            <p id="buildingCraftingTitle"></p>
+            <img id="buildingCraftingImg">
+            <p id="buildingCraftingDesc"></p>
+            <p id="buildingCraftComponents"></p>
+            <button id="buildBuildingButton" onclick="buildBuilding()"></button>
+            <div id="buildingProgressBarContainer" class="progressBarContainer">
+                <div id="buildingProgressBar" class="progressBar"></div>
+            </div>
+            <p id="buildingCraftingAlert" class="notEnoughResourcesAlert"></p>
         </div>
         <div class="buildingInterior" id="primitiveBlastFurnaceInterior">
             <button class="buildingMenuCloseButton" onclick="closeBuildingMenu()">Close menu</button>
+            <p id="buildingTitle">Primitive blast furnace</p>
+            <button class="primitiveBlastFurnaceButton" onclick="smeltSteel()">Smelt steel</button>
+            <button class="primitiveBlastFurnaceButton" onclick="runPrimtiveBlastFurnace('magnetite')">Smelt
+                magnetite</button>
+            <button class="primitiveBlastFurnaceButton">Smelt chalcopyrite</button>
+            <button class="primitiveBlastFurnaceButton">Smelt cassiterite</button>
+            <p></p>
         </div>
     </div>
 
@@ -208,15 +226,20 @@
         <a href="https://github.com/somerandomviolinkid/incrementalindustries.github.io" target="_blank">Source code
             repository</a><br>
         <a href="devTools.html" target="_blank">Modding and dev tools</a>
+        <br>
+        <div id="settingsDiv">
+            <label for="sigFigSlider" id="sigFigSliderLabel"></label>
+            <input type="range" min="0" max="6" value="2" id="sigFigSlider" class="settingInputs"><br>
+            <label for="mspfSlider" id="mspfSliderLabel">Milliseconds per frame:</label>
+            <input type="range" min="5" max="200" id="mspfSlider" class="settingInputs">
+        </div>
+
     </div>
 
-    <div id="discordLinkDiv">
-        <a href="https://discord.gg/ZCTTjFwg2V" target="_blank">Discord</a>
-    </div>
+    <a id="discordLink" href="https://discord.gg/ZCTTjFwg2V" target="_blank">Discord</a>
+    <p id="saveIndicator">Saved data</p>
 
 </body>
-
-<script src="scripts/config.js"></script>
 
 <script src="indexes/rocks.js"></script>
 <script src="indexes/tools.js"></script>
@@ -230,9 +253,10 @@
 <script src="scripts/game.js"></script>
 <script src="scripts/main.js"></script>
 
-<script src="scripts/util.js"></script>
-
 <script src="scripts/saving.js"></script>
+
+<script src="scripts/util.js"></script>
+<script src="scripts/config.js"></script>
 <script src="scripts/init.js"></script>
 
 </html>

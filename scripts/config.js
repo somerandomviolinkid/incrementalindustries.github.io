@@ -15,7 +15,6 @@ sigFigSlider.oninput = function () {
     }
 
     console.log(data.settings.significantDigits);
-    saveData();
 
     const endSigFigChange = Date.now() - startSigFigChange;
     console.log("Changed significant digits in " + endSigFigChange + " ms.");

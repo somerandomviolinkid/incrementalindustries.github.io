@@ -352,7 +352,7 @@ let data = {
     },
     settings: {
         significantDigits: 2,
-        visualGainTimeout: 1000,
+        visualGainTimeout: 1250,
         fuelSource: 'coal', //default fuel source, is changed throughout game
         framerateMS: 20 //framerate in MS between frames, not actually the rate per frame bobby >:( !!!!
     }

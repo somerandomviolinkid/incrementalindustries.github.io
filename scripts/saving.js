@@ -4,6 +4,13 @@ function saveData() {
         data
     }))
     console.log("saved data");
+
+    function hideSaveIndicator() {
+        document.getElementById("saveIndicator").style.display = "none";
+    }
+
+    document.getElementById("saveIndicator").style.display = "inline";
+    setTimeout(hideSaveIndicator, 1000);
 }
 
 function resetData() {
