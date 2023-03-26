@@ -233,16 +233,9 @@ function resetProgressBar(progressBarID) {
 //sorts inventory
 function sortInventory(tag) {
     const startSort = Date.now();
-    const elements = document.getElementsByClassName("inventorySquare");
 
-    for (let a = 0; a < elements.length; a++) {
-        document.getElementById(elements[a].id).style.display = "none";
-    }
-
-    const sortedElements = document.getElementsByClassName(tag);
-    for (let b = 0; b < sortedElements.length; b++) {
-        document.getElementById(sortedElements[b].id).style.display = "inline";
-    }
+    changeClassDisplay('inventorySquare', 'none');
+    changeClassDisplay(tag, 'inline');
 
     const endSort = Date.now() - startSort;
     console.log("Sorted inventory in " + endSort + " ms.");
@@ -252,7 +245,7 @@ function sortInventory(tag) {
 function showAllInventory() {
     const startSort = Date.now();
 
-    doStuffToClass('inventorySquare', 'inline');
+    changeClassDisplay('inventorySquare', 'inline');
 
     const endSort = Date.now() - startSort;
     console.log("Sorted inventory in " + endSort + " ms.");
@@ -303,9 +296,6 @@ function openBuildingInteriorMenu(building) {
 //closes building menu
 function closeBuildingMenu() {
     document.getElementById("buildingBuildingDiv").style.display = "none";
-    const interiors = document.getElementsByClassName("buildingInterior");
-    for (let a = 0; a < interiors.length; a++) {
-        document.getElementById(interiors[a].id).style.display = "none";
-    }
+    changeClassDisplay('buildingInterior', 'none');
     document.getElementById("mainBuildingDiv").style.display = "block";
 }
