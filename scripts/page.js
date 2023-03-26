@@ -37,10 +37,10 @@ function updateResourceCount(resourceName) {
 
 //amount gained then resource name
 //thanks to asterisk man and escapee for bug fixes and rewriting this
-function visualGains(data) {
+function visualGains(VGdata) {
     let infoDiv = document.getElementById("informationDiv");
 
-    for (const y of data) {
+    for (const y of VGdata) {
 
         let currentVisualGain = document.createElement("p");
         currentVisualGain.className = "visualGain";
@@ -221,13 +221,12 @@ let width = 0;
 
 //progress bar
 function updateProgressBar(totalTime, progressBarID) {
-    document.getElementById(progressBarID).style.width = width + '%';
-    width += (1 / (totalTime * 10 / (framerateMS)));
+    document.getElementById(progressBarID).style.width = width + "%";
+    width += (1 / (totalTime * 10 / (data.settings.mspf)));
 }
 
 function resetProgressBar(progressBarID) {
-    document.getElementById(progressBarID).style.width = 0 + '%';
-    document.getElementById(progressBarID).style.visibility = "hidden";
+    document.getElementById(progressBarID).style.width = 0 + "%";
     width = 0;
 }
 

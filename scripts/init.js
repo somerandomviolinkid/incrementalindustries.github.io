@@ -162,8 +162,8 @@ console.log(rockHeight);
 
 document.getElementById("rocksDiv").style.height = rockHeight.toString() + "px";
 document.getElementById("woodDiv").style.height = rockHeight.toString() + "px";
-document.getElementById("toolCraftingDiv").style.height = (rockHeight.toString()) + "px";
-document.getElementById("craftingDiv").style.height = (rockHeight.toString()) + "px";
+document.getElementById("toolCraftingDiv").style.height = (rockHeight * 1.1).toString() + "px";
+document.getElementById("craftingDiv").style.height = (rockHeight * 1.1).toString() + "px";
 
 //loading time counter
 const loadingTime = Date.now() - startLoading;

@@ -442,6 +442,7 @@ input {
     display: inline;
     margin: 0;
     display: none;
+    color: red;
 }
 
 #buildingCraftingDesc {

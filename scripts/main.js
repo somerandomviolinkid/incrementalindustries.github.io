@@ -38,13 +38,15 @@ function craftItem(item) {
 
     //progress bar
     document.getElementById("craftingProgressBarContainer").style.visibility = "visible";
-    let progressBarInterval = setInterval(updateProgressBar, framerateMS, craftingRecipes[item].info.timeS, 'craftingProgressBar');
+    let progressBarInterval = setInterval(updateProgressBar, data.settings.mspf, craftingRecipes[item].info.timeS, 'craftingProgressBar');
 
     //yields items
     function yieldItems() {
         data.resources[item].amount += craftingRecipes[item].info.yield;
         clearInterval(progressBarInterval);
         resetProgressBar('craftingProgressBar');
+
+        closeCraftingMenu();
     }
 
     setTimeout(yieldItems, craftingTime);
@@ -55,8 +57,6 @@ function craftItem(item) {
     if (craftingRecipes[item].info.type === 'manual') {
         return;
     }
-    
-    closeCraftingMenu();
 
     //checks if the crafting recipe can only be crafting once
     if (machines[item].oneTime !== undefined) {

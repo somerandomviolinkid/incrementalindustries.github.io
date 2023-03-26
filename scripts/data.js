@@ -10,7 +10,7 @@ let data = {
             crafted: false,
         },
         stone: {
-            amount: 0,
+            amount: 100,
             crafted: false,
         },
         sand: {
@@ -354,6 +354,6 @@ let data = {
         significantDigits: 2,
         visualGainTimeout: 1250,
         fuelSource: 'coal', //default fuel source, is changed throughout game
-        framerateMS: 20 //framerate in MS between frames, not actually the rate per frame bobby >:( !!!!
+        mspf: 20 //framerate in MS between frames, not actually the rate per frame bobby >:( !!!!
     }
 }
