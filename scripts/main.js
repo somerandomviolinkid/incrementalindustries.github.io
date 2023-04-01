@@ -26,6 +26,7 @@ function craftItem(item) {
 
     for (let x in craftingRecipes[item].components) {
         data.resources[craftingRecipes[item].components[x].title].amount -= craftingRecipes[item].components[x].amount;
+        updateResourceCount(data.resources[craftingRecipes[item].components[x].title]);
     }
 
     //disables buttons
@@ -88,4 +89,50 @@ function buildBuilding(building) {
 
     const buildingTime = buildings[building].info.timeS * 1000;
 
+    for (let x in buildings[building].components) {
+        if (data.resources[buildings[building].components[x].title].amount >= buildings[building].components[x].amount) {
+            console.log(x + " success");
+        } else {
+            notEnoughResourcesAlert('craftingAlert');
+            return;
+        }
+    }
+
+    if (buildings[building].tools !== undefined) {
+        for (let y in buildings[building].tools) {
+            if (data.tools[buildings[building].tools[y].title]) {
+                console.log(y + " success");
+            } else {
+                notEnoughResourcesAlert('craftingAlert');
+                return;
+            }
+        }
+    }
+
+    for (let x in buildings[building].components) {
+        data.resources[buildings[building].components[x].title].amount -= buildings[building].components[x].amount;
+        updateResourceCount(buildings[building].components[x].title);
+    }
+
+    //disables buttons
+    disableButton('buildingClose1', buildingTime);
+    disableButton('buildBuildingButton', buildingTime);
+    const tabLinks = document.getElementsByClassName("tabLink");
+    for (let l = 0; l < tabLinks.length; l++) {
+        disableButton(tabLinks[l].id, buildingTime);
+    }
+
+    //progress bar
+    document.getElementById("buildingProgressBarContainer").style.visibility = "visible";
+    let progressBarInterval = setInterval(updateProgressBar, data.settings.mspf, buildings[building].info.timeS, 'buildingProgressBar');
+
+    function yieldBuilding() {
+        data.buildings[building].built = true;
+        clearInterval(progressBarInterval);
+        resetProgressBar('buildingProgressBar');
+
+        closeBuildingMenu();
+    }
+
+    setTimeout(yieldBuilding, buildingTime);
 }

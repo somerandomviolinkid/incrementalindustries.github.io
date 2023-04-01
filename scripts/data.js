@@ -10,7 +10,7 @@ let data = {
             crafted: false,
         },
         stone: {
-            amount: 100,
+            amount: 0,
             crafted: false,
         },
         sand: {
@@ -339,7 +339,8 @@ let data = {
         primitiveBlastFurnace: {
             unlocked: true,
             built: false,
-            smeltAmount: 5
+            smeltAmount: 5,
+            smeltTime: 10000 //ms
         },
         electricBlastFurnace: {
             unlocked: true,

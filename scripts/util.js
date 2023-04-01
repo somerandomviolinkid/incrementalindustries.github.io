@@ -8,10 +8,10 @@ function randomNumberRange(seed, factor) {
     return randomNumber(seed - (seed * factor), seed + (seed * factor));
 }
 
-//does something to all elements of a particular class
-function doStuffToClass(className, actionName) {
+//hides or shows all elements of a class
+function changeClassDisplay(className, display) {
     const elements = document.getElementsByClassName(className);
     for (let a = 0; a < elements.length; a++) {
-        document.getElementById(elements[a].id).style.display = actionName;
+        document.getElementById(elements[a].id).style.display = display;
     }
 }
