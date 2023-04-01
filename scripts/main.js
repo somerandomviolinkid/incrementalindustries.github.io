@@ -93,7 +93,7 @@ function buildBuilding(building) {
         if (data.resources[buildings[building].components[x].title].amount >= buildings[building].components[x].amount) {
             console.log(x + " success");
         } else {
-            notEnoughResourcesAlert('craftingAlert');
+            notEnoughResourcesAlert('buildingCraftingAlert');
             return;
         }
     }
@@ -103,7 +103,7 @@ function buildBuilding(building) {
             if (data.tools[buildings[building].tools[y].title]) {
                 console.log(y + " success");
             } else {
-                notEnoughResourcesAlert('craftingAlert');
+                notEnoughResourcesAlert('buildingCraftingAlert');
                 return;
             }
         }
@@ -130,6 +130,9 @@ function buildBuilding(building) {
         data.buildings[building].built = true;
         clearInterval(progressBarInterval);
         resetProgressBar('buildingProgressBar');
+
+        document.getElementById(building + "BuildingButton").remove();
+        loadBuildingInteriorMenu(building);
 
         closeBuildingMenu();
     }
