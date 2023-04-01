@@ -189,7 +189,7 @@
         <h3>Buildings</h3>
         <div id="mainBuildingDiv"></div>
         <div id="buildingBuildingDiv">
-            <button class="buildingMenuCloseButton" onclick="closeBuildingMenu()">Close menu</button>
+            <button class="buildingMenuCloseButton" id="buildingClose1" onclick="closeBuildingMenu()">Close menu</button>
             <p id="buildingCraftingTitle"></p>
             <img id="buildingCraftingImg">
             <p id="buildingCraftingDesc"></p>
@@ -201,7 +201,7 @@
             <p id="buildingCraftingAlert" class="notEnoughResourcesAlert"></p>
         </div>
         <div class="buildingInterior" id="primitiveBlastFurnaceInterior">
-            <button class="buildingMenuCloseButton" onclick="closeBuildingMenu()">Close menu</button>
+            <button class="buildingMenuCloseButton"  id="buildingClose2" onclick="closeBuildingMenu()">Close menu</button>
             <p id="buildingTitle">Primitive blast furnace</p>
             <button class="primitiveBlastFurnaceButton" onclick="smeltSteel()">Smelt steel</button>
             <button class="primitiveBlastFurnaceButton" onclick="runPrimtiveBlastFurnace('magnetite')">Smelt
